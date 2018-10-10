@@ -11,10 +11,6 @@ import java.util.HashMap;
 public class KVToStream {
     private HashMap<UnsignedLong, byte[]> map;
 
-    public KVToStream() {
-        this.map = new HashMap<UnsignedLong, byte[]>();
-    }
-
     public KVToStream(HashMap<UnsignedLong, byte[]> map) {
         this.map = map;
     }

@@ -1,8 +1,12 @@
 package cn.wangxinshuo.hpkv;
 
+import cn.wangxinshuo.hpkv.file.FileResources;
 import com.alibabacloud.polar_race.engine.common.EngineRace;
 import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
+import com.google.common.primitives.UnsignedLong;
 import org.junit.Test;
+
+import java.util.Random;
 
 public class Test01 {
     @Test
@@ -37,5 +41,36 @@ public class Test01 {
         } catch (EngineException e) {
             e.printStackTrace();
         }
+    }
+
+    private byte[] getKey() {
+        byte[] result = new byte[8];
+        new Random().nextBytes(result);
+        return result;
+    }
+
+    private byte[] getValue() {
+        byte[] result = new byte[4 * 1024];
+        new Random().nextBytes(result);
+        return result;
+    }
+
+    @Test
+    public void test03() {
+        EngineRace engineRace = new EngineRace();
+        try {
+            engineRace.open("./data");
+            for (int i = 0; i < 1000000; i++) {
+                System.out.println(i);
+                engineRace.write(getKey(), getValue());
+            }
+        } catch (EngineException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void test04() {
+        System.out.println(FileResources.getIndex(UnsignedLong.valueOf(3 * 18014398509481984L - 1)));
     }
 }

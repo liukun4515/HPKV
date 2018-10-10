@@ -14,7 +14,6 @@ public class FileResources {
     private ArrayList<OutputStream> outputStreamArrayList;
     private ArrayList<InputStream> inputStreamArrayList;
 
-
     public FileResources(String path) {
         this.path = path;
         outputStreamArrayList = new ArrayList<OutputStream>(NUMBER_OF_FILES);
@@ -55,7 +54,10 @@ public class FileResources {
     public static int getIndex(UnsignedLong key) {
         // 2^54 = 18014398509481984L
         UnsignedLong div = UnsignedLong.valueOf(18014398509481984L);
-        return key.dividedBy(div).intValue();
+        UnsignedLong mod = UnsignedLong.valueOf(1024L);
+        int result = key.dividedBy(div).mod(mod).intValue();
+        System.out.println(key + "输入到：" + result);
+        return result;
     }
 
     public void close() throws IOException {

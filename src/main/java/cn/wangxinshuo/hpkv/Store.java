@@ -7,6 +7,7 @@ import cn.wangxinshuo.hpkv.util.ByteArrayToUnsignedLong;
 import com.google.common.primitives.UnsignedLong;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.HashMap;
 
@@ -32,8 +33,12 @@ public class Store {
         int fileIndex = FileResources.getIndex(key);
         if (existData[fileIndex]) {
             // 之前存在map在文件内
-            HashMap<UnsignedLong, byte[]> map =
-                    StreamToKV.get(resources.getFileResources(key, false));
+            InputStream stream = resources.getFileResources(key, false);
+            // 创建一个新数组用来存放序列化后的对象
+            byte[] objArray = new byte[stream.available()];
+            final int read = stream.read(objArray);
+            // 进行反序列化
+            HashMap<UnsignedLong, byte[]> map = StreamToKV.get(objArray);
             map.put(ByteArrayToUnsignedLong.getKey(inKey), inValue);
             byte[] write = new KVToStream(map).getStream();
             out.write(write);

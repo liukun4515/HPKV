@@ -14,6 +14,9 @@ public class StreamToKV {
     }
 
     public static HashMap get(InputStream val) {
+        /*
+         * 流在此可能被关闭
+         * */
         return (HashMap) SerializationUtils.deserialize(val);
     }
 }
