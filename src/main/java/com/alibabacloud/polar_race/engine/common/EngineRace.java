@@ -28,29 +28,38 @@ public class EngineRace extends AbstractEngine {
         try {
             store.put(key, value);
         } catch (IOException e) {
-            e.printStackTrace();
-            throw new EngineException(RetCodeEnum.IO_ERROR, "IO异常！");
+            throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR！");
         } catch (OutOfMemoryError e) {
-            e.printStackTrace();
-            throw new EngineException(RetCodeEnum.OUT_OF_MEMORY, "内存不足！");
-        } catch (Exception e) {
-            e.printStackTrace();
+            throw new EngineException(RetCodeEnum.OUT_OF_MEMORY, "OUT_OF_MEMORY！");
         }
     }
 
     @Override
     public byte[] read(byte[] key) throws EngineException {
         byte[] value = null;
-        resources = null;
+        try {
+            value = select.get(key);
+        } catch (IOException e) {
+            throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
+        }
+        if (value == null) {
+            throw new EngineException(RetCodeEnum.NOT_FOUND, "NOT_FOUND");
+        }
         return value;
     }
 
     @Override
     public void range(byte[] lower, byte[] upper, AbstractVisitor visitor) throws EngineException {
+
     }
 
     @Override
     public void close() {
+        try {
+            resources.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

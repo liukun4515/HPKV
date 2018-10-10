@@ -1,4 +1,4 @@
-package cn.wangxinshuo.hpkv.value;
+package cn.wangxinshuo.hpkv.kv;
 
 import cn.wangxinshuo.hpkv.util.interfaces.KeyValueInterface;
 import com.google.common.primitives.UnsignedLong;
@@ -9,14 +9,14 @@ import java.util.HashMap;
 /**
  * @author wszgr
  */
-public class KeyValueToStream {
+public class KVToStream {
     private HashMap<UnsignedLong, byte[]> map;
 
-    public KeyValueToStream() {
+    public KVToStream() {
         this.map = new HashMap<UnsignedLong, byte[]>();
     }
 
-    public KeyValueToStream(HashMap<UnsignedLong, byte[]> map) {
+    public KVToStream(HashMap<UnsignedLong, byte[]> map) {
         this.map = map;
     }
 

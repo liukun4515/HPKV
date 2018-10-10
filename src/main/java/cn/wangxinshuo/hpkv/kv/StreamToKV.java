@@ -1,4 +1,4 @@
-package cn.wangxinshuo.hpkv.value;
+package cn.wangxinshuo.hpkv.kv;
 
 import org.apache.commons.lang3.SerializationUtils;
 
@@ -8,7 +8,7 @@ import java.util.HashMap;
 /**
  * @author wszgr
  */
-public class StreamToKeyValue {
+public class StreamToKV {
     public static HashMap get(byte[] val) {
         return (HashMap) SerializationUtils.deserialize(val);
     }

@@ -10,33 +10,22 @@ import java.util.ArrayList;
  */
 public class CreateFileResources {
     private String path;
-    private ArrayList<OutputStream> files1, files2;
-    private ArrayList<InputStream> files3, files4;
+    private ArrayList<OutputStream> file1;
+    private ArrayList<InputStream> file2;
     private static final int NUMBER_OF_FILES = 1024;
 
     public CreateFileResources(String path) {
         this.path = path;
-        files1 = new ArrayList<OutputStream>(NUMBER_OF_FILES);
-        files2 = new ArrayList<OutputStream>(NUMBER_OF_FILES);
-        files3 = new ArrayList<InputStream>(NUMBER_OF_FILES);
-        files4 = new ArrayList<InputStream>(NUMBER_OF_FILES);
-        this.createKeyFile();
+        file1 = new ArrayList<OutputStream>(NUMBER_OF_FILES);
+        file2 = new ArrayList<InputStream>(NUMBER_OF_FILES);
         this.createKeyValueFile();
-    }
-
-    private void createKeyFile() {
-        for (int i = 0; i < NUMBER_OF_FILES; i++) {
-            String name = "/Key_" + Integer.toString(i) + ".bin";
-            File file = new File(path + name);
-            getStream(i, file, files1, files3);
-        }
     }
 
     private void createKeyValueFile() {
         for (int i = 0; i < NUMBER_OF_FILES; i++) {
             String name = "/KeyAndValue_" + Integer.toString(i) + ".bin";
             File file = new File(path + name);
-            getStream(i, file, files2, files4);
+            getStream(i, file, file1, file2);
         }
     }
 
@@ -52,46 +41,36 @@ public class CreateFileResources {
         }
     }
 
-    public OutputStream getKeyResources(UnsignedLong key) {
-        return files1.get(getIndex(key));
-    }
-
     public OutputStream getKeyValueResources(UnsignedLong key) {
-        return files2.get(getIndex(key));
-    }
-
-    public InputStream getKeyResources(UnsignedLong key, boolean bool) {
-        return files3.get(getIndex(key));
+        return file1.get(getIndex(key));
     }
 
     public InputStream getKeyValueResources(UnsignedLong key, boolean bool) {
-        return files4.get(getIndex(key));
-    }
-
-    public ArrayList<InputStream> getAllKeyResources() {
-        return files3;
+        return file2.get(getIndex(key));
     }
 
     public static int getIndex(UnsignedLong key) {
         // 2^54 = 18014398509481984L
-        long a = 0L;
-        final long step = 18014398509481984L;
-        for (int i = 0; i < NUMBER_OF_FILES; i++, a += step) {
-            if (key.compareTo(UnsignedLong.valueOf(a)) > 0
-                    && key.compareTo(UnsignedLong.valueOf(a + step)) < 0) {
+        UnsignedLong a = UnsignedLong.valueOf(0L);
+        UnsignedLong step = UnsignedLong.valueOf(18014398509481984L);
+        for (int i = 0; i < NUMBER_OF_FILES; i++, a.plus(step)) {
+            if (key.compareTo(a) > 0
+                    && key.compareTo(a.plus(step)) < 0) {
                 return i;
             }
         }
         return 0;
     }
 
+    public void close() throws IOException {
+        for (int i = 0; i < NUMBER_OF_FILES; i++) {
+            file1.get(i).close();
+            file2.get(i).close();
+        }
+    }
+
     @Override
     protected void finalize() throws Throwable {
-        for (int i = 0; i < NUMBER_OF_FILES; i++) {
-            files1.get(i).close();
-            files2.get(i).close();
-            files3.get(i).close();
-            files4.get(i).close();
-        }
+        this.close();
     }
 }

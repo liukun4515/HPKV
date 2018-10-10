@@ -1,10 +1,13 @@
 package cn.wangxinshuo.hpkv;
 
 import cn.wangxinshuo.hpkv.file.CreateFileResources;
-import cn.wangxinshuo.hpkv.util.ByteArrayToLong;
+import cn.wangxinshuo.hpkv.util.ByteArrayToUnsignedLong;
+import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
+import com.alibabacloud.polar_race.engine.common.exceptions.RetCodeEnum;
 import com.google.common.primitives.UnsignedLong;
 import org.apache.commons.lang3.SerializationUtils;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 
@@ -19,9 +22,12 @@ public class Select {
         this.resources = resources;
     }
 
-    public byte[] get(byte[] inKey) {
-        UnsignedLong key = ByteArrayToLong.getKey(inKey);
-        InputStream stream = resources.getKeyResources(key, false);
+    public byte[] get(byte[] inKey) throws IOException, EngineException {
+        UnsignedLong key = ByteArrayToUnsignedLong.getKey(inKey);
+        InputStream stream = resources.getKeyValueResources(key, false);
+        if (stream.available() == 0) {
+            throw new EngineException(RetCodeEnum.CORRUPTION, "异常！");
+        }
         HashMap<UnsignedLong, byte[]> map = SerializationUtils.deserialize(stream);
         return map.get(key);
     }

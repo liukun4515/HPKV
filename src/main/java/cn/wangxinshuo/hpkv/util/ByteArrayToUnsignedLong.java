@@ -6,7 +6,7 @@ import com.google.common.primitives.UnsignedLong;
 /**
  * @author wszgr
  */
-public class ByteArrayToLong {
+public class ByteArrayToUnsignedLong {
 
     public static UnsignedLong getKey(byte[] keys) {
         UnsignedLong key = UnsignedLong.valueOf(0L);

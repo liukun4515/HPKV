@@ -8,14 +8,14 @@ import com.google.common.primitives.UnsignedLong;
  */
 public interface KeyValueInterface {
     /**
-     * get the key of KeyValueDataType
+     * get the key of KVDataType
      *
      * @return UnsignedLong
      */
     UnsignedLong getKey();
 
     /**
-     * get the value of KeyValueDataType
+     * get the kv of KVDataType
      *
      * @return byte[]
      */
