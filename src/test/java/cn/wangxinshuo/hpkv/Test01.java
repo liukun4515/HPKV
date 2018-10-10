@@ -2,13 +2,12 @@ package cn.wangxinshuo.hpkv;
 
 import com.alibabacloud.polar_race.engine.common.EngineRace;
 import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
-import com.alibabacloud.polar_race.engine.common.exceptions.RetCodeEnum;
 import org.junit.Test;
 
 public class Test01 {
     @Test
     public void test01() {
-//        CreateFileResources createFileResources = new CreateFileResources("data");
+//        FileResources createFileResources = new FileResources("data");
 //        OutputStream o2 = createFileResources.getKeyResources(UnsignedLong.valueOf(0L));
 //        try {
 //            o2.write(12);
@@ -26,15 +25,14 @@ public class Test01 {
             byte[] key = {12, 12, 12, 12, 12, 12, 12, 12};
             byte[] value = {12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12,
                     12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 13};
+            byte[] v = {12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12,
+                    12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12};
             engineRace.write(key, value);
+            engineRace.write(key, v);
             value = engineRace.read(key);
-            if (value != null) {
-                for (byte val :
-                        value) {
-                    System.out.print(val);
-                }
-            } else {
-                throw new EngineException(RetCodeEnum.NOT_FOUND, "键值对应的不存在!");
+            for (byte val :
+                    value) {
+                System.out.print(val);
             }
         } catch (EngineException e) {
             e.printStackTrace();

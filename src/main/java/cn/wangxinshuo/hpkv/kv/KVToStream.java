@@ -1,6 +1,5 @@
 package cn.wangxinshuo.hpkv.kv;
 
-import cn.wangxinshuo.hpkv.util.interfaces.KeyValueInterface;
 import com.google.common.primitives.UnsignedLong;
 import org.apache.commons.lang3.SerializationUtils;
 
@@ -20,8 +19,7 @@ public class KVToStream {
         this.map = map;
     }
 
-    public byte[] getStream(KeyValueInterface keyValueInterface) {
-        this.map.put(keyValueInterface.getKey(), keyValueInterface.getValue());
+    public byte[] getStream() {
         return SerializationUtils.serialize(map);
     }
 }

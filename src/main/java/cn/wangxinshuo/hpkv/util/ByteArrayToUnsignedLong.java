@@ -13,9 +13,9 @@ public class ByteArrayToUnsignedLong {
         UnsignedLong mul = UnsignedLong.valueOf(1);
         for (int i = keys.length - 1; i >= 0; i--) {
             if (keys[i] >= 0) {
-                key = key.plus(mul.minus(UnsignedLong.valueOf(keys[i])));
+                key = key.plus(mul.times(UnsignedLong.valueOf(keys[i])));
             } else {
-                key = key.plus(mul.minus(UnsignedLong.valueOf(128 - keys[i])));
+                key = key.plus(mul.times(UnsignedLong.valueOf(128 - keys[i])));
             }
             mul = mul.minus(UnsignedLong.valueOf(256));
         }

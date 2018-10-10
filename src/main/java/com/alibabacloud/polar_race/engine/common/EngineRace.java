@@ -2,7 +2,7 @@ package com.alibabacloud.polar_race.engine.common;
 
 import cn.wangxinshuo.hpkv.Select;
 import cn.wangxinshuo.hpkv.Store;
-import cn.wangxinshuo.hpkv.file.CreateFileResources;
+import cn.wangxinshuo.hpkv.file.FileResources;
 import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
 import com.alibabacloud.polar_race.engine.common.exceptions.RetCodeEnum;
 
@@ -12,19 +12,23 @@ import java.io.IOException;
  * @author wszgr
  */
 public class EngineRace extends AbstractEngine {
-    private CreateFileResources resources;
+    private FileResources resources;
     private Store store;
     private Select select;
 
     @Override
     public void open(String path) throws EngineException {
-        resources = new CreateFileResources(path);
+        resources = new FileResources(path);
         store = new Store(resources);
         select = new Select(resources);
     }
 
     @Override
     public void write(byte[] key, byte[] value) throws EngineException {
+        int keyLength = 8, valueLength = 4 * 1024;
+//        if (key.length != keyLength && value.length != valueLength) {
+//            throw new EngineException(RetCodeEnum.INVALID_ARGUMENT, "INVALID_ARGUMENT");
+//        }
         try {
             store.put(key, value);
         } catch (IOException e) {
@@ -36,10 +40,14 @@ public class EngineRace extends AbstractEngine {
 
     @Override
     public byte[] read(byte[] key) throws EngineException {
+        if (key.length != 8) {
+            throw new EngineException(RetCodeEnum.INVALID_ARGUMENT, "INVALID_ARGUMENT");
+        }
         byte[] value = null;
         try {
             value = select.get(key);
         } catch (IOException e) {
+            e.printStackTrace();
             throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
         }
         if (value == null) {

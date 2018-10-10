@@ -1,7 +1,6 @@
 package cn.wangxinshuo.hpkv;
 
-import cn.wangxinshuo.hpkv.file.CreateFileResources;
-import cn.wangxinshuo.hpkv.kv.KVDataType;
+import cn.wangxinshuo.hpkv.file.FileResources;
 import cn.wangxinshuo.hpkv.kv.KVToStream;
 import cn.wangxinshuo.hpkv.kv.StreamToKV;
 import cn.wangxinshuo.hpkv.util.ByteArrayToUnsignedLong;
@@ -15,42 +14,42 @@ import java.util.HashMap;
  * @author wszgr
  */
 public class Store {
-    private CreateFileResources resources;
-    private boolean[] haveWrite;
+    private FileResources resources;
+    private boolean[] existData;
 
-    public Store(CreateFileResources resources) {
+    public Store(FileResources resources) {
         this.resources = resources;
         int numberOfFiles = 1024;
-        haveWrite = new boolean[numberOfFiles];
+        existData = new boolean[numberOfFiles];
         for (int i = 0; i < numberOfFiles; i++) {
-            haveWrite[i] = false;
+            existData[i] = false;
         }
     }
 
     public void put(byte[] inKey, byte[] inValue) throws IOException {
         UnsignedLong key = ByteArrayToUnsignedLong.getKey(inKey);
-        OutputStream out = resources.getKeyValueResources(key);
-        int fileIndex = CreateFileResources.getIndex(key);
-        if (haveWrite[fileIndex]) {
-            // 之前存在树在文件内
+        OutputStream out = resources.getFileResources(key);
+        int fileIndex = FileResources.getIndex(key);
+        if (existData[fileIndex]) {
+            // 之前存在map在文件内
             HashMap<UnsignedLong, byte[]> map =
-                    StreamToKV.get(resources.getKeyValueResources(key, false));
-            synchronized (this) {
-                out.write(new KVToStream(map).getStream(new KVDataType(key, inValue)));
-                out.flush();
-            }
-
+                    StreamToKV.get(resources.getFileResources(key, false));
+            map.put(ByteArrayToUnsignedLong.getKey(inKey), inValue);
+            byte[] write = new KVToStream(map).getStream();
+            out.write(write);
+            out.flush();
         } else {
-            // 之前没有树在文件内
-            // 构造新树  64000000 / 1024 = 62500
-            HashMap<UnsignedLong, byte[]> map = new HashMap<UnsignedLong, byte[]>(62500);
-            // 写入
-            synchronized (this) {
-                out.write(new KVToStream(map).getStream(new KVDataType(key, inValue)));
-                out.flush();
-                // 标记文件里已经存在树
-                haveWrite[fileIndex] = true;
-            }
+            // 之前没有map在文件内
+            // 构造新map  64000000 / 1024 = 62500
+            HashMap<UnsignedLong, byte[]> map =
+                    new HashMap<UnsignedLong, byte[]>(62500);
+            // 写入map
+            map.put(ByteArrayToUnsignedLong.getKey(inKey), inValue);
+            byte[] write = new KVToStream(map).getStream();
+            out.write(write);
+            out.flush();
+            // 标记文件里map已经存在
+            existData[fileIndex] = true;
         }
     }
 }

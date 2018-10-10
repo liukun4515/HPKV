@@ -8,16 +8,17 @@ import java.util.ArrayList;
 /**
  * @author wszgr
  */
-public class CreateFileResources {
+public class FileResources {
     private String path;
-    private ArrayList<OutputStream> file1;
-    private ArrayList<InputStream> file2;
     private static final int NUMBER_OF_FILES = 1024;
+    private ArrayList<OutputStream> outputStreamArrayList;
+    private ArrayList<InputStream> inputStreamArrayList;
 
-    public CreateFileResources(String path) {
+
+    public FileResources(String path) {
         this.path = path;
-        file1 = new ArrayList<OutputStream>(NUMBER_OF_FILES);
-        file2 = new ArrayList<InputStream>(NUMBER_OF_FILES);
+        outputStreamArrayList = new ArrayList<OutputStream>(NUMBER_OF_FILES);
+        inputStreamArrayList = new ArrayList<InputStream>(NUMBER_OF_FILES);
         this.createKeyValueFile();
     }
 
@@ -25,7 +26,7 @@ public class CreateFileResources {
         for (int i = 0; i < NUMBER_OF_FILES; i++) {
             String name = "/KeyAndValue_" + Integer.toString(i) + ".bin";
             File file = new File(path + name);
-            getStream(i, file, file1, file2);
+            getStream(i, file, outputStreamArrayList, inputStreamArrayList);
         }
     }
 
@@ -41,36 +42,31 @@ public class CreateFileResources {
         }
     }
 
-    public OutputStream getKeyValueResources(UnsignedLong key) {
-        return file1.get(getIndex(key));
+    public OutputStream getFileResources(UnsignedLong key) {
+        int index = getIndex(key);
+        return outputStreamArrayList.get(index);
     }
 
-    public InputStream getKeyValueResources(UnsignedLong key, boolean bool) {
-        return file2.get(getIndex(key));
+    public InputStream getFileResources(UnsignedLong key, boolean bool) {
+        int index = getIndex(key);
+        return inputStreamArrayList.get(index);
     }
 
     public static int getIndex(UnsignedLong key) {
         // 2^54 = 18014398509481984L
-        UnsignedLong a = UnsignedLong.valueOf(0L);
-        UnsignedLong step = UnsignedLong.valueOf(18014398509481984L);
-        for (int i = 0; i < NUMBER_OF_FILES; i++, a.plus(step)) {
-            if (key.compareTo(a) > 0
-                    && key.compareTo(a.plus(step)) < 0) {
-                return i;
-            }
-        }
-        return 0;
+        UnsignedLong div = UnsignedLong.valueOf(18014398509481984L);
+        return key.dividedBy(div).intValue();
     }
 
     public void close() throws IOException {
         for (int i = 0; i < NUMBER_OF_FILES; i++) {
-            file1.get(i).close();
-            file2.get(i).close();
+            outputStreamArrayList.get(i).close();
+            inputStreamArrayList.get(i).close();
         }
     }
 
     @Override
-    protected void finalize() throws Throwable {
+    protected void finalize() throws IOException {
         this.close();
     }
 }
