@@ -8,7 +8,7 @@ import com.google.common.primitives.UnsignedLong;
 import org.apache.commons.lang3.SerializationUtils;
 
 import java.io.IOException;
-import java.io.InputStream;
+import java.io.RandomAccessFile;
 import java.util.HashMap;
 
 /**
@@ -23,11 +23,14 @@ public class Select {
 
     public byte[] get(byte[] inKey) throws IOException, EngineException {
         UnsignedLong key = ByteArrayToUnsignedLong.getKey(inKey);
-        InputStream stream = resources.getFileResources(key, false);
-        if (stream.available() == 0) {
-            throw new EngineException(RetCodeEnum.CORRUPTION, "CORRUPTION！");
+        RandomAccessFile stream = resources.getFileResources(FileResources.getIndex(key));
+        if (stream.length() == 0) {
+            throw new EngineException(RetCodeEnum.NOT_FOUND, "NOT_FOUND！");
         }
-        HashMap<UnsignedLong, byte[]> map = SerializationUtils.deserialize(stream);
+        byte[] streamObject = new byte[(int) stream.length()];
+        stream.seek(0);
+        stream.readFully(streamObject);
+        HashMap<UnsignedLong, byte[]> map = SerializationUtils.deserialize(streamObject);
         byte[] result = map.get(key);
         if (result == null) {
             throw new EngineException(RetCodeEnum.NOT_FOUND, "NOT_FOUND");

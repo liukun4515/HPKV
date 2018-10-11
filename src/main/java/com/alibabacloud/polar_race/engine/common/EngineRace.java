@@ -18,17 +18,22 @@ public class EngineRace extends AbstractEngine {
 
     @Override
     public void open(String path) throws EngineException {
-        resources = new FileResources(path);
-        store = new Store(resources);
-        select = new Select(resources);
+        try {
+            resources = new FileResources(path, "rw");
+            store = new Store(resources);
+            select = new Select(resources);
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
+        }
     }
 
     @Override
     public void write(byte[] key, byte[] value) throws EngineException {
         int keyLength = 8, valueLength = 4 * 1024;
-//        if (key.length != keyLength && value.length != valueLength) {
-//            throw new EngineException(RetCodeEnum.INVALID_ARGUMENT, "INVALID_ARGUMENT");
-//        }
+        if (key.length != keyLength && value.length != valueLength) {
+            throw new EngineException(RetCodeEnum.INVALID_ARGUMENT, "INVALID_ARGUMENT");
+        }
         try {
             store.put(key, value);
         } catch (IOException e) {
@@ -47,7 +52,6 @@ public class EngineRace extends AbstractEngine {
         try {
             value = select.get(key);
         } catch (IOException e) {
-            e.printStackTrace();
             throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
         }
         if (value == null) {
@@ -69,5 +73,4 @@ public class EngineRace extends AbstractEngine {
             e.printStackTrace();
         }
     }
-
 }
