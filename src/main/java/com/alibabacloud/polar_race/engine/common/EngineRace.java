@@ -19,7 +19,7 @@ public class EngineRace extends AbstractEngine {
     @Override
     public void open(String path) throws EngineException {
         try {
-            resources = new FileResources(path, "rw");
+            resources = new FileResources(path);
             store = new Store(resources);
             select = new Select(resources);
         } catch (IOException e) {
@@ -49,11 +49,7 @@ public class EngineRace extends AbstractEngine {
             throw new EngineException(RetCodeEnum.INVALID_ARGUMENT, "INVALID_ARGUMENT");
         }
         byte[] value = null;
-        try {
-            value = select.get(key);
-        } catch (IOException e) {
-            throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
-        }
+        value = select.get(key);
         if (value == null) {
             throw new EngineException(RetCodeEnum.NOT_FOUND, "NOT_FOUND");
         }

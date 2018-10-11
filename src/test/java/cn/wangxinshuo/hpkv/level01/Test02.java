@@ -1,4 +1,4 @@
-package cn.wangxinshuo.hpkv;
+package cn.wangxinshuo.hpkv.level01;
 
 import cn.wangxinshuo.hpkv.file.FileResources;
 import com.alibabacloud.polar_race.engine.common.EngineRace;
@@ -59,7 +59,7 @@ public class Test02 {
         try {
             FileResources resources = new FileResources("./data");
             for (int i = 0; i < 1024; i++) {
-                RandomAccessFile fileResources = resources.getFileResources(i);
+                RandomAccessFile fileResources = resources.getWriteSources(i);
                 if (fileResources.length() != 0) {
                     byte[] arr = new byte[(int) fileResources.length()];
                     fileResources.readFully(arr);
