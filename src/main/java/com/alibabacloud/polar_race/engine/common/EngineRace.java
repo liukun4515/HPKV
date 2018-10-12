@@ -45,6 +45,10 @@ public class EngineRace extends AbstractEngine {
 
     @Override
     public byte[] read(byte[] key) throws EngineException {
+        // 按照题目要求在开始查询的时候就已经
+        // 完成了写入的工作
+        store.storeIncompleteMap();
+        // 开始查询相关工作
         if (key.length != 8) {
             throw new EngineException(RetCodeEnum.INVALID_ARGUMENT, "INVALID_ARGUMENT");
         }

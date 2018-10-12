@@ -1,22 +1,26 @@
 package cn.wangxinshuo.hpkv.util;
 
+import com.google.common.primitives.UnsignedLong;
+
+import java.util.HashMap;
+
 /**
  * @author wszgr
  */
 public class Cache {
     private int fileIndex;
-    private byte[] data;
+    private HashMap<UnsignedLong, byte[]> map;
 
-    public Cache(int fileIndex, byte[] data) {
+    public Cache(int fileIndex, HashMap<UnsignedLong, byte[]> map) {
         this.fileIndex = fileIndex;
-        this.data = data;
+        this.map = map;
     }
 
     public int getFileIndex() {
         return fileIndex;
     }
 
-    public byte[] getData() {
-        return data;
+    public HashMap<UnsignedLong, byte[]> getData() {
+        return map;
     }
 }

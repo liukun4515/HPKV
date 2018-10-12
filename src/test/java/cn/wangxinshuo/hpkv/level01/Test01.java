@@ -1,9 +1,7 @@
 package cn.wangxinshuo.hpkv.level01;
 
-import cn.wangxinshuo.hpkv.file.FileResources;
 import com.alibabacloud.polar_race.engine.common.EngineRace;
 import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
-import com.google.common.primitives.UnsignedLong;
 import org.junit.Test;
 
 import java.util.Random;
@@ -71,6 +69,6 @@ public class Test01 {
 
     @Test
     public void test04() {
-        System.out.println(FileResources.getIndex(UnsignedLong.valueOf(3 * 18014398509481984L - 1)));
+        //System.out.println(FileResources.getIndex(UnsignedLong.valueOf(3 * 18014398509481984L - 1)));
     }
 }
