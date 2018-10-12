@@ -1,4 +1,4 @@
-package cn.wangxinshuo.hpkv.util;
+package cn.wangxinshuo.hpkv.cache;
 
 import com.google.common.primitives.UnsignedLong;
 

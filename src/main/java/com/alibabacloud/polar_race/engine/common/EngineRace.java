@@ -3,29 +3,30 @@ package com.alibabacloud.polar_race.engine.common;
 import cn.wangxinshuo.hpkv.Select;
 import cn.wangxinshuo.hpkv.Store;
 import cn.wangxinshuo.hpkv.file.FileResources;
+import cn.wangxinshuo.hpkv.log.Log;
 import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
 import com.alibabacloud.polar_race.engine.common.exceptions.RetCodeEnum;
+import com.google.common.primitives.UnsignedLong;
 
-import java.io.IOException;
+import java.util.HashMap;
 
 /**
  * @author wszgr
  */
 public class EngineRace extends AbstractEngine {
+    private volatile HashMap<UnsignedLong, byte[]> map;
     private FileResources resources;
     private Store store;
     private Select select;
+    private Log log;
 
     @Override
     public void open(String path) throws EngineException {
-        try {
-            resources = new FileResources(path);
-            store = new Store(resources);
-            select = new Select(resources);
-        } catch (IOException e) {
-            e.printStackTrace();
-            throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
-        }
+        resources = new FileResources(path);
+        log = new Log(path);
+        map = log.deserializeFromFile();
+        store = new Store(resources, log, map);
+        select = new Select(resources, log, map);
     }
 
     @Override
@@ -36,8 +37,6 @@ public class EngineRace extends AbstractEngine {
         }
         try {
             store.put(key, value);
-        } catch (IOException e) {
-            throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR！");
         } catch (OutOfMemoryError e) {
             throw new EngineException(RetCodeEnum.OUT_OF_MEMORY, "OUT_OF_MEMORY！");
         }
@@ -45,9 +44,6 @@ public class EngineRace extends AbstractEngine {
 
     @Override
     public byte[] read(byte[] key) throws EngineException {
-        // 按照题目要求在开始查询的时候就已经
-        // 完成了写入的工作
-        store.storeIncompleteMap();
         // 开始查询相关工作
         if (key.length != 8) {
             throw new EngineException(RetCodeEnum.INVALID_ARGUMENT, "INVALID_ARGUMENT");
@@ -68,8 +64,10 @@ public class EngineRace extends AbstractEngine {
     @Override
     public void close() {
         try {
+            log.close();
+            map.clear();
             resources.close();
-        } catch (IOException e) {
+        } catch (EngineException e) {
             e.printStackTrace();
         }
     }

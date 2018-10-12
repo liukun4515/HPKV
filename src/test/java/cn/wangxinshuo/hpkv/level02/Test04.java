@@ -20,7 +20,7 @@ public class Test04 {
         return result;
     }
 
-    private void print(byte[] arr) {
+    private static void print(byte[] arr) {
         for (byte val :
                 arr) {
             System.out.print(val);

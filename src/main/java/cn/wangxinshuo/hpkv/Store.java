@@ -1,15 +1,20 @@
 package cn.wangxinshuo.hpkv;
 
 import cn.wangxinshuo.hpkv.file.FileResources;
+import cn.wangxinshuo.hpkv.log.Log;
 import cn.wangxinshuo.hpkv.util.ByteArrayToUnsignedLong;
 import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
 import com.alibabacloud.polar_race.engine.common.exceptions.RetCodeEnum;
+import com.google.common.io.Files;
 import com.google.common.primitives.UnsignedLong;
 import org.apache.commons.lang3.SerializationUtils;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.io.RandomAccessFile;
 import java.util.HashMap;
+import java.util.Random;
 
 /**
  * @author wszgr
@@ -17,38 +22,66 @@ import java.util.HashMap;
 public class Store {
     private FileResources resources;
     private HashMap<UnsignedLong, byte[]> map;
+    private Log log;
 
-    public Store(FileResources resources) throws IOException {
+    private Store(FileResources resources) {
         this.resources = resources;
-        map = new HashMap<UnsignedLong, byte[]>(4096);
     }
 
-    public void put(byte[] inKey, byte[] inValue) throws IOException, EngineException {
+    public Store(FileResources resources, Log log, HashMap<UnsignedLong, byte[]> map)
+            throws EngineException {
+        this(resources);
+        this.log = log;
+        log.initResources();
+        this.map = map;
+    }
+
+    public void put(byte[] inKey, byte[] inValue) throws EngineException {
         UnsignedLong key = ByteArrayToUnsignedLong.getKey(inKey);
-        int maxContainNumbers = 4000;
-        if (map.size() < maxContainNumbers) {
-            map.put(key, inValue);
-        } else {
-            RandomAccessFile stream = resources.getWriteSources();
-            // 进行序列化
-            byte[] serializedBytes = SerializationUtils.serialize(map);
-            stream.seek(0);
-            stream.write(serializedBytes);
-            // 清空并准备下一次写入文件
+        // 首先判断状态
+        if (map.size() >= log.getLogNumber()) {
+            System.out.println("进行数据持久化！");
+            // 为可以持久化到文件的状态
+            int fileIndex =
+                    Math.abs(new Random().nextInt()) % resources.getNumberOfFiles();
+            try {
+                byte[] input = Files.toByteArray(resources.getReadSources(fileIndex));
+                System.out.println("InputStream大小为：" + input.length);
+                if (input.length > 0) {
+                    HashMap<UnsignedLong, byte[]> mapInFile =
+                            SerializationUtils.deserialize(input);
+                    System.out.println("文件中的Map大小为：" + mapInFile.size());
+                    map.putAll(mapInFile);
+                    System.out.println("重载后的Map大小为：" + map.size());
+                }
+                OutputStream outputStream =
+                        new FileOutputStream(
+                                resources.getWriteSources(fileIndex));
+                byte[] afterInputObjectArray = SerializationUtils.serialize(map);
+                System.out.println("afterInputObjectArray: " + afterInputObjectArray.length);
+                outputStream.write(afterInputObjectArray);
+                outputStream.flush();
+                outputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+                throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
+            }
+            // 清场
+            log.eraseLog();
             map.clear();
-            map.put(key, inValue);
         }
-    }
-
-    public void storeIncompleteMap() throws EngineException {
-        RandomAccessFile stream = resources.getWriteSources();
-        // 进行序列化
-        byte[] serializedBytes = SerializationUtils.serialize(map);
+        // log文件初始化
+        RandomAccessFile logFile = log.getRandomAccessFile();
+        // 为不可以持久化到文件的状态
         try {
-            stream.seek(0);
-            stream.write(serializedBytes);
+            logFile.seek(logFile.length());
+            logFile.write(inKey);
+            logFile.write(inValue);
         } catch (IOException e) {
+            e.printStackTrace();
             throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
         }
+        // 放入MemTable
+        map.put(key, inValue);
     }
 }

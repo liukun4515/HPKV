@@ -5,7 +5,6 @@ import com.alibabacloud.polar_race.engine.common.exceptions.RetCodeEnum;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.RandomAccessFile;
 
 /**
  * 总数据量大概260GB左右
@@ -13,56 +12,45 @@ import java.io.RandomAccessFile;
  */
 public class FileResources {
     private String path;
-    private String mode;
-    private short canWriteFileNumber;
-    private static final int NUMBER_OF_FILES = 256;
-    private RandomAccessFile[] streams;
+    private static final int NUMBER_OF_FILES = 32;
+    private File[] files;
 
-    public FileResources(String path) throws IOException {
+    public int getNumberOfFiles() {
+        return NUMBER_OF_FILES;
+    }
+
+    public FileResources(String path) throws EngineException {
         this.path = path;
-        mode = "rws";
-        streams = new RandomAccessFile[NUMBER_OF_FILES];
+        files = new File[NUMBER_OF_FILES];
         this.createFile();
     }
 
-    public FileResources(String path, String mode) throws IOException {
-        this(path);
-        this.mode = mode;
-    }
-
-    private void createFile() throws IOException {
-        for (int i = 0; i < NUMBER_OF_FILES; i++) {
-            String name = "/KV_" + Integer.toString(i) + ".map";
-            File file = new File(path + name);
-            final boolean newFile = file.createNewFile();
-            streams[i] = new RandomAccessFile(file, mode);
+    private void createFile() throws EngineException {
+        try {
+            for (int i = 0; i < NUMBER_OF_FILES; i++) {
+                String name = "/KV_" + Integer.toString(i) + ".map";
+                files[i] = new File(path + name);
+                final boolean newFile = files[i].createNewFile();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
         }
     }
 
-    public RandomAccessFile getWriteSources() throws EngineException {
-        if (canWriteFileNumber < NUMBER_OF_FILES) {
-            return streams[canWriteFileNumber++];
-        } else {
-            throw new EngineException(RetCodeEnum.FULL, "FULL");
-        }
+    public File getWriteSources(int index) {
+        return files[index];
     }
 
-    public RandomAccessFile getReadSources(int index) throws EngineException {
+    public File getReadSources(int index) throws EngineException {
         if (index < NUMBER_OF_FILES) {
-            return streams[index];
+            return files[index];
         } else {
-            throw new EngineException(RetCodeEnum.CORRUPTION, "CORRUPTION");
+            throw new EngineException(RetCodeEnum.INVALID_ARGUMENT,
+                    "INVALID_ARGUMENT");
         }
     }
 
-    public void close() throws IOException {
-        for (int i = 0; i < NUMBER_OF_FILES; i++) {
-            streams[i].close();
-        }
-    }
-
-    @Override
-    protected void finalize() throws IOException {
-        this.close();
+    public void close() {
     }
 }
