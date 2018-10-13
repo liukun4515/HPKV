@@ -12,7 +12,7 @@ import java.io.IOException;
  */
 public class FileResources {
     private String path;
-    private static final int NUMBER_OF_FILES = 32;
+    private static final int NUMBER_OF_FILES = 128;
     private File[] files;
 
     public int getNumberOfFiles() {
