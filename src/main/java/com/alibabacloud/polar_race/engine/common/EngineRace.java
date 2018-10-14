@@ -26,7 +26,7 @@ public class EngineRace extends AbstractEngine {
         log = new Log(path);
         map = log.deserializeFromFile();
         store = new Store(resources, log, map);
-        select = new Select(resources, log, map);
+        select = new Select(resources, map);
     }
 
     @Override

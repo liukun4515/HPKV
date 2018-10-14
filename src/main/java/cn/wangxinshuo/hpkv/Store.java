@@ -28,18 +28,16 @@ public class Store {
         this.resources = resources;
     }
 
-    public Store(FileResources resources, Log log, HashMap<UnsignedLong, byte[]> map)
-            throws EngineException {
+    public Store(FileResources resources, Log log, HashMap<UnsignedLong, byte[]> map) {
         this(resources);
         this.log = log;
-        log.initResources();
         this.map = map;
     }
 
     public void put(byte[] inKey, byte[] inValue) throws EngineException {
         UnsignedLong key = ByteArrayToUnsignedLong.getKey(inKey);
         // 首先判断状态
-        if (map.size() >= log.getLogNumber()) {
+        if (map.size() >= log.getKeyValueNumberInLogFile()) {
             System.out.println("进行数据持久化！");
             // 为可以持久化到文件的状态
             int fileIndex =
@@ -70,6 +68,7 @@ public class Store {
             log.eraseLog();
             map.clear();
         }
+        // 为不可以持久化到文件的状态
         // log文件初始化
         RandomAccessFile logFile = log.getRandomAccessFile();
         // 为不可以持久化到文件的状态

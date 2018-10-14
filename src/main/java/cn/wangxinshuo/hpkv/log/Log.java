@@ -33,7 +33,7 @@ public class Log {
         this.mode = mode;
     }
 
-    public int getLogNumber() {
+    public int getKeyValueNumberInLogFile() {
         return KV_NUMBER;
     }
 
@@ -90,6 +90,15 @@ public class Log {
             final boolean newFile = file.createNewFile();
             this.randomAccessFile = new RandomAccessFile(file, mode);
             randomAccessFile.setLength(0);
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
+        }
+    }
+
+    public int getLogFileLength() throws EngineException {
+        try {
+            return (int) randomAccessFile.length();
         } catch (IOException e) {
             e.printStackTrace();
             throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
