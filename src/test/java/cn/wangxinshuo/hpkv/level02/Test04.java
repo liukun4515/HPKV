@@ -40,7 +40,6 @@ public class Test04 {
                 byte[] key = getKey();
                 byte[] value = getValue();
                 engineRace.write(key, value);
-                //print(engineRace.read(key));
             }
             System.out.println("store:" + TimeUnit.NANOSECONDS.toMillis(
                     System.nanoTime() - start) + " ms");

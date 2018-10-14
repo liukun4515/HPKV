@@ -2,6 +2,7 @@ package cn.wangxinshuo.hpkv;
 
 import cn.wangxinshuo.hpkv.file.FileResources;
 import cn.wangxinshuo.hpkv.log.Log;
+import cn.wangxinshuo.hpkv.range.key.SortedList;
 import cn.wangxinshuo.hpkv.util.ByteArrayToUnsignedLong;
 import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
 import com.alibabacloud.polar_race.engine.common.exceptions.RetCodeEnum;
@@ -22,16 +23,19 @@ import java.util.Random;
 public class Store {
     private FileResources resources;
     private HashMap<UnsignedLong, byte[]> map;
+    private SortedList sortedList;
     private Log log;
 
     private Store(FileResources resources) {
         this.resources = resources;
     }
 
-    public Store(FileResources resources, Log log, HashMap<UnsignedLong, byte[]> map) {
+    public Store(FileResources resources, Log log,
+                 HashMap<UnsignedLong, byte[]> map, SortedList sortedList) {
         this(resources);
         this.log = log;
         this.map = map;
+        this.sortedList = sortedList;
     }
 
     public void put(byte[] inKey, byte[] inValue) throws EngineException {
@@ -43,6 +47,7 @@ public class Store {
             int fileIndex =
                     Math.abs(new Random().nextInt()) % resources.getNumberOfFiles();
             try {
+                // 将map持久化到文件并清空
                 byte[] input = Files.toByteArray(resources.getReadSources(fileIndex));
                 System.out.println("InputStream大小为：" + input.length);
                 if (input.length > 0) {
@@ -60,6 +65,13 @@ public class Store {
                 outputStream.write(afterInputObjectArray);
                 outputStream.flush();
                 outputStream.close();
+                // 将key持久化到文件
+                OutputStream keyOutput =
+                        new FileOutputStream(resources.getKeyFile());
+                byte[] serializeSortedList = SerializationUtils.serialize(sortedList);
+                keyOutput.write(serializeSortedList);
+                keyOutput.flush();
+                keyOutput.close();
             } catch (IOException e) {
                 e.printStackTrace();
                 throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");

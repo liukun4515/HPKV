@@ -14,6 +14,7 @@ public class FileResources {
     private String path;
     private static final int NUMBER_OF_FILES = 128;
     private File[] files;
+    private File keyFile;
 
     public int getNumberOfFiles() {
         return NUMBER_OF_FILES;
@@ -27,11 +28,15 @@ public class FileResources {
 
     private void createFile() throws EngineException {
         try {
+            // 创建KeyValueFile
             for (int i = 0; i < NUMBER_OF_FILES; i++) {
                 String name = "/KV_" + Integer.toString(i) + ".map";
                 files[i] = new File(path + name);
                 final boolean newFile = files[i].createNewFile();
             }
+            // 创建KeyFile
+            keyFile = new File("K.list");
+            final boolean newFile = keyFile.createNewFile();
         } catch (IOException e) {
             e.printStackTrace();
             throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
@@ -49,6 +54,10 @@ public class FileResources {
             throw new EngineException(RetCodeEnum.INVALID_ARGUMENT,
                     "INVALID_ARGUMENT");
         }
+    }
+
+    public File getKeyFile() {
+        return keyFile;
     }
 
     public void close() {

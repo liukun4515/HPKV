@@ -2,7 +2,9 @@ package cn.wangxinshuo.hpkv;
 
 import cn.wangxinshuo.hpkv.cache.FileCache;
 import cn.wangxinshuo.hpkv.file.FileResources;
+import cn.wangxinshuo.hpkv.range.key.SortedList;
 import cn.wangxinshuo.hpkv.util.ByteArrayToUnsignedLong;
+import cn.wangxinshuo.hpkv.util.UnsignedLongToByteArray;
 import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
 import com.alibabacloud.polar_race.engine.common.exceptions.RetCodeEnum;
 import com.google.common.primitives.UnsignedLong;
@@ -13,6 +15,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 
 /**
  * @author wszgr
@@ -26,19 +29,21 @@ public class Select {
     private ArrayList<FileCache> fileCaches;
     private final int FILE_CACHE_LEN = 128;
     private HashMap<UnsignedLong, byte[]> map;
+    private SortedList sortedList;
 
     private Select(FileResources resources) {
         this.resources = resources;
         fileCaches = new ArrayList<FileCache>(FILE_CACHE_LEN);
     }
 
-    public Select(FileResources resources, HashMap<UnsignedLong, byte[]> map) {
+    public Select(FileResources resources,
+                  HashMap<UnsignedLong, byte[]> map, SortedList sortedList) {
         this(resources);
+        this.sortedList = sortedList;
         this.map = map;
     }
 
-    public byte[] get(byte[] inKey) throws EngineException {
-        UnsignedLong key = ByteArrayToUnsignedLong.getKey(inKey);
+    public byte[] get(UnsignedLong key) throws EngineException {
         // 去MemTable中查找，由于map初始化的时候log文件就已经写入，
         // 所以不需要再去Log文件里面查找
         if (map.containsKey(key)) {
@@ -81,5 +86,20 @@ public class Select {
             }
         }
         throw new EngineException(RetCodeEnum.NOT_FOUND, "NOT_FOUND");
+    }
+
+    public byte[] get(byte[] inKey) throws EngineException {
+        UnsignedLong key = ByteArrayToUnsignedLong.getKey(inKey);
+        return get(key);
+    }
+
+    public HashMap<byte[], byte[]> range(byte[] start, byte[] end) throws EngineException {
+        HashMap<byte[], byte[]> rangeMap = new HashMap<byte[], byte[]>();
+        LinkedList<UnsignedLong> list = sortedList.get(start, end);
+        for (UnsignedLong key :
+                list) {
+            rangeMap.put(UnsignedLongToByteArray.getKey(key), get(key));
+        }
+        return rangeMap;
     }
 }
