@@ -68,7 +68,7 @@ public class Store {
                 // 将key持久化到文件
                 OutputStream keyOutput =
                         new FileOutputStream(resources.getKeyFile());
-                byte[] serializeSortedList = SerializationUtils.serialize(sortedList);
+                byte[] serializeSortedList = SerializationUtils.serialize(sortedList.getLinkedList());
                 keyOutput.write(serializeSortedList);
                 keyOutput.flush();
                 keyOutput.close();

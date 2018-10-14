@@ -30,7 +30,7 @@ public class Test04 {
 
     @Test
     public void test01() {
-        int runTimes = 1000000;
+        int runTimes = 10000;
         EngineRace engineRace = new EngineRace();
         // 存
         try {

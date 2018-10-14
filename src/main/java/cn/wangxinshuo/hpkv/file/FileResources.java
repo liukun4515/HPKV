@@ -35,7 +35,7 @@ public class FileResources {
                 final boolean newFile = files[i].createNewFile();
             }
             // 创建KeyFile
-            keyFile = new File("K.list");
+            keyFile = new File(path + "/K.list");
             final boolean newFile = keyFile.createNewFile();
         } catch (IOException e) {
             e.printStackTrace();

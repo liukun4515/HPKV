@@ -4,15 +4,18 @@ package cn.wangxinshuo.hpkv.range.key;
 import cn.wangxinshuo.hpkv.util.ByteArrayToUnsignedLong;
 import com.google.common.primitives.UnsignedLong;
 
-import java.io.Serializable;
 import java.util.Collections;
 import java.util.LinkedList;
 
 /**
  * @author wszgr
  */
-public class SortedList implements Serializable {
+public class SortedList {
     private LinkedList<UnsignedLong> linkedList;
+
+    public SortedList(LinkedList<UnsignedLong> list) {
+        this.linkedList = list;
+    }
 
     public SortedList() {
         linkedList = new LinkedList<UnsignedLong>();
@@ -42,5 +45,9 @@ public class SortedList implements Serializable {
             }
         }
         return result;
+    }
+
+    public LinkedList<UnsignedLong> getLinkedList() {
+        return linkedList;
     }
 }
