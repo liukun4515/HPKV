@@ -27,7 +27,7 @@ public class EngineRace extends AbstractEngine {
         resources = new FileResources(path);
         log = new Log(path);
         map = log.deserializeFromFile();
-        sortedList = new SortedList();
+        sortedList = new SortedList(resources.getSortedList());
         store = new Store(resources, log, map, sortedList);
         select = new Select(resources, map, sortedList);
     }
@@ -73,6 +73,7 @@ public class EngineRace extends AbstractEngine {
         try {
             log.close();
             map.clear();
+            sortedList.close();
             resources.close();
         } catch (EngineException e) {
             e.printStackTrace();

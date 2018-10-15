@@ -10,9 +10,9 @@ import com.google.common.io.Files;
 import com.google.common.primitives.UnsignedLong;
 import org.apache.commons.lang3.SerializationUtils;
 
+import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.io.RandomAccessFile;
 import java.util.HashMap;
 import java.util.Random;
@@ -38,7 +38,7 @@ public class Store {
         this.sortedList = sortedList;
     }
 
-    public void put(byte[] inKey, byte[] inValue) throws EngineException {
+    public synchronized void put(byte[] inKey, byte[] inValue) throws EngineException {
         UnsignedLong key = ByteArrayToUnsignedLong.getKey(inKey);
         // 首先判断状态
         if (map.size() >= log.getKeyValueNumberInLogFile()) {
@@ -57,18 +57,25 @@ public class Store {
                     map.putAll(mapInFile);
                     System.out.println("重载后的Map大小为：" + map.size());
                 }
-                OutputStream outputStream =
-                        new FileOutputStream(
-                                resources.getWriteSources(fileIndex));
+                BufferedOutputStream outputStream =
+                        new BufferedOutputStream(
+                                new FileOutputStream(
+                                        resources.getWriteSources(fileIndex)));
                 byte[] afterInputObjectArray = SerializationUtils.serialize(map);
                 System.out.println("afterInputObjectArray: " + afterInputObjectArray.length);
                 outputStream.write(afterInputObjectArray);
                 outputStream.flush();
                 outputStream.close();
                 // 将key持久化到文件
-                OutputStream keyOutput =
-                        new FileOutputStream(resources.getKeyFile());
-                byte[] serializeSortedList = SerializationUtils.serialize(sortedList.getLinkedList());
+                BufferedOutputStream keyOutput =
+                        new BufferedOutputStream(
+                                new FileOutputStream(
+                                        resources.getKeyFile()));
+                // 将map里面的key持久化到文件中
+                sortedList.getLinkedList().addAll(map.keySet());
+                byte[] serializeSortedList =
+                        SerializationUtils.serialize(
+                                sortedList.getLinkedList());
                 keyOutput.write(serializeSortedList);
                 keyOutput.flush();
                 keyOutput.close();

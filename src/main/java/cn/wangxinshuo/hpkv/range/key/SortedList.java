@@ -14,10 +14,14 @@ public class SortedList {
     private LinkedList<UnsignedLong> linkedList;
 
     public SortedList(LinkedList<UnsignedLong> list) {
-        this.linkedList = list;
+        if (list != null) {
+            this.linkedList = list;
+        } else {
+            linkedList = new LinkedList<UnsignedLong>();
+        }
     }
 
-    public SortedList() {
+    private SortedList() {
         linkedList = new LinkedList<UnsignedLong>();
         linkedList.clear();
     }
@@ -49,5 +53,8 @@ public class SortedList {
 
     public LinkedList<UnsignedLong> getLinkedList() {
         return linkedList;
+    }
+
+    public void close() {
     }
 }

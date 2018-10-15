@@ -23,14 +23,14 @@ public class Test04 {
     private static void print(byte[] arr) {
         for (byte val :
                 arr) {
-            System.out.print(val);
+            System.out.print(val + ",");
         }
         System.out.println();
     }
 
     @Test
     public void test01() {
-        int runTimes = 10000;
+        int runTimes = 1000000;
         EngineRace engineRace = new EngineRace();
         // 存
         try {

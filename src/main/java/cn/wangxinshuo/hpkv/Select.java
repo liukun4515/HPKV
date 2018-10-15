@@ -43,9 +43,9 @@ public class Select {
         this.map = map;
     }
 
-    public byte[] get(UnsignedLong key) throws EngineException {
-        // 去MemTable中查找，由于map初始化的时候log文件就已经写入，
-        // 所以不需要再去Log文件里面查找
+    private synchronized byte[] get(UnsignedLong key) throws EngineException {
+        // 去MemTable中查找，由于map初始化的时候log文件就已经写入map，
+        // 所以不需要再去log文件里面查找
         if (map.containsKey(key)) {
             System.out.println("从map中获得查询的数据！");
             return map.get(key);

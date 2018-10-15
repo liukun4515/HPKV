@@ -4,11 +4,14 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a83aecd-3add-470d-9b9b-09402338ece2" name="Default Changelist" comment="">
+    <list default="true" id="5a83aecd-3add-470d-9b9b-09402338ece2" name="Default Changelist" comment="C:\Users\wszgr\IdeaProjects\HPKV\src\test\java\cn\wangxinshuo\hpkv\level02\Test04.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Select.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Select.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Store.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/file/FileResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/file/FileResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/log/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/log/Log.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/range/key/SortedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/range/key/SortedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/EngineRace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/EngineRace.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/level02/Test04.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/level02/Test04.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -81,18 +84,18 @@
     <session id="1680737414">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.4" value="5" />
+          <entry key="project.open.time.4" value="7" />
           <entry key="project.open.time.5" value="5" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="bin" value="4" />
-          <entry key="class" value="16" />
-          <entry key="java" value="355" />
+          <entry key="class" value="18" />
+          <entry key="java" value="374" />
           <entry key="map" value="1" />
           <entry key="md" value="1" />
           <entry key="xml" value="4" />
@@ -100,8 +103,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="16" />
-          <entry key="JAVA" value="355" />
+          <entry key="CLASS" value="18" />
+          <entry key="JAVA" value="374" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="XML" value="4" />
@@ -110,22 +113,77 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="40" />
-          <entry key="java" value="19601" />
-          <entry key="txt" value="184" />
+          <entry key="java" value="20016" />
+          <entry key="txt" value="188" />
           <entry key="xml" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="19601" />
-          <entry key="PLAIN_TEXT" value="224" />
+          <entry key="JAVA" value="20016" />
+          <entry key="PLAIN_TEXT" value="228" />
           <entry key="XML" value="38" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/level02/Test04.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="41" column="45" lean-forward="true" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/file/FileResources.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Select.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Store.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="62">
+              <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/log/Log.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-496">
+              <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -193,15 +251,15 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/cache/FileCache.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/KeyEqual.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/cache/LogCache.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/log/Log.java" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/EngineRace.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Select.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/UnsignedLongToByteArray.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/EngineRace.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/range/key/SortedList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Select.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Store.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/level02/Test04.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/file/FileResources.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/range/key/SortedList.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Store.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/log/Log.java" />
       </list>
     </option>
   </component>
@@ -378,7 +436,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539529920738" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539562265847" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -521,7 +579,9 @@
       <workItem from="1539433386522" duration="2651000" />
       <workItem from="1539440861743" duration="3827000" />
       <workItem from="1539489739240" duration="9833000" />
-      <workItem from="1539523885372" duration="6274000" />
+      <workItem from="1539523885372" duration="6346000" />
+      <workItem from="1539530282414" duration="815000" />
+      <workItem from="1539559958452" duration="2329000" />
     </task>
     <task id="LOCAL-00001" summary="完成写入部分">
       <created>1539068236120</created>
@@ -628,22 +688,17 @@
       <option name="project" value="LOCAL" />
       <updated>1539529647951</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="添加新的接口，实现复赛的功能(2)">
+      <created>1539530180114</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1539530180114</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test04_test01 - 2018.10.14 at 13h 45m 30s.xml">
-      <configuration name="Test04.test01" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test04_test01 - 2018.10.14 at 13h 49m 53s.xml">
-      <configuration name="Test04.test01" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test04_test01 - 2018.10.14 at 14h 32m 53s.xml">
-      <configuration name="Test04.test01" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test04_test01 - 2018.10.14 at 14h 35m 10s.xml">
-      <configuration name="Test04.test01" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Test04_test01 - 2018.10.14 at 14h 41m 13s.xml">
       <configuration name="Test04.test01" configurationId="JUnit" />
     </history-entry>
@@ -662,9 +717,21 @@
     <history-entry file="Test04_test01 - 2018.10.14 at 23h 11m 42s.xml">
       <configuration name="Test04.test01" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Test04_test01 - 2018.10.14 at 23h 25m 55s.xml">
+      <configuration name="Test04.test01" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test04_test01 - 2018.10.14 at 23h 28m 19s.xml">
+      <configuration name="Test04.test01" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test04_test01 - 2018.10.14 at 23h 31m 26s.xml">
+      <configuration name="Test04.test01" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test04_test01 - 2018.10.15 at 08h 06m 31s.xml">
+      <configuration name="Test04.test01" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147016000" />
+    <option name="totallyTimeSpent" value="150232000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -678,7 +745,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.21055438" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21481876" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -696,7 +763,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="11" visible="true" weight="0.38720173" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="11" visible="true" weight="0.38611713" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -708,7 +775,7 @@
       <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21055438" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21268657" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -718,7 +785,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.3275488" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.36876357" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.36876357" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -726,7 +793,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.329718" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.38720173" />
+      <window_info anchor="bottom" id="Version Control" order="11" visible="true" weight="0.38678223" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -782,13 +849,12 @@
     <MESSAGE value="store:246445 ms" />
     <MESSAGE value="阶段二已经完成，转战阶段三" />
     <MESSAGE value="添加新的接口，实现复赛的功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加新的接口，实现复赛的功能" />
+    <MESSAGE value="添加新的接口，实现复赛的功能(2)" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加新的接口，实现复赛的功能(2)" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/KeyDataType.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/interfaces/KeyInterface.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/SortedList.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/exceptions/EngineException.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -962,13 +1028,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/cache/FileCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/cache/LogCache.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/nio/MappedByteBuffer.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -998,13 +1057,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/log/Log.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1019,10 +1071,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-608">
           <caret line="103" column="11" selection-start-line="103" selection-start-column="11" selection-end-line="103" selection-end-column="11" />
-          <folding>
-            <element signature="e#3709#3710#0" expanded="true" />
-            <element signature="e#3746#3747#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1040,16 +1088,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Select.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="102" column="9" lean-forward="true" selection-start-line="102" selection-start-column="9" selection-end-line="102" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/UnsignedLongToByteArray.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -1057,10 +1095,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/range/key/SortedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-92">
+          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/EngineRace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+        <state relative-caret-position="124">
+          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/cache/FileCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#531#532#0" expanded="true" />
+            <element signature="e#585#586#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/test-classes/cn/wangxinshuo/hpkv/level02/Test04.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-186">
+          <folding>
+            <element signature="e#0#1643#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/cn/wangxinshuo/hpkv/Select.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2046">
+          <folding>
+            <element signature="e#0#4043#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Select.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Store.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1070,44 +1172,21 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/file/FileResources.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
-          <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
-          <folding>
-            <element signature="e#1709#1710#0" expanded="true" />
-            <element signature="e#1739#1740#0" expanded="true" />
-          </folding>
+          <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/range/key/SortedList.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/log/Log.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#419#420#0" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
-            <element signature="e#1381#1382#0" expanded="true" />
-            <element signature="e#1414#1415#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Store.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="73" column="34" lean-forward="true" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-496">
+          <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/level02/Test04.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+        <state relative-caret-position="374">
+          <caret line="41" column="45" lean-forward="true" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

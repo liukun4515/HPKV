@@ -2,9 +2,14 @@ package cn.wangxinshuo.hpkv.file;
 
 import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
 import com.alibabacloud.polar_race.engine.common.exceptions.RetCodeEnum;
+import com.google.common.primitives.UnsignedLong;
+import org.apache.commons.lang3.SerializationUtils;
 
+import java.io.BufferedInputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.LinkedList;
 
 /**
  * 总数据量大概260GB左右
@@ -12,7 +17,7 @@ import java.io.IOException;
  */
 public class FileResources {
     private String path;
-    private static final int NUMBER_OF_FILES = 128;
+    private static final int NUMBER_OF_FILES = 256;
     private File[] files;
     private File keyFile;
 
@@ -58,6 +63,27 @@ public class FileResources {
 
     public File getKeyFile() {
         return keyFile;
+    }
+
+    /**
+     * 此函数不符合设计理念，但实用
+     */
+    public LinkedList<UnsignedLong> getSortedList() throws EngineException {
+        try {
+            BufferedInputStream stream =
+                    new BufferedInputStream(
+                            new FileInputStream(
+                                    this.getKeyFile()));
+            if (stream.available() > 0) {
+                return SerializationUtils.deserialize(stream);
+            } else {
+                return null;
+            }
+        } catch (IOException e) {
+            e.fillInStackTrace();
+            throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
+        }
+
     }
 
     public void close() {
