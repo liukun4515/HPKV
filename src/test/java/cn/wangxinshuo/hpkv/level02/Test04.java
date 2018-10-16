@@ -40,6 +40,8 @@ public class Test04 {
                 byte[] key = getKey();
                 byte[] value = getValue();
                 engineRace.write(key, value);
+                // print(key);
+                // System.exit(0);
             }
             System.out.println("store:" + TimeUnit.NANOSECONDS.toMillis(
                     System.nanoTime() - start) + " ms");
@@ -50,6 +52,17 @@ public class Test04 {
 
     @Test
     public void test02() {
-
+        EngineRace engineRace = new EngineRace();
+        byte[] key = {-53, 79, -54, -97, -2, -71, -94, -65};
+        try {
+            engineRace.open("./data");
+            long start = System.nanoTime();
+            byte[] value = engineRace.read(key);
+            System.out.println("store:" + TimeUnit.NANOSECONDS.toMillis(
+                    System.nanoTime() - start) + " ms");
+            print(value);
+        } catch (EngineException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -13,7 +13,6 @@ import org.apache.commons.lang3.SerializationUtils;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 
@@ -26,14 +25,18 @@ public class Select {
      * 利用LRU缓存淘汰算法来进行缓存
      * LRU:Least Recently Used
      */
-    private ArrayList<FileCache> fileCaches;
+    private LinkedList<FileCache> fileCaches;
+    /**
+     * FILE_CACHE_LEN 数量需要控制，单文件
+     * 的大小最后会在1~2GB左右，所以不能占用太多内存
+     */
     private final int FILE_CACHE_LEN = 128;
     private HashMap<UnsignedLong, byte[]> map;
     private SortedList sortedList;
 
     private Select(FileResources resources) {
+        fileCaches = new LinkedList<FileCache>();
         this.resources = resources;
-        fileCaches = new ArrayList<FileCache>(FILE_CACHE_LEN);
     }
 
     public Select(FileResources resources,
@@ -50,15 +53,13 @@ public class Select {
             System.out.println("从map中获得查询的数据！");
             return map.get(key);
         }
-        // 从文件缓存中查找
-        for (FileCache aLruList : fileCaches) {
-            HashMap<UnsignedLong, byte[]> map = aLruList.getData();
+        // 去FileCache中查找
+        for (FileCache cache :
+                fileCaches) {
+            HashMap<UnsignedLong, byte[]> map =
+                    cache.getData();
             if (map.containsKey(key)) {
-                byte[] value = map.get(key);
-                fileCaches.remove(aLruList);
-                fileCaches.add(0, aLruList);
-                System.out.println("从文件缓存中获得查询的数据！");
-                return value;
+                return map.get(key);
             }
         }
         // 去文件中查找
@@ -73,11 +74,11 @@ public class Select {
                     HashMap<UnsignedLong, byte[]> map =
                             SerializationUtils.deserialize(serializedArray);
                     if (map.containsKey(key)) {
-                        if (map.size() == FILE_CACHE_LEN) {
-                            fileCaches.remove(FILE_CACHE_LEN);
+                        // 加入Cache
+                        if (fileCaches.size() >= this.FILE_CACHE_LEN) {
+                            fileCaches.removeLast();
                         }
-                        System.out.println("从序列化后的Map中获得查询的数据！");
-                        fileCaches.add(0, new FileCache(i, map));
+                        fileCaches.addFirst(new FileCache(i, map));
                         return map.get(key);
                     }
                 }
@@ -101,5 +102,9 @@ public class Select {
             rangeMap.put(UnsignedLongToByteArray.getKey(key), get(key));
         }
         return rangeMap;
+    }
+
+    public int getFileCacheLen() {
+        return FILE_CACHE_LEN;
     }
 }
