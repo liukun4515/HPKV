@@ -46,7 +46,7 @@ public class Test01 {
 
                 }
             });
-            System.out.println("store:" + TimeUnit.NANOSECONDS.toMillis(
+            System.out.println("select:" + TimeUnit.NANOSECONDS.toMillis(
                     System.nanoTime() - startTime) + " ms");
         } catch (EngineException e) {
             e.printStackTrace();

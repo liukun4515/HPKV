@@ -17,7 +17,7 @@ import java.util.HashMap;
 public class Log {
     private String path;
     private String mode;
-    private final int KV_NUMBER = 16384;
+    public static final int KV_NUMBER = 16384;
     private volatile RandomAccessFile randomAccessFile;
 
     public Log(String path) throws EngineException {

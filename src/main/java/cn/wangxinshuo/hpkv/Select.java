@@ -3,6 +3,7 @@ package cn.wangxinshuo.hpkv;
 import cn.wangxinshuo.hpkv.cache.FileCache;
 import cn.wangxinshuo.hpkv.desrialize.DeserializeFromFile;
 import cn.wangxinshuo.hpkv.key.Key;
+import cn.wangxinshuo.hpkv.log.Log;
 import cn.wangxinshuo.hpkv.resources.DatabaseResources;
 import cn.wangxinshuo.hpkv.resources.IndexResources;
 import cn.wangxinshuo.hpkv.util.KeyCompare;
@@ -35,36 +36,73 @@ public class Select {
     }
 
     public synchronized byte[] get(byte[] inKey) throws EngineException {
-        // 去MemTable中查找，由于map初始化的时候log文件就已经写入map，
-        // 所以不需要再去log文件里面查找
         Key key = new Key(inKey);
-        if (map.containsKey(key)) {
-            return map.get(key);
-        }
-        // 去FileCache中查找
-        for (FileCache cache :
-                fileCaches) {
-            HashMap<Key, byte[]> mapInFileCache =
-                    cache.getData();
-            if (mapInFileCache.containsKey(key)) {
-                fileCaches.remove(cache);
-                fileCaches.addFirst(cache);
-                return mapInFileCache.get(key);
-            }
-            mapInFileCache.clear();
-        }
         // 去文件中查找
         for (int i = 0; i < databaseResources.getNumberOfFiles(); i++) {
-            HashMap<Key, byte[]> mapInFileResources =
-                    DeserializeFromFile.deserializeFromFile(
-                            databaseResources, i, true);
-            if (mapInFileResources != null && mapInFileResources.containsKey(key)) {
-                // 加入Cache
-                fileCaches.addFirst(new FileCache(i, mapInFileResources));
-                return mapInFileResources.get(key);
+            byte[] value = getFromFile(i, inKey);
+            if (value != null) {
+                return value;
             }
         }
         throw new EngineException(RetCodeEnum.NOT_FOUND, "NOT_FOUND");
+    }
+
+    private synchronized byte[] getFromMap(byte[] inKey) {
+        // 去MemTable中查找，由于map初始化的时候log文件就已经写入map，
+        // 所以不需要再去log文件里面查找
+        Key key = null;
+        try {
+            key = new Key(inKey);
+        } catch (EngineException e) {
+            e.printStackTrace();
+        }
+        if (map.containsKey(key)) {
+            return map.get(key);
+        }
+        return null;
+    }
+
+    private synchronized byte[] getFromCache(byte[] inKey) {
+        Key key = null;
+        try {
+            key = new Key(inKey);
+            // 去FileCache中查找
+            for (FileCache cache :
+                    fileCaches) {
+                HashMap<Key, byte[]> mapAlreadyExist =
+                        cache.getData();
+                if (mapAlreadyExist.containsKey(key)) {
+                    if (fileCaches.size() > 0) {
+                        fileCaches.removeLast();
+                    }
+                    fileCaches.addFirst(cache);
+                    return mapAlreadyExist.get(key);
+                }
+            }
+        } catch (EngineException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private synchronized byte[] getFromFile(int fileIndex, byte[] inKey) {
+        try {
+            Key key = new Key(inKey);
+            HashMap<Key, byte[]> mapAlreadyExist =
+                    DeserializeFromFile.deserializeFromFile(
+                            databaseResources, fileIndex, true);
+            if (mapAlreadyExist != null && mapAlreadyExist.containsKey(key)) {
+                // 加入Cache
+                if (fileCaches.size() > 0) {
+                    fileCaches.removeLast();
+                }
+                fileCaches.addFirst(new FileCache(fileIndex, mapAlreadyExist));
+                return mapAlreadyExist.get(key);
+            }
+        } catch (EngineException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public HashMap<Key, byte[]> range(byte[] start,
@@ -73,10 +111,22 @@ public class Select {
                 new HashMap<Key, byte[]>();
         int indexLength = indexResources.getIndexLength();
         for (int i = 0; i < indexResources.getIndexFileLength(); i += indexLength) {
+            System.out.println("第：" + i + "个Key");
             byte[] key = indexResources.read(i);
             if (KeyCompare.compare(start, key) >= 0) {
                 if (KeyCompare.compare(key, end) >= 0) {
-                    rangeMap.put(new Key(key), get(key));
+                    int index = (i / Log.KV_NUMBER) % databaseResources.getNumberOfFiles();
+                    byte[] value = getFromMap(key);
+                    if (value == null) {
+                        value = getFromCache(key);
+                        if (value == null) {
+                            value = getFromFile(index, key);
+                            if (value == null) {
+                                value = get(key);
+                            }
+                        }
+                    }
+                    rangeMap.put(new Key(key), value);
                 }
             }
         }
