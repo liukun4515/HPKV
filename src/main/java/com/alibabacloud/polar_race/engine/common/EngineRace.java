@@ -2,6 +2,7 @@ package com.alibabacloud.polar_race.engine.common;
 
 import cn.wangxinshuo.hpkv.Select;
 import cn.wangxinshuo.hpkv.Store;
+import cn.wangxinshuo.hpkv.key.Key;
 import cn.wangxinshuo.hpkv.log.Log;
 import cn.wangxinshuo.hpkv.resources.DatabaseResources;
 import cn.wangxinshuo.hpkv.resources.IndexResources;
@@ -14,7 +15,7 @@ import java.util.HashMap;
  * @author wszgr
  */
 public class EngineRace extends AbstractEngine {
-    private volatile HashMap<byte[], byte[]> map;
+    private volatile HashMap<Key, byte[]> map;
     private DatabaseResources databaseResources;
     private IndexResources indexResources;
     private Select select;
@@ -60,11 +61,12 @@ public class EngineRace extends AbstractEngine {
 
     @Override
     public void range(byte[] lower, byte[] upper, AbstractVisitor visitor) throws EngineException {
-        HashMap<byte[], byte[]> rangeMap = select.range(lower, upper);
-        for (byte[] key :
+        HashMap<Key, byte[]> rangeMap = select.range(lower, upper);
+        for (Key key :
                 rangeMap.keySet()) {
-            visitor.visit(key, rangeMap.get(key));
+            visitor.visit(key.getData(), rangeMap.get(key));
         }
+        rangeMap.clear();
     }
 
     @Override

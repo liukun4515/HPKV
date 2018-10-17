@@ -1,6 +1,7 @@
 package cn.wangxinshuo.hpkv;
 
 import cn.wangxinshuo.hpkv.desrialize.DeserializeFromFile;
+import cn.wangxinshuo.hpkv.key.Key;
 import cn.wangxinshuo.hpkv.log.Log;
 import cn.wangxinshuo.hpkv.resources.DatabaseResources;
 import cn.wangxinshuo.hpkv.resources.IndexResources;
@@ -15,15 +16,16 @@ import java.util.HashMap;
 public class Store {
     private DatabaseResources databaseResources;
     private IndexResources indexResources;
-    private HashMap<byte[], byte[]> map;
+    private HashMap<Key, byte[]> map;
     private int fileIndex;
     private Log log;
 
     public Store(DatabaseResources databaseResources,
                  IndexResources indexResources,
-                 Log log, HashMap<byte[], byte[]> map) {
+                 Log log, HashMap<Key, byte[]> map) {
         this.databaseResources = databaseResources;
         this.indexResources = indexResources;
+        fileIndex = 0;
         this.log = log;
         this.map = map;
     }
@@ -31,8 +33,9 @@ public class Store {
     private int getFileIndex() {
         if (fileIndex == databaseResources.getNumberOfFiles()) {
             fileIndex = 0;
+            return fileIndex;
         }
-        return ++fileIndex;
+        return fileIndex++;
     }
 
     public synchronized void put(byte[] key, byte[] value) throws EngineException {
@@ -40,19 +43,20 @@ public class Store {
         if (map.size() >= log.getKeyValueNumberInLogFile()) {
             // 为可以持久化到文件的状态
             int fileIndex = getFileIndex();
-            // 将map持久化到文件并清空
-            HashMap<byte[], byte[]> mapInFile =
+            // 将map持久化到文件
+            HashMap<Key, byte[]> mapInFile =
                     DeserializeFromFile.deserializeFromFile(
                             databaseResources, fileIndex, true);
             if (mapInFile != null) {
                 map.putAll(mapInFile);
+                mapInFile.clear();
             }
             System.out.println("MapSzie:" + map.size());
             SerializeToFile.serializeToFile(databaseResources, fileIndex, map);
             // 将map里面的key持久化到文件中
-            for (byte[] eachKey :
+            for (Key eachKey :
                     map.keySet()) {
-                indexResources.write(eachKey);
+                indexResources.write(eachKey.getData());
             }
             // 清场
             log.eraseLog();
@@ -62,6 +66,6 @@ public class Store {
         log.write(key);
         log.write(value);
         // 放入MemTable
-        map.put(key, value);
+        map.put(new Key(key), value);
     }
 }

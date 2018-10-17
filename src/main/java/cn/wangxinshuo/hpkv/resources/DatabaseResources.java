@@ -39,7 +39,7 @@ public class DatabaseResources {
         }
     }
 
-    public File getReSources(int index) throws EngineException {
+    public File getResources(int index) throws EngineException {
         if (index < NUMBER_OF_FILES) {
             return files[index];
         } else {

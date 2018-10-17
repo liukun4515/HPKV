@@ -34,8 +34,8 @@ public class Test01 {
 
     @Test
     public void test02() {
+        byte[] start = {0, 0, 0, 0, 0, 0, 0, 0};
         byte[] end = {-128, -128, -128, -128, -128, -128, -128, -128};
-        byte[] start = {127, 127, 127, 127, 127, 127, 127, 127};
         EngineRace engineRace = new EngineRace();
         try {
             engineRace.open("D:\\HPKV");

@@ -1,5 +1,6 @@
 package cn.wangxinshuo.hpkv.log;
 
+import cn.wangxinshuo.hpkv.key.Key;
 import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
 import com.alibabacloud.polar_race.engine.common.exceptions.RetCodeEnum;
 
@@ -14,13 +15,13 @@ import java.util.HashMap;
  * @author wszgr
  */
 public class Log {
-    private String logPath;
+    private String path;
     private String mode;
     private final int KV_NUMBER = 16384;
     private volatile RandomAccessFile randomAccessFile;
 
     public Log(String path) throws EngineException {
-        logPath = path;
+        this.path = path;
         mode = "rws";
         randomAccessFile = null;
         initResources();
@@ -39,7 +40,7 @@ public class Log {
      * 只有在新生成log的时候才调用此函数
      */
     private void initResources() throws EngineException {
-        String logFileName = logPath + "/log.bin";
+        String logFileName = path + "/log.bin";
         File file = new File(logFileName);
         try {
             if (!file.exists()) {
@@ -52,9 +53,9 @@ public class Log {
         }
     }
 
-    public HashMap<byte[], byte[]> deserializeFromFile() throws EngineException {
-        HashMap<byte[], byte[]> map =
-                new HashMap<byte[], byte[]>(KV_NUMBER);
+    public HashMap<Key, byte[]> deserializeFromFile() throws EngineException {
+        HashMap<Key, byte[]> map =
+                new HashMap<Key, byte[]>(KV_NUMBER);
         try {
             if (randomAccessFile.length() == 0) {
                 return map;
@@ -70,7 +71,7 @@ public class Log {
                 for (int i = 0; i < bytesInFile / singleKeyValueSize; i++) {
                     randomAccessFile.read(key);
                     randomAccessFile.read(value);
-                    map.put(key, value);
+                    map.put(new Key(key), value);
                 }
                 return map;
             }
@@ -81,7 +82,7 @@ public class Log {
     }
 
     public void eraseLog() throws EngineException {
-        File file = new File(logPath + "/log.bin");
+        File file = new File(path + "/log.bin");
         try {
             close();
             final boolean delete = file.delete();
@@ -103,11 +104,7 @@ public class Log {
         }
     }
 
-    public RandomAccessFile getRandomAccessFile() {
-        return randomAccessFile;
-    }
-
-    public void write(long offset, byte[] data) throws EngineException {
+    private void write(long offset, byte[] data) throws EngineException {
         try {
             this.randomAccessFile.seek(offset);
             randomAccessFile.write(data);

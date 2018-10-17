@@ -2,6 +2,7 @@ package cn.wangxinshuo.hpkv;
 
 import cn.wangxinshuo.hpkv.cache.FileCache;
 import cn.wangxinshuo.hpkv.desrialize.DeserializeFromFile;
+import cn.wangxinshuo.hpkv.key.Key;
 import cn.wangxinshuo.hpkv.resources.DatabaseResources;
 import cn.wangxinshuo.hpkv.resources.IndexResources;
 import cn.wangxinshuo.hpkv.util.KeyCompare;
@@ -22,38 +23,39 @@ public class Select {
      * LRU:Least Recently Used
      */
     private LinkedList<FileCache> fileCaches;
-    private HashMap<byte[], byte[]> map;
+    private HashMap<Key, byte[]> map;
 
     public Select(DatabaseResources databaseResources,
                   IndexResources indexResources,
-                  HashMap<byte[], byte[]> map) {
+                  HashMap<Key, byte[]> map) {
         fileCaches = new LinkedList<FileCache>();
         this.databaseResources = databaseResources;
         this.indexResources = indexResources;
         this.map = map;
     }
 
-    public synchronized byte[] get(byte[] key) throws EngineException {
+    public synchronized byte[] get(byte[] inKey) throws EngineException {
         // 去MemTable中查找，由于map初始化的时候log文件就已经写入map，
         // 所以不需要再去log文件里面查找
+        Key key = new Key(inKey);
         if (map.containsKey(key)) {
-            System.out.println("从map中获得查询的数据！");
             return map.get(key);
         }
         // 去FileCache中查找
         for (FileCache cache :
                 fileCaches) {
-            HashMap<byte[], byte[]> mapInFileCache =
+            HashMap<Key, byte[]> mapInFileCache =
                     cache.getData();
             if (mapInFileCache.containsKey(key)) {
                 fileCaches.remove(cache);
                 fileCaches.addFirst(cache);
                 return mapInFileCache.get(key);
             }
+            mapInFileCache.clear();
         }
         // 去文件中查找
         for (int i = 0; i < databaseResources.getNumberOfFiles(); i++) {
-            HashMap<byte[], byte[]> mapInFileResources =
+            HashMap<Key, byte[]> mapInFileResources =
                     DeserializeFromFile.deserializeFromFile(
                             databaseResources, i, true);
             if (mapInFileResources != null && mapInFileResources.containsKey(key)) {
@@ -65,21 +67,19 @@ public class Select {
         throw new EngineException(RetCodeEnum.NOT_FOUND, "NOT_FOUND");
     }
 
-    public HashMap<byte[], byte[]> range(byte[] start,
-                                         byte[] end) throws EngineException {
-        HashMap<byte[], byte[]> rangeMap =
-                new HashMap<byte[], byte[]>();
+    public HashMap<Key, byte[]> range(byte[] start,
+                                      byte[] end) throws EngineException {
+        HashMap<Key, byte[]> rangeMap =
+                new HashMap<Key, byte[]>();
         int indexLength = indexResources.getIndexLength();
-        System.out.println("NumberOfKeys:" + indexResources.getIndexFileLength() / 8);
         for (int i = 0; i < indexResources.getIndexFileLength(); i += indexLength) {
-            byte[] key = indexResources.read(i, indexLength);
+            byte[] key = indexResources.read(i);
             if (KeyCompare.compare(start, key) >= 0) {
                 if (KeyCompare.compare(key, end) >= 0) {
-                    rangeMap.put(key, get(key));
+                    rangeMap.put(new Key(key), get(key));
                 }
             }
         }
-        System.out.println(rangeMap.size());
         return rangeMap;
     }
 }

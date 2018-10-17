@@ -1,6 +1,8 @@
 package cn.wangxinshuo.hpkv.cache;
 
 
+import cn.wangxinshuo.hpkv.key.Key;
+
 import java.util.HashMap;
 
 /**
@@ -8,14 +10,14 @@ import java.util.HashMap;
  */
 public class FileCache {
     private int fileIndex;
-    private HashMap<byte[], byte[]> map;
+    private HashMap<Key, byte[]> map;
 
-    public FileCache(int fileIndex, HashMap<byte[], byte[]> map) {
+    public FileCache(int fileIndex, HashMap<Key, byte[]> map) {
         this.fileIndex = fileIndex;
         this.map = map;
     }
 
-    public void add(byte[] key, byte[] value) {
+    public void add(Key key, byte[] value) {
         map.put(key, value);
     }
 
@@ -23,7 +25,7 @@ public class FileCache {
         return fileIndex;
     }
 
-    public HashMap<byte[], byte[]> getData() {
+    public HashMap<Key, byte[]> getData() {
         return map;
     }
 }

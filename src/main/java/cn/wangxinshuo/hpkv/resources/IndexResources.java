@@ -26,7 +26,7 @@ public class IndexResources {
         }
     }
 
-    public void write(long offset, byte[] data) throws EngineException {
+    private void write(long offset, byte[] data) throws EngineException {
         try {
             randomAccessFile.seek(offset);
             randomAccessFile.write(data);
@@ -42,10 +42,11 @@ public class IndexResources {
             write(offset, data);
         } catch (IOException e) {
             e.printStackTrace();
+            throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
         }
     }
 
-    public byte[] read(long offset, int length) throws EngineException {
+    private byte[] read(long offset, int length) throws EngineException {
         try {
             if (offset + length > randomAccessFile.length()) {
                 throw new EngineException(RetCodeEnum.INVALID_ARGUMENT, "INVALID_ARGUMENT");
@@ -58,6 +59,10 @@ public class IndexResources {
             e.printStackTrace();
             throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
         }
+    }
+
+    public byte[] read(long offset) throws EngineException {
+        return read(offset, indexLength);
     }
 
     public long getIndexFileLength() throws EngineException {
@@ -79,7 +84,12 @@ public class IndexResources {
         return indexLength;
     }
 
-    public void close() {
-
+    public void close() throws EngineException {
+        try {
+            randomAccessFile.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
+        }
     }
 }

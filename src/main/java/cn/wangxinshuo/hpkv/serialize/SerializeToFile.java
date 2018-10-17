@@ -1,5 +1,6 @@
 package cn.wangxinshuo.hpkv.serialize;
 
+import cn.wangxinshuo.hpkv.key.Key;
 import cn.wangxinshuo.hpkv.resources.DatabaseResources;
 import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
 import com.alibabacloud.polar_race.engine.common.exceptions.RetCodeEnum;
@@ -19,9 +20,8 @@ public final class SerializeToFile {
             throws EngineException {
         BufferedOutputStream stream = null;
         try {
-            stream = new BufferedOutputStream(
-                    new FileOutputStream(
-                            resources.getReSources(index)));
+            stream = new BufferedOutputStream(new FileOutputStream(
+                    resources.getResources(index)));
             stream.write(serializeArray);
             stream.flush();
         } catch (IOException e) {
@@ -39,7 +39,7 @@ public final class SerializeToFile {
     }
 
     public static void serializeToFile(DatabaseResources resources,
-                                       int index, HashMap<byte[], byte[]> map)
+                                       int index, HashMap<Key, byte[]> map)
             throws EngineException {
         byte[] serializeArray = SerializationUtils.serialize(map);
         serializeToFile(resources, index, serializeArray);
