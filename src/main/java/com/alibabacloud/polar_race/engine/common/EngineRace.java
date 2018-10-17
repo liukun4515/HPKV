@@ -2,8 +2,9 @@ package com.alibabacloud.polar_race.engine.common;
 
 import cn.wangxinshuo.hpkv.Select;
 import cn.wangxinshuo.hpkv.Store;
-import cn.wangxinshuo.hpkv.file.FileResources;
 import cn.wangxinshuo.hpkv.log.Log;
+import cn.wangxinshuo.hpkv.resources.DatabaseResources;
+import cn.wangxinshuo.hpkv.resources.IndexResources;
 import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
 import com.alibabacloud.polar_race.engine.common.exceptions.RetCodeEnum;
 
@@ -14,18 +15,20 @@ import java.util.HashMap;
  */
 public class EngineRace extends AbstractEngine {
     private volatile HashMap<byte[], byte[]> map;
-    private FileResources resources;
+    private DatabaseResources databaseResources;
+    private IndexResources indexResources;
     private Select select;
     private Store store;
     private Log log;
 
     @Override
     public void open(String path) throws EngineException {
-        resources = new FileResources(path);
+        databaseResources = new DatabaseResources(path);
+        indexResources = new IndexResources(path);
         log = new Log(path);
         map = log.deserializeFromFile();
-        store = new Store(resources, log, map);
-        select = new Select(resources, map);
+        store = new Store(databaseResources, indexResources, log, map);
+        select = new Select(databaseResources, indexResources, map);
     }
 
     @Override
@@ -69,7 +72,8 @@ public class EngineRace extends AbstractEngine {
         try {
             log.close();
             map.clear();
-            resources.close();
+            indexResources.close();
+            databaseResources.close();
         } catch (EngineException e) {
             e.printStackTrace();
         }

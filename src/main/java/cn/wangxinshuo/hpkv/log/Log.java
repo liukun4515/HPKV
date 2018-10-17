@@ -107,6 +107,36 @@ public class Log {
         return randomAccessFile;
     }
 
+    public void write(long offset, byte[] data) throws EngineException {
+        try {
+            this.randomAccessFile.seek(offset);
+            randomAccessFile.write(data);
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
+        }
+    }
+
+    public void write(byte[] data) throws EngineException {
+        long length = 0;
+        try {
+            length = randomAccessFile.length();
+            write(length, data);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void read(long offset, byte[] data) throws EngineException {
+        try {
+            this.randomAccessFile.seek(offset);
+            this.randomAccessFile.read(data);
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
+        }
+    }
+
     public void close() throws EngineException {
         try {
             this.randomAccessFile.close();
