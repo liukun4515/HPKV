@@ -1,6 +1,5 @@
 package cn.wangxinshuo.hpkv.cache;
 
-import com.google.common.primitives.UnsignedLong;
 
 import java.util.HashMap;
 
@@ -9,14 +8,14 @@ import java.util.HashMap;
  */
 public class FileCache {
     private int fileIndex;
-    private HashMap<UnsignedLong, byte[]> map;
+    private HashMap<byte[], byte[]> map;
 
-    public FileCache(int fileIndex, HashMap<UnsignedLong, byte[]> map) {
+    public FileCache(int fileIndex, HashMap<byte[], byte[]> map) {
         this.fileIndex = fileIndex;
         this.map = map;
     }
 
-    public void add(UnsignedLong key, byte[] value) {
+    public void add(byte[] key, byte[] value) {
         map.put(key, value);
     }
 
@@ -24,7 +23,7 @@ public class FileCache {
         return fileIndex;
     }
 
-    public HashMap<UnsignedLong, byte[]> getData() {
+    public HashMap<byte[], byte[]> getData() {
         return map;
     }
 }

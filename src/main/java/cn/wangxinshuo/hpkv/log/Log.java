@@ -1,9 +1,7 @@
 package cn.wangxinshuo.hpkv.log;
 
-import cn.wangxinshuo.hpkv.util.ByteArrayToUnsignedLong;
 import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
 import com.alibabacloud.polar_race.engine.common.exceptions.RetCodeEnum;
-import com.google.common.primitives.UnsignedLong;
 
 import java.io.File;
 import java.io.IOException;
@@ -40,7 +38,7 @@ public class Log {
     /**
      * 只有在新生成log的时候才调用此函数
      */
-    public void initResources() throws EngineException {
+    private void initResources() throws EngineException {
         String logFileName = logPath + "/log.bin";
         File file = new File(logFileName);
         try {
@@ -54,9 +52,9 @@ public class Log {
         }
     }
 
-    public HashMap<UnsignedLong, byte[]> deserializeFromFile() throws EngineException {
-        HashMap<UnsignedLong, byte[]> map =
-                new HashMap<UnsignedLong, byte[]>(KV_NUMBER);
+    public HashMap<byte[], byte[]> deserializeFromFile() throws EngineException {
+        HashMap<byte[], byte[]> map =
+                new HashMap<byte[], byte[]>(KV_NUMBER);
         try {
             if (randomAccessFile.length() == 0) {
                 return map;
@@ -72,7 +70,7 @@ public class Log {
                 for (int i = 0; i < bytesInFile / singleKeyValueSize; i++) {
                     randomAccessFile.read(key);
                     randomAccessFile.read(value);
-                    map.put(ByteArrayToUnsignedLong.getKey(key), value);
+                    map.put(key, value);
                 }
                 return map;
             }

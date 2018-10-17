@@ -4,10 +4,8 @@ import cn.wangxinshuo.hpkv.Select;
 import cn.wangxinshuo.hpkv.Store;
 import cn.wangxinshuo.hpkv.file.FileResources;
 import cn.wangxinshuo.hpkv.log.Log;
-import cn.wangxinshuo.hpkv.range.key.SortedList;
 import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
 import com.alibabacloud.polar_race.engine.common.exceptions.RetCodeEnum;
-import com.google.common.primitives.UnsignedLong;
 
 import java.util.HashMap;
 
@@ -15,9 +13,8 @@ import java.util.HashMap;
  * @author wszgr
  */
 public class EngineRace extends AbstractEngine {
-    private volatile HashMap<UnsignedLong, byte[]> map;
+    private volatile HashMap<byte[], byte[]> map;
     private FileResources resources;
-    private SortedList sortedList;
     private Select select;
     private Store store;
     private Log log;
@@ -27,9 +24,8 @@ public class EngineRace extends AbstractEngine {
         resources = new FileResources(path);
         log = new Log(path);
         map = log.deserializeFromFile();
-        sortedList = new SortedList(resources.getSortedList());
-        store = new Store(resources, log, map, sortedList);
-        select = new Select(resources, map, sortedList);
+        store = new Store(resources, log, map);
+        select = new Select(resources, map);
     }
 
     @Override
@@ -73,7 +69,6 @@ public class EngineRace extends AbstractEngine {
         try {
             log.close();
             map.clear();
-            sortedList.close();
             resources.close();
         } catch (EngineException e) {
             e.printStackTrace();

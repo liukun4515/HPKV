@@ -2,12 +2,9 @@ package cn.wangxinshuo.hpkv;
 
 import cn.wangxinshuo.hpkv.file.FileResources;
 import cn.wangxinshuo.hpkv.log.Log;
-import cn.wangxinshuo.hpkv.range.key.SortedList;
-import cn.wangxinshuo.hpkv.util.ByteArrayToUnsignedLong;
 import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
 import com.alibabacloud.polar_race.engine.common.exceptions.RetCodeEnum;
 import com.google.common.io.Files;
-import com.google.common.primitives.UnsignedLong;
 import org.apache.commons.lang3.SerializationUtils;
 
 import java.io.BufferedOutputStream;
@@ -22,66 +19,66 @@ import java.util.Random;
  */
 public class Store {
     private FileResources resources;
-    private HashMap<UnsignedLong, byte[]> map;
-    private SortedList sortedList;
+    private HashMap<byte[], byte[]> map;
     private Log log;
 
     private Store(FileResources resources) {
         this.resources = resources;
     }
 
-    public Store(FileResources resources, Log log,
-                 HashMap<UnsignedLong, byte[]> map, SortedList sortedList) {
+    public Store(FileResources resources, Log log, HashMap<byte[], byte[]> map) {
         this(resources);
         this.log = log;
         this.map = map;
-        this.sortedList = sortedList;
     }
 
-    public synchronized void put(byte[] inKey, byte[] inValue) throws EngineException {
-        UnsignedLong key = ByteArrayToUnsignedLong.getKey(inKey);
+    public synchronized void put(byte[] key, byte[] inValue) throws EngineException {
         // 首先判断状态
         if (map.size() >= log.getKeyValueNumberInLogFile()) {
-            System.out.println("进行数据持久化！");
             // 为可以持久化到文件的状态
             int fileIndex =
                     Math.abs(new Random().nextInt()) % resources.getNumberOfFiles();
+            BufferedOutputStream outputStream = null;
+            RandomAccessFile keyFile = null;
             try {
                 // 将map持久化到文件并清空
                 byte[] input = Files.toByteArray(resources.getReadSources(fileIndex));
                 System.out.println("InputStream大小为：" + input.length);
                 if (input.length > 0) {
-                    HashMap<UnsignedLong, byte[]> mapInFile =
+                    HashMap<byte[], byte[]> mapInFile =
                             SerializationUtils.deserialize(input);
                     System.out.println("文件中的Map大小为：" + mapInFile.size());
                     map.putAll(mapInFile);
                     System.out.println("重载后的Map大小为：" + map.size());
                 }
-                BufferedOutputStream outputStream =
-                        new BufferedOutputStream(
-                                new FileOutputStream(
-                                        resources.getWriteSources(fileIndex)));
+                outputStream = new BufferedOutputStream(
+                        new FileOutputStream(resources.getWriteSources(fileIndex)));
                 byte[] afterInputObjectArray = SerializationUtils.serialize(map);
                 System.out.println("afterInputObjectArray: " + afterInputObjectArray.length);
                 outputStream.write(afterInputObjectArray);
                 outputStream.flush();
-                outputStream.close();
-                // 将key持久化到文件
-                BufferedOutputStream keyOutput =
-                        new BufferedOutputStream(
-                                new FileOutputStream(
-                                        resources.getKeyFile()));
                 // 将map里面的key持久化到文件中
-                sortedList.getLinkedList().addAll(map.keySet());
-                byte[] serializeSortedList =
-                        SerializationUtils.serialize(
-                                sortedList.getLinkedList());
-                keyOutput.write(serializeSortedList);
-                keyOutput.flush();
-                keyOutput.close();
+                keyFile = new RandomAccessFile(
+                        resources.getKeyFile(), "rws");
+                keyFile.seek(keyFile.length());
+                for (byte[] eachKey :
+                        map.keySet()) {
+                    keyFile.write(eachKey);
+                }
             } catch (IOException e) {
                 e.printStackTrace();
                 throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
+            } finally {
+                try {
+                    if (outputStream != null) {
+                        outputStream.close();
+                    }
+                    if (keyFile != null) {
+                        keyFile.close();
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
             // 清场
             log.eraseLog();
@@ -93,7 +90,7 @@ public class Store {
         // 为不可以持久化到文件的状态
         try {
             logFile.seek(logFile.length());
-            logFile.write(inKey);
+            logFile.write(key);
             logFile.write(inValue);
         } catch (IOException e) {
             e.printStackTrace();
