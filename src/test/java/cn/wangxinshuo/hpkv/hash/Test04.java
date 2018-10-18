@@ -1,6 +1,6 @@
 package cn.wangxinshuo.hpkv.hash;
 
-import cn.wangxinshuo.hpkv.key.Key;
+import cn.wangxinshuo.hpkv.util.key.Key;
 import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
 import org.junit.Test;
 

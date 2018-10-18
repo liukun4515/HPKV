@@ -1,4 +1,4 @@
-package cn.wangxinshuo.hpkv.key;
+package cn.wangxinshuo.hpkv.util.key;
 
 import cn.wangxinshuo.hpkv.util.KeyCompare;
 import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;

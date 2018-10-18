@@ -1,7 +1,7 @@
 package cn.wangxinshuo.hpkv.cache;
 
 
-import cn.wangxinshuo.hpkv.key.Key;
+import cn.wangxinshuo.hpkv.util.key.Key;
 
 import java.util.HashMap;
 
