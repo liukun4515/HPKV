@@ -39,6 +39,10 @@ public class DatabaseResources {
         }
     }
 
+    public String getFileName(int index) {
+        return this.path + "/KV_" + Integer.toString(index) + ".map";
+    }
+
     public File getResources(int index) throws EngineException {
         if (index < NUMBER_OF_FILES) {
             return files[index];

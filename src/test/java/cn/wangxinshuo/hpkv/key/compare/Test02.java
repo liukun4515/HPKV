@@ -1,6 +1,6 @@
 package cn.wangxinshuo.hpkv.key.compare;
 
-import cn.wangxinshuo.hpkv.util.KeyCompare;
+import cn.wangxinshuo.hpkv.util.key.KeyCompare;
 import org.junit.Test;
 
 public class Test02 {

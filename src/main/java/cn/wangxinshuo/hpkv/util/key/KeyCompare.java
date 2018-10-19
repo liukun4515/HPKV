@@ -1,4 +1,4 @@
-package cn.wangxinshuo.hpkv.util;
+package cn.wangxinshuo.hpkv.util.key;
 
 import java.util.Arrays;
 
