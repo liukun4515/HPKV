@@ -1,16 +1,17 @@
 package cn.wangxinshuo.hpkv.util.tree;
 
-import cn.wangxinshuo.hpkv.util.key.Key;
+import java.io.File;
 
 /**
  * @author wszgr
  */
 public class Tree {
-    static {
-        System.loadLibrary("tree");
+
+    public void add(File file, byte[] key, byte[] data) {
+
     }
 
-    public native void add(String fileName, Key key, byte[] data);
-
-    public native byte[] get(String fileName, Key key);
+    public byte[] get(File file, byte[] key) {
+        return null;
+    }
 }
