@@ -10,7 +10,11 @@ public class Tree {
         System.loadLibrary("tree");
     }
 
-    public native void add(String fileName, Key key, byte[] data);
+    public void add(String fileName, Key key, byte[] data) {
 
-    public native byte[] get(String fileName, Key key);
+    }
+
+    public byte[] get(String fileName, Key key) {
+        return null;
+    }
 }
