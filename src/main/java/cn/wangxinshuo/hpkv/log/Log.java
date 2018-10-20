@@ -1,12 +1,14 @@
 package cn.wangxinshuo.hpkv.log;
 
-import cn.wangxinshuo.hpkv.util.key.Key;
+import cn.wangxinshuo.hpkv.key.Key;
 import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
 import com.alibabacloud.polar_race.engine.common.exceptions.RetCodeEnum;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.nio.MappedByteBuffer;
+import java.nio.channels.FileChannel;
 import java.util.HashMap;
 
 /**
@@ -106,6 +108,7 @@ public class Log {
 
     private void write(long offset, byte[] data) throws EngineException {
         try {
+
             this.randomAccessFile.seek(offset);
             randomAccessFile.write(data);
         } catch (IOException e) {
@@ -118,7 +121,12 @@ public class Log {
         long length = 0;
         try {
             length = randomAccessFile.length();
-            write(length, data);
+            MappedByteBuffer buffer =
+                    randomAccessFile.getChannel()
+                            .map(FileChannel.MapMode.
+                                    READ_WRITE, length, data.length);
+            buffer.put(data);
+            buffer.force();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -126,8 +134,11 @@ public class Log {
 
     public void read(long offset, byte[] data) throws EngineException {
         try {
-            this.randomAccessFile.seek(offset);
-            this.randomAccessFile.read(data);
+            MappedByteBuffer buffer =
+                    randomAccessFile.getChannel().
+                            map(FileChannel.MapMode.
+                                    READ_ONLY, offset, data.length);
+            buffer.get(data);
         } catch (IOException e) {
             e.printStackTrace();
             throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");

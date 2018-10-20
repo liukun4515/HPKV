@@ -1,6 +1,6 @@
 package cn.wangxinshuo.hpkv.util.tree;
 
-import cn.wangxinshuo.hpkv.util.key.Key;
+import cn.wangxinshuo.hpkv.key.Key;
 
 /**
  * @author wszgr
