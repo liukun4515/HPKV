@@ -1,20 +1,24 @@
 package cn.wangxinshuo.hpkv.util.tree;
 
 import cn.wangxinshuo.hpkv.key.Key;
+import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
+
+import java.io.File;
+import java.util.List;
 
 /**
- * @author wszgr
+ * @author 王新硕
  */
 public class Tree {
-    static {
-        System.loadLibrary("tree");
-    }
-
-    public void add(String fileName, Key key, byte[] data) {
+    public static void insert(File file, Key key, byte[] value) throws EngineException {
 
     }
 
-    public byte[] get(String fileName, Key key) {
+    public static byte[] select(File file, Key key) throws EngineException {
+        return null;
+    }
+
+    public static List<byte[]> selectAll(List<File> list) {
         return null;
     }
 }

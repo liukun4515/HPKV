@@ -1,14 +1,14 @@
 package cn.wangxinshuo.hpkv.log;
 
 import cn.wangxinshuo.hpkv.key.Key;
+import cn.wangxinshuo.hpkv.util.disk.ReadDisk;
+import cn.wangxinshuo.hpkv.util.disk.WriteDisk;
 import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
 import com.alibabacloud.polar_race.engine.common.exceptions.RetCodeEnum;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
-import java.nio.MappedByteBuffer;
-import java.nio.channels.FileChannel;
 import java.util.HashMap;
 
 /**
@@ -107,42 +107,23 @@ public class Log {
     }
 
     private void write(long offset, byte[] data) throws EngineException {
-        try {
-
-            this.randomAccessFile.seek(offset);
-            randomAccessFile.write(data);
-        } catch (IOException e) {
-            e.printStackTrace();
-            throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
-        }
+        WriteDisk.write(randomAccessFile, offset, data);
     }
 
     public void write(byte[] data) throws EngineException {
         long length = 0;
         try {
             length = randomAccessFile.length();
-            MappedByteBuffer buffer =
-                    randomAccessFile.getChannel()
-                            .map(FileChannel.MapMode.
-                                    READ_WRITE, length, data.length);
-            buffer.put(data);
-            buffer.force();
+            WriteDisk.write(randomAccessFile, length, data);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void read(long offset, byte[] data) throws EngineException {
-        try {
-            MappedByteBuffer buffer =
-                    randomAccessFile.getChannel().
-                            map(FileChannel.MapMode.
-                                    READ_ONLY, offset, data.length);
-            buffer.get(data);
-        } catch (IOException e) {
-            e.printStackTrace();
-            throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
-        }
+        System.arraycopy(
+                ReadDisk.read(randomAccessFile, offset, data.length),
+                0, data, 0, data.length);
     }
 
     public void close() throws EngineException {
