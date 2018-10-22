@@ -1,5 +1,6 @@
 package cn.wangxinshuo.hpkv.tree;
 
+import org.apache.commons.lang3.SerializationUtils;
 import org.junit.Test;
 
 import java.io.DataOutputStream;
@@ -21,6 +22,12 @@ public class Test01 {
 
     @Test
     public void test02() {
-        System.out.println(Configuration.getNumber());
+        System.out.println(Configuration.getNodeNumber());
+    }
+
+    @Test
+    public void test03() {
+        byte[] data = SerializationUtils.serialize(Long.MAX_VALUE);
+        System.out.println(data.length);
     }
 }

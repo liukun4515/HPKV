@@ -1,3 +1,5 @@
 {
-  "NodeNumber": "3"
+  "NodeNumber": 3,
+  "KeySize": 8,
+  "ValueSize": 4096
 }
