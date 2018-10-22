@@ -4,53 +4,60 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a83aecd-3add-470d-9b9b-09402338ece2" name="Default Changelist" comment="完善日志类功能，加快读写速度">
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/BIndexFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/BIndexMultiValueFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/BTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/BTreeCallback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/BTreeException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/FreeList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/Key.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/Paged.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/Settings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/Value.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/indexer/BTreeIndexer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/indexer/BasicIndexQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/indexer/ByteLikeIndexQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/indexer/IndexMatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/indexer/IndexQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/indexer/Indexer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/indexer/LikeIndexQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/utils/codec/Codec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/utils/codec/VariableByteCodec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/utils/collections/IntStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/utils/collections/LRUMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/utils/collections/ObservableLRUMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/utils/collections/longs/LongArrayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/utils/collections/longs/LongHash.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/utils/collections/longs/PurgeOptObservableLongLRUMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/utils/datetime/StopWatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/utils/io/FastBufferedInputStream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/utils/io/FastBufferedOutputStream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/utils/io/FastByteArrayInputStream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/utils/io/FastByteArrayOutputStream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/utils/io/FastMultiByteArrayOutputStream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/utils/io/FileUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/utils/io/IOUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/utils/lang/ArrayUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/utils/lang/DateTimeFormatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/utils/lang/HashUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/utils/lang/Primitives.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/utils/lang/PrintUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/btree4j/utils/lang/StringUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/b/plus/tree/AdelsonVelskyLandTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/ReadDisk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/WriteDisk.java" afterDir="false" />
+    <list default="true" id="5a83aecd-3add-470d-9b9b-09402338ece2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/BPlusTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/Configuration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/InternalNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/LeafNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/configuration.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/log/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/log/Log.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/tree/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/tree/Tree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/BIndexFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/BIndexMultiValueFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/BTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/BTreeCallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/BTreeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/FreeList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/Key.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/Paged.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/Settings.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/Value.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/indexer/BTreeIndexer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/indexer/BasicIndexQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/indexer/ByteLikeIndexQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/indexer/IndexMatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/indexer/IndexQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/indexer/Indexer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/indexer/LikeIndexQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/utils/codec/Codec.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/utils/codec/VariableByteCodec.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/utils/collections/IntStack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/utils/collections/LRUMap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/utils/collections/ObservableLRUMap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/utils/collections/longs/LongArrayList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/utils/collections/longs/LongHash.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/utils/collections/longs/PurgeOptObservableLongLRUMap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/utils/datetime/StopWatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/utils/io/FastBufferedInputStream.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/utils/io/FastBufferedOutputStream.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/utils/io/FastByteArrayInputStream.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/utils/io/FastByteArrayOutputStream.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/utils/io/FastMultiByteArrayOutputStream.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/utils/io/FileUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/utils/io/IOUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/utils/lang/ArrayUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/utils/lang/DateTimeFormatter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/utils/lang/HashUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/utils/lang/Primitives.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/utils/lang/PrintUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/btree4j/utils/lang/StringUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/b/plus/tree/AdelsonVelskyLandTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/Key.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/tree/Tree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/key/a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/value/a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/tree/Test01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/tree/Test01.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -78,47 +85,52 @@
     <session id="-2004513787">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.12" value="2" />
-          <entry key="project.open.time.13" value="3" />
+          <entry key="project.open.time.13" value="4" />
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="LICENSE" value="1" />
           <entry key="a" value="3" />
-          <entry key="java" value="48" />
+          <entry key="java" value="69" />
+          <entry key="json" value="1" />
           <entry key="md" value="2" />
-          <entry key="xml" value="3" />
+          <entry key="xml" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="48" />
+          <entry key="JAVA" value="69" />
+          <entry key="JSON" value="1" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="XML" value="3" />
+          <entry key="XML" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="12" />
-          <entry key="java" value="3011" />
+          <entry key="dummy" value="17" />
+          <entry key="java" value="4664" />
+          <entry key="json" value="16" />
           <entry key="md" value="3" />
-          <entry key="txt" value="42" />
-          <entry key="xml" value="169" />
+          <entry key="txt" value="55" />
+          <entry key="xml" value="203" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3011" />
+          <entry key="JAVA" value="4664" />
+          <entry key="JSON" value="16" />
           <entry key="Markdown" value="3" />
-          <entry key="PLAIN_TEXT" value="54" />
-          <entry key="XML" value="169" />
+          <entry key="PLAIN_TEXT" value="72" />
+          <entry key="XML" value="203" />
         </counts>
       </usages-collector>
     </session>
@@ -179,33 +191,63 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/b/plus/tree/AdelsonVelskyLandTree.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/BPlusTree.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="186">
-              <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/Node.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/Configuration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#435#436#0" expanded="true" />
-                <element signature="e#467#468#0" expanded="true" />
-                <element signature="e#957#958#0" expanded="true" />
-                <element signature="e#983#984#0" expanded="true" />
-                <element signature="e#226#227#0" expanded="true" />
-                <element signature="e#254#255#0" expanded="true" />
-                <element signature="e#296#297#0" expanded="true" />
-                <element signature="e#330#331#0" expanded="true" />
-                <element signature="e#360#361#0" expanded="true" />
-                <element signature="e#386#387#0" expanded="true" />
-                <element signature="e#424#425#0" expanded="true" />
-                <element signature="e#454#455#0" expanded="true" />
-                <element signature="e#173#174#0" expanded="true" />
-                <element signature="e#200#201#0" expanded="true" />
-                <element signature="e#238#239#0" expanded="true" />
-                <element signature="e#270#271#0" expanded="true" />
-                <element signature="e#300#301#0" expanded="true" />
-                <element signature="e#328#329#0" expanded="true" />
-                <element signature="e#368#369#0" expanded="true" />
-                <element signature="e#402#403#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/LeafNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/InternalNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/tree/Test01.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="19" column="19" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#428#429#0" expanded="true" />
+                <element signature="e#464#465#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -240,18 +282,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/Test03.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/Test02.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/LRU.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/level01/Test02.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/Cache.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/ByteArrayToInputStream.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/cache/Cache.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/cache/LogCache.java" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/range/key/SortedList.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/level02/Test04.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/KeyEqual.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/UnsignedLongToByteArray.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/ByteArrayToUnsignedLong.java" />
         <option value="$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/level03/Test05.java" />
@@ -276,21 +306,33 @@
         <option value="$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/all/Test01.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Select.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/b/plus/tree/BPlusTree.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/tree/BPlusTree.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/tree/Test01.java" />
         <option value="$PROJECT_DIR$/data/kv_0.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/resources/DatabaseResources.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/Key.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/require/check/RequireNotNull.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/WriteDisk.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/ReadDisk.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/log/Log.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/btree4j/BIndexFile.java" />
         <option value="$PROJECT_DIR$/src/main/java/btree4j/Value.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/tree/Tree.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/b/plus/tree/AVL.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/b/plus/tree/Node.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/b/plus/tree/AdelsonVelskyLandTree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/tree/AdelsonVelskyLandTree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/Key.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/tree/BPlusTree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/tree/InternalNode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/tree/AbstractNode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/tree/Node.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/tree/LeafAbstractNode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/tree/InternalAbstractNode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/tree/LeafNode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/LeafNode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/configuration.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/configuration.json" />
+        <option value="$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/tree/Test01.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/Configuration.java" />
       </list>
     </option>
   </component>
@@ -368,7 +410,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="wangxinshuo" type="462c0819:PsiDirectoryNode" />
+              <item name="hpkv" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HPKV" type="b2602c69:ProjectViewProjectNode" />
@@ -376,7 +418,16 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="wangxinshuo" type="462c0819:PsiDirectoryNode" />
+              <item name="hpkv" type="462c0819:PsiDirectoryNode" />
+              <item name="key" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HPKV" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HPKV" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hpkv" type="462c0819:PsiDirectoryNode" />
               <item name="tree" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -385,16 +436,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="wangxinshuo" type="462c0819:PsiDirectoryNode" />
-              <item name="hpkv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HPKV" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HPKV" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="wangxinshuo" type="462c0819:PsiDirectoryNode" />
               <item name="hpkv" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -403,18 +444,44 @@
               <item name="HPKV" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HPKV" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HPKV" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HPKV" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HPKV" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="wangxinshuo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HPKV" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HPKV" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="hpkv" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HPKV" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HPKV" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hpkv" type="462c0819:PsiDirectoryNode" />
               <item name="tree" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -423,7 +490,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540118457200" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540176656634" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -431,6 +498,9 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\王新硕\Documents\GitHub\HPKV\src\main\resources" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="cn.wangxinshuo.hpkv.key" />
     </key>
@@ -452,7 +522,37 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Test01.test02">
+  <component name="RunManager" selected="JUnit.Test01.test02 (1)">
+    <configuration name="Test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HPKV" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.wangxinshuo.hpkv.tree.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.wangxinshuo.hpkv.tree" />
+      <option name="MAIN_CLASS_NAME" value="cn.wangxinshuo.hpkv.tree.Test01" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test01.test01 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HPKV" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.wangxinshuo.hpkv.tree.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.wangxinshuo.hpkv.tree" />
+      <option name="MAIN_CLASS_NAME" value="cn.wangxinshuo.hpkv.tree.Test01" />
+      <option name="METHOD_NAME" value="test01" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test01.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HPKV" />
       <extension name="coverage">
@@ -464,6 +564,22 @@
       <option name="PACKAGE_NAME" value="cn.wangxinshuo.hpkv.all" />
       <option name="MAIN_CLASS_NAME" value="cn.wangxinshuo.hpkv.all.Test01" />
       <option name="METHOD_NAME" value="test01" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test01.test02 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HPKV" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.wangxinshuo.hpkv.tree.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.wangxinshuo.hpkv.tree" />
+      <option name="MAIN_CLASS_NAME" value="cn.wangxinshuo.hpkv.tree.Test01" />
+      <option name="METHOD_NAME" value="test02" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -485,68 +601,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test02.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HPKV" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.wangxinshuo.hpkv.key.compare.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cn.wangxinshuo.hpkv.key.compare" />
-      <option name="MAIN_CLASS_NAME" value="cn.wangxinshuo.hpkv.key.compare.Test02" />
-      <option name="METHOD_NAME" value="test01" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test03.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HPKV" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.wangxinshuo.hpkv.randomaccess.file.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cn.wangxinshuo.hpkv.randomaccess.file" />
-      <option name="MAIN_CLASS_NAME" value="cn.wangxinshuo.hpkv.randomaccess.file.Test03" />
-      <option name="METHOD_NAME" value="test01" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test04.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HPKV" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.wangxinshuo.hpkv.hash.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cn.wangxinshuo.hpkv.hash" />
-      <option name="MAIN_CLASS_NAME" value="cn.wangxinshuo.hpkv.hash.Test04" />
-      <option name="METHOD_NAME" value="test01" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="JUnit.Test01.test01" />
       <item itemvalue="JUnit.Test01.test02" />
-      <item itemvalue="JUnit.Test02.test01" />
-      <item itemvalue="JUnit.Test03.test01" />
-      <item itemvalue="JUnit.Test04.test01" />
+      <item itemvalue="JUnit.Test01.test01 (1)" />
+      <item itemvalue="JUnit.Test01" />
+      <item itemvalue="JUnit.Test01.test02 (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Test01.test02 (1)" />
+        <item itemvalue="JUnit.Test01.test01 (1)" />
+        <item itemvalue="JUnit.Test01" />
         <item itemvalue="JUnit.Test01.test02" />
         <item itemvalue="JUnit.Test01.test01" />
-        <item itemvalue="JUnit.Test04.test01" />
-        <item itemvalue="JUnit.Test03.test01" />
-        <item itemvalue="JUnit.Test02.test01" />
       </list>
     </recent_temporary>
   </component>
@@ -585,7 +653,9 @@
       <workItem from="1539868391340" duration="594000" />
       <workItem from="1539914440922" duration="483000" />
       <workItem from="1539920750369" duration="1420000" />
-      <workItem from="1540025735304" duration="13211000" />
+      <workItem from="1540025735304" duration="13371000" />
+      <workItem from="1540126120738" duration="5700000" />
+      <workItem from="1540173447739" duration="3030000" />
     </task>
     <task id="LOCAL-00001" summary="完成写入部分">
       <created>1539068236120</created>
@@ -769,43 +839,50 @@
       <option name="project" value="LOCAL" />
       <updated>1540027089479</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="自研AVL树">
+      <created>1540119231688</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1540119231688</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test01_test02 - 2018.10.17 at 14h 47m 32s.xml">
-      <configuration name="Test01.test02" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test01_test02 - 2018.10.17 at 14h 55m 06s.xml">
-      <configuration name="Test01.test02" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test01_test02 - 2018.10.17 at 14h 57m 34s.xml">
-      <configuration name="Test01.test02" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test01_test02 - 2018.10.17 at 15h 04m 48s.xml">
-      <configuration name="Test01.test02" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test01_test02 - 2018.10.17 at 15h 10m 30s.xml">
-      <configuration name="Test01.test02" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test01_test02 - 2018.10.17 at 15h 11m 20s.xml">
-      <configuration name="Test01.test02" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test01_test02 - 2018.10.17 at 15h 15m 21s.xml">
-      <configuration name="Test01.test02" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test01_test02 - 2018.10.17 at 15h 25m 33s.xml">
-      <configuration name="Test01.test02" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Test01_test02 - 2018.10.17 at 15h 28m 06s.xml">
       <configuration name="Test01.test02" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Test01_test02 - 2018.10.17 at 15h 33m 08s.xml">
       <configuration name="Test01.test02" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Test01_test01_(1) - 2018.10.21 at 21h 07m 08s.xml">
+      <configuration name="Test01.test01 (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test01_test01_(1) - 2018.10.21 at 21h 07m 33s.xml">
+      <configuration name="Test01.test01 (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test01 - 2018.10.21 at 21h 09m 09s.xml">
+      <configuration name="Test01" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test01_test01_(1) - 2018.10.21 at 21h 11m 26s.xml">
+      <configuration name="Test01.test01 (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test01_test02_(1) - 2018.10.22 at 10h 46m 35s.xml">
+      <configuration name="Test01.test02 (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test01_test02_(1) - 2018.10.22 at 10h 47m 51s.xml">
+      <configuration name="Test01.test02 (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test01_test02_(1) - 2018.10.22 at 10h 48m 25s.xml">
+      <configuration name="Test01.test02 (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test01_test02_(1) - 2018.10.22 at 10h 50m 11s.xml">
+      <configuration name="Test01.test02 (1)" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227755000" />
+    <option name="totallyTimeSpent" value="236645000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -818,27 +895,28 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21108742" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2153518" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.329718" />
       <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49946696" weight="0.3264642" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.4967462" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.37093276" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.329718" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.329718" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="11" visible="true" weight="0.38394794" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.38394794" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49946696" weight="0.38394794" />
+      <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -934,28 +1012,12 @@
     <MESSAGE value="完成插入与查找基本功能，下一步：B+树索引、内存优化" />
     <MESSAGE value="准备用C++实现Tree的相关功能" />
     <MESSAGE value="完善日志类功能，加快读写速度" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善日志类功能，加快读写速度" />
+    <MESSAGE value="自研AVL树" />
+    <option name="LAST_COMMIT_MESSAGE" value="自研AVL树" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/nio/DirectByteBuffer.java" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="186">
-            <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/HashSet.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/range/key/SortedList.java" />
-    <entry file="file://$PROJECT_DIR$/target/test-classes/cn/wangxinshuo/hpkv/level02/Test04.class" />
-    <entry file="file://$PROJECT_DIR$/target/classes/cn/wangxinshuo/hpkv/Select.class" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/level02/Test05.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/26.0-jre/guava-26.0-jre.jar!/com/google/common/primitives/UnsignedLong.class" />
     <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/26.0-jre/guava-26.0-jre.jar!/com/google/common/primitives/UnsignedLongs.class" />
     <entry file="file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/level02/Test04.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/math/BigInteger.java" />
@@ -1019,20 +1081,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/desrialize/DeserializeFromFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1203">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/serialize/SerializeToFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="955">
-          <caret line="34" column="10" lean-forward="true" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Store.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1478">
@@ -1059,10 +1107,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="40" column="4" lean-forward="true" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
-          <folding>
-            <element signature="e#1220#1221#0" expanded="true" />
-            <element signature="e#1296#1297#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1073,27 +1117,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/tree/Test01.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/Key.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/ReadDisk.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
           <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1101,11 +1128,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#994#995#0" expanded="true" />
-            <element signature="e#1058#1059#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1116,150 +1138,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xbird/ext/xstream/DTMReader.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xbird/ext/xstream/DTMReader.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/xbird/server/Server.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/btree4j/BIndexFile.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/btree4j/Paged.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/btree4j/Value.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/btree4j/Settings.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/btree4j/BIndexMultiValueFile.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/btree4j/BTreeCallback.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/btree4j/BTreeException.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/btree4j/FreeList.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/btree4j/Key.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/btree4j/BTree.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/serialize/SerializeToFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <caret line="34" column="10" lean-forward="true" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/desrialize/DeserializeFromFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/btree4j/indexer/ByteLikeIndexQuery.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/tree/AdelsonVelskyLandTree.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/BPlusTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/Key.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1272">
+          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1381#1382#0" expanded="true" />
+            <element signature="e#1441#1442#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/xbird/server/Server.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/configuration.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="33" column="3" lean-forward="true" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="31">
+          <caret line="1" column="18" lean-forward="true" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2821">
-          <caret line="91" column="21" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="21" />
+        <state relative-caret-position="342">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/btree4j/BIndexFile.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/configuration.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12059">
-          <caret line="419" column="8" selection-start-line="419" selection-start-column="8" selection-end-line="419" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="62">
+          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/btree4j/Paged.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/io/FileInputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="185" column="5" lean-forward="true" selection-start-line="185" selection-start-column="5" selection-end-line="185" selection-end-column="5" />
-          <folding>
-            <element signature="e#5158#5159#0" expanded="true" />
-            <element signature="e#5195#5196#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="191">
+          <caret line="194" selection-start-line="194" selection-end-line="194" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/btree4j/Value.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1984">
-          <caret line="116" selection-start-line="116" selection-end-line="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/btree4j/Settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/btree4j/BIndexMultiValueFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/btree4j/BTreeCallback.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/LeafNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
-          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/btree4j/BTreeException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="248">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/btree4j/FreeList.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/Configuration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/btree4j/Key.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/btree4j/BTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41323">
-          <caret line="1427" column="54" lean-forward="true" selection-start-line="1427" selection-start-column="54" selection-end-line="1427" selection-end-column="54" />
+        <state relative-caret-position="294">
+          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/tree/Tree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding>
-            <element signature="e#1188#1189#0" expanded="true" />
-            <element signature="e#1215#1216#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/b/plus/tree/AdelsonVelskyLandTree.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/InternalNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
-          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/tree/Test01.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#435#436#0" expanded="true" />
-            <element signature="e#467#468#0" expanded="true" />
-            <element signature="e#957#958#0" expanded="true" />
-            <element signature="e#983#984#0" expanded="true" />
-            <element signature="e#226#227#0" expanded="true" />
-            <element signature="e#254#255#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#330#331#0" expanded="true" />
-            <element signature="e#360#361#0" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-            <element signature="e#173#174#0" expanded="true" />
-            <element signature="e#200#201#0" expanded="true" />
-            <element signature="e#238#239#0" expanded="true" />
-            <element signature="e#270#271#0" expanded="true" />
-            <element signature="e#300#301#0" expanded="true" />
-            <element signature="e#328#329#0" expanded="true" />
-            <element signature="e#368#369#0" expanded="true" />
-            <element signature="e#402#403#0" expanded="true" />
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#464#465#0" expanded="true" />
           </folding>
         </state>
       </provider>

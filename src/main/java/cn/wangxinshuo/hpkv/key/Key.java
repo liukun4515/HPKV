@@ -9,7 +9,7 @@ import java.io.Serializable;
 /**
  * @author wszgr
  */
-public class Key implements Serializable {
+public class Key implements Serializable, Comparable<Key> {
     private byte[] data;
     private short dataLen = 8;
     private static final long serialVersionUID = -4870523500791682929L;
@@ -50,5 +50,9 @@ public class Key implements Serializable {
         } else {
             return false;
         }
+    }
+
+    public int compareTo(Key o) {
+        return KeyCompare.compare(this.data, o.data);
     }
 }
