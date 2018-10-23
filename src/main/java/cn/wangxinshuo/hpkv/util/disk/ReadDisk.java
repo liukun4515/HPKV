@@ -28,12 +28,6 @@ public class ReadDisk {
         return result;
     }
 
-    public static long read(File file, long start, int length, boolean isLong)
-            throws EngineException {
-        MappedByteBuffer buffer = getBuffer(file, start, length);
-        return buffer.getLong();
-    }
-
     private static MappedByteBuffer getBuffer(RandomAccessFile file, long start, int length)
             throws EngineException {
         try {

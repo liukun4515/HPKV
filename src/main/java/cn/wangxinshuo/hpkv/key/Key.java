@@ -1,29 +1,17 @@
 package cn.wangxinshuo.hpkv.key;
 
-import cn.wangxinshuo.hpkv.util.key.KeyCompare;
-import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
-import com.alibabacloud.polar_race.engine.common.exceptions.RetCodeEnum;
+import cn.wangxinshuo.hpkv.util.convert.byte2long.ByteArrayToLong;
 
-import java.io.Serializable;
+import java.util.Arrays;
 
 /**
  * @author wszgr
  */
-public class Key implements Serializable, Comparable<Key> {
+public class Key implements Comparable<Key> {
     private byte[] data;
-    private short dataLen = 8;
-    private static final long serialVersionUID = -4870523500791682929L;
 
-    public Key(byte[] data) throws EngineException {
-        if (data.length == dataLen) {
-            this.data = data;
-        } else {
-            throw new EngineException(RetCodeEnum.INVALID_ARGUMENT, "INVALID_ARGUMENT");
-        }
-    }
-
-    public static Key valueOf(byte[] data) throws EngineException {
-        return new Key(data);
+    private Key(byte[] data) {
+        this.data = data;
     }
 
     public byte[] getData() {
@@ -32,10 +20,6 @@ public class Key implements Serializable, Comparable<Key> {
 
     public void setData(byte[] data) {
         this.data = data;
-    }
-
-    public void setDataLen(short len) {
-        this.dataLen = len;
     }
 
     @Override
@@ -54,5 +38,23 @@ public class Key implements Serializable, Comparable<Key> {
 
     public int compareTo(Key o) {
         return KeyCompare.compare(this.data, o.data);
+    }
+}
+
+/**
+ * @author wszgr
+ */
+class KeyCompare {
+    private static boolean isEqual(byte[] a, byte[] b) {
+        return Arrays.equals(a, b);
+    }
+
+    static int compare(byte[] a, byte[] b) {
+        if (isEqual(a, b)) {
+            return 0;
+        }
+        long numA = ByteArrayToLong.convert(a);
+        long numB = ByteArrayToLong.convert(b);
+        return 0;
     }
 }
