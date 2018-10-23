@@ -1,11 +1,11 @@
 package com.alibabacloud.polar_race.engine.common;
 
-import cn.wangxinshuo.hpkv.Select;
-import cn.wangxinshuo.hpkv.Store;
-import cn.wangxinshuo.hpkv.key.Key;
-import cn.wangxinshuo.hpkv.log.Log;
-import cn.wangxinshuo.hpkv.resources.DatabaseResources;
-import cn.wangxinshuo.hpkv.resources.IndexResources;
+import cn.wangxinshuo.hpkv.old.Select;
+import cn.wangxinshuo.hpkv.old.Store;
+import cn.wangxinshuo.hpkv.old.key.Key;
+import cn.wangxinshuo.hpkv.old.log.Log;
+import cn.wangxinshuo.hpkv.old.resources.DatabaseResources;
+import cn.wangxinshuo.hpkv.old.resources.IndexResources;
 import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
 import com.alibabacloud.polar_race.engine.common.exceptions.RetCodeEnum;
 
