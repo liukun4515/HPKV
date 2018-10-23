@@ -4,23 +4,8 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a83aecd-3add-470d-9b9b-09402338ece2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/key/TestKey.java" afterDir="false" />
+    <list default="true" id="5a83aecd-3add-470d-9b9b-09402338ece2" name="Default Changelist" comment="自研skip list">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Select.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Store.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/cache/FileCache.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/Key.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/log/Log.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/resources/DatabaseResources.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/resources/IndexResources.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/desrialize/DeserializeFromFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/ReadDisk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/WriteDisk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/key/KeyCompare.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/require/check/RequireNotNull.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/serialize/SerializeToFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/EngineRace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/EngineRace.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -339,9 +324,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="25" />
+    <option name="y" value="27" />
     <option name="width" value="927" />
-    <option name="height" value="1055" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -471,12 +456,12 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540276006870" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540276097950" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.27586207" />
-    <property name="settings.editor.selected.configurable" value="project.scopes" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -644,7 +629,7 @@
       <workItem from="1540179921242" duration="2063000" />
       <workItem from="1540195891472" duration="5718000" />
       <workItem from="1540204114835" duration="7167000" />
-      <workItem from="1540268369998" duration="2920000" />
+      <workItem from="1540268369998" duration="3026000" />
     </task>
     <task id="LOCAL-00001" summary="完成写入部分">
       <created>1539068236120</created>
@@ -863,19 +848,17 @@
       <option name="project" value="LOCAL" />
       <updated>1540275970673</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="自研skip list">
+      <created>1540276027313</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1540276027313</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test01_test02_(1) - 2018.10.22 at 16h 19m 08s.xml">
-      <configuration name="Test01.test02 (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test01_test02_(1) - 2018.10.22 at 16h 22m 26s.xml">
-      <configuration name="Test01.test02 (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Test01_test03 - 2018.10.22 at 16h 23m 47s.xml">
-      <configuration name="Test01.test03" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Test01_test03 - 2018.10.22 at 16h 24m 10s.xml">
       <configuration name="Test01.test03" configurationId="JUnit" />
     </history-entry>
@@ -897,9 +880,18 @@
     <history-entry file="Test01_test04 - 2018.10.22 at 18h 55m 27s.xml">
       <configuration name="Test01.test04" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestKey_test01 - 2018.10.23 at 14h 23m 36s.xml">
+      <configuration name="TestKey.test01" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestKey_test01 - 2018.10.23 at 14h 24m 24s.xml">
+      <configuration name="TestKey.test01" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestKey_test01 - 2018.10.23 at 14h 25m 45s.xml">
+      <configuration name="TestKey.test01" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="257693000" />
+    <option name="totallyTimeSpent" value="257799000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -912,6 +904,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2418373" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
