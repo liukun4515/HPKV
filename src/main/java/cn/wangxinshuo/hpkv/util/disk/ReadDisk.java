@@ -1,8 +1,5 @@
 package cn.wangxinshuo.hpkv.util.disk;
 
-import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
-import com.alibabacloud.polar_race.engine.common.exceptions.RetCodeEnum;
-
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -13,38 +10,27 @@ import java.nio.channels.FileChannel;
  * @author 王新硕
  */
 public class ReadDisk {
-    public static byte[] read(File file, long start, int length) throws EngineException {
+    public static byte[] read(File file,
+                              long start, int length) throws IOException {
+        return read(new RandomAccessFile(file, "rwd"), start, length);
+    }
+
+
+    private static MappedByteBuffer getBuffer(
+            RandomAccessFile file, long start, int length) throws IOException {
+        return file.getChannel().map(FileChannel.MapMode.READ_ONLY, start, length);
+    }
+
+    public static byte[] read(
+            RandomAccessFile file, long start, int length) throws IOException {
         MappedByteBuffer buffer = getBuffer(file, start, length);
-        byte[] result = new byte[length];
+        byte[] result;
+        if (length > buffer.remaining()) {
+            result = new byte[buffer.remaining()];
+        } else {
+            result = new byte[length];
+        }
         buffer.get(result);
         return result;
-    }
-
-    public static byte[] read(RandomAccessFile file, long start, int length)
-            throws EngineException {
-        MappedByteBuffer buffer = getBuffer(file, start, length);
-        byte[] result = new byte[length];
-        buffer.get(result);
-        return result;
-    }
-
-    private static MappedByteBuffer getBuffer(RandomAccessFile file, long start, int length)
-            throws EngineException {
-        try {
-            return file.getChannel().map(FileChannel.MapMode.READ_ONLY, start, length);
-        } catch (IOException e) {
-            e.printStackTrace();
-            throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
-        }
-    }
-
-    private static MappedByteBuffer getBuffer(File file, long start, int length)
-            throws EngineException {
-        try {
-            return getBuffer(new RandomAccessFile(file, "rws"), start, length);
-        } catch (IOException e) {
-            e.printStackTrace();
-            throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
-        }
     }
 }
