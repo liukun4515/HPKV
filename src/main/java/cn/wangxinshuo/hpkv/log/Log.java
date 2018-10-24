@@ -1,5 +1,6 @@
 package cn.wangxinshuo.hpkv.log;
 
+import cn.wangxinshuo.hpkv.conf.Configuration;
 import cn.wangxinshuo.hpkv.key.Key;
 import cn.wangxinshuo.hpkv.util.disk.ReadDisk;
 import cn.wangxinshuo.hpkv.util.disk.WriteDisk;
@@ -15,7 +16,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author wszgr
  */
 public class Log {
-    private static final int KV_NUMBER = 16384;
+    private static final int KV_NUMBER = Configuration.MaxLogNumber;
     private String path;
     private volatile RandomAccessFile randomAccessFile;
 
@@ -51,10 +52,10 @@ public class Log {
             // 所以重启数据库之后需要从日志文件构建MemTable
             randomAccessFile.seek(0);
             // 计算日志文件中有多少对key-value
-            int singleKeyValueSize = 8 + 4 * 1024;
+            int singleKeyValueSize = Configuration.keySize + Configuration.ValueSize;
             int bytesInFile = (int) randomAccessFile.length();
-            byte[] key = new byte[8];
-            byte[] value = new byte[4 * 1024];
+            byte[] key = new byte[Configuration.keySize];
+            byte[] value = new byte[Configuration.ValueSize];
             for (int i = 0; i < bytesInFile / singleKeyValueSize; i++) {
                 randomAccessFile.read(key);
                 randomAccessFile.read(value);

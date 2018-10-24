@@ -1,5 +1,8 @@
 {
-  "NodeNumber": 3,
+  "MaxLogNumber": 16384,
   "KeySize": 8,
-  "ValueSize": 4096
+  "PointerSize": 8,
+  "ValueSize": 4096,
+  "InsertBufferSize": 8192,
+  "IndexSizeInFile": 24
 }

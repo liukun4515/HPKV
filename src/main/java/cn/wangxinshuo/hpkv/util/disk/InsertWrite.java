@@ -1,5 +1,7 @@
 package cn.wangxinshuo.hpkv.util.disk;
 
+import cn.wangxinshuo.hpkv.conf.Configuration;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -15,7 +17,8 @@ public class InsertWrite {
 
     public static void insertWrite(
             RandomAccessFile file, long start, byte[] data) throws IOException {
-        int length = data.length > 8192 ? data.length : 8192;
+        int length = data.length > Configuration.InsertBufferSize ?
+                data.length : Configuration.InsertBufferSize;
         byte[] buffer = ReadDisk.read(file, start, length);
         byte[] temp;
         WriteDisk.write(file, start, data);

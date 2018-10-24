@@ -1,7 +1,7 @@
-# Compiled class file
+# Compiled class indexFiles
 *.class
 
-# Log file
+# Log indexFiles
 *.log
 
 # BlueJ files
