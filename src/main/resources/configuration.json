@@ -4,5 +4,6 @@
   "PointerSize": 8,
   "ValueSize": 4096,
   "InsertBufferSize": 8192,
-  "IndexSizeInFile": 24
+  "IndexSizeInFile": 24,
+  "MaxLevel": 7
 }

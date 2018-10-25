@@ -13,12 +13,11 @@ import java.io.IOException;
 public class Configuration {
     private static JSONParser json = new JSONParser();
     public static int MaxLogNumber = getMaxLogNumber();
-    public static int keySize = getKeySize();
+    public static int KeySize = getKeySize();
     public static int ValueSize = getValueSize();
     public static int InsertBufferSize = getInsertBufferSize();
-    public static int IndexSizeInFile = getIndexSizeInFile();
     public static int PointerSize = getPointerSize();
-
+    public static int MaxLevel = getMaxLevel();
 
     private static int getMaxLogNumber() {
         return getConfiguration("MaxLogNumber");
@@ -36,12 +35,12 @@ public class Configuration {
         return getConfiguration("InsertBufferSize");
     }
 
-    private static int getIndexSizeInFile() {
-        return getConfiguration("IndexSizeInFile");
-    }
-
     private static int getPointerSize() {
         return getConfiguration("PointerSize");
+    }
+
+    private static int getMaxLevel() {
+        return getConfiguration("MaxLevel");
     }
 
     private static int getConfiguration(String key) {

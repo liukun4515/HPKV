@@ -16,18 +16,14 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author wszgr
  */
 public class Log {
-    private static final int KV_NUMBER = Configuration.MaxLogNumber;
-    private String path;
+    private final int KV_NUMBER = Configuration.MaxLogNumber;
     private volatile RandomAccessFile randomAccessFile;
+    private String path;
 
     public Log(String path) throws IOException {
         this.path = path;
         randomAccessFile = null;
         initResources();
-    }
-
-    public int getKeyValueNumberInLogFile() {
-        return KV_NUMBER;
     }
 
     /**
@@ -52,9 +48,9 @@ public class Log {
             // 所以重启数据库之后需要从日志文件构建MemTable
             randomAccessFile.seek(0);
             // 计算日志文件中有多少对key-value
-            int singleKeyValueSize = Configuration.keySize + Configuration.ValueSize;
+            int singleKeyValueSize = Configuration.KeySize + Configuration.ValueSize;
             int bytesInFile = (int) randomAccessFile.length();
-            byte[] key = new byte[Configuration.keySize];
+            byte[] key = new byte[Configuration.KeySize];
             byte[] value = new byte[Configuration.ValueSize];
             for (int i = 0; i < bytesInFile / singleKeyValueSize; i++) {
                 randomAccessFile.read(key);
