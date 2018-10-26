@@ -30,7 +30,7 @@ public class Log {
      * 只有在新生成log的时候才调用此函数
      */
     private void initResources() throws IOException {
-        String logFileName = path + "/log.bin";
+        String logFileName = path + "/data.log";
         File file = new File(logFileName);
         if (!file.exists()) {
             final boolean newFile = file.createNewFile();
@@ -61,12 +61,12 @@ public class Log {
         }
     }
 
-    public void eraseLog() throws IOException {
+    public void delete() throws IOException {
         close();
-//        File file = new File(path + "/log.bin");
-//        final boolean delete = file.delete();
-//        final boolean newFile = file.createNewFile();
-//        this.randomAccessFile = new RandomAccessFile(file, "rwd");
+        File file = new File(path + "/log.bin");
+        final boolean delete = file.delete();
+        final boolean newFile = file.createNewFile();
+        this.randomAccessFile = new RandomAccessFile(file, "rwd");
         randomAccessFile.setLength(0);
     }
 

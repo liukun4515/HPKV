@@ -17,14 +17,14 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class EngineRace extends AbstractEngine {
     private Log log;
-    private SkipList sl;
+    private SkipList skipList;
     private ConcurrentHashMap<Key, byte[]> map;
 
     @Override
     public void open(String path) throws EngineException {
         try {
             log = new Log(path);
-            sl = new SkipList(IndexResources.getIndexFiles(path),
+            skipList = new SkipList(IndexResources.getIndexFiles(path),
                     DatabaseResources.getDatabaseFile(path));
             map = log.deserializeFromFile();
         } catch (IOException e) {
@@ -39,8 +39,9 @@ public class EngineRace extends AbstractEngine {
             try {
                 for (Key k :
                         map.keySet()) {
-                    sl.insert(k.getData(), map.get(k));
+                    skipList.insert(k.getData(), map.get(k));
                 }
+                log.delete();
                 map.clear();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -60,7 +61,7 @@ public class EngineRace extends AbstractEngine {
     @Override
     public byte[] read(byte[] key) throws EngineException {
         try {
-            return sl.select(key);
+            return skipList.select(key);
         } catch (Exception e) {
             e.printStackTrace();
             throw new EngineException(RetCodeEnum.NOT_FOUND, "NOT_FOUND");
@@ -74,6 +75,10 @@ public class EngineRace extends AbstractEngine {
 
     @Override
     public void close() {
-
+        try {
+            log.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
