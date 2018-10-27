@@ -14,10 +14,6 @@ public class Key implements Comparable<Key> {
         return data;
     }
 
-    public void setData(byte[] data) {
-        this.data = data;
-    }
-
     @Override
     public int hashCode() {
         return data[0] * data[1] * data[3];

@@ -18,15 +18,18 @@ public class KeyCompare {
         }
         long numA = ByteArrayToLong.convert(a);
         long numB = ByteArrayToLong.convert(b);
-        if (numA < 0 && numB < 0) {
-            return numA < numB ? -1 : 1;
-        }
         if (numA < 0) {
-            return -1;
+            if (numB < 0) {
+                return numA < numB ? -1 : 1;
+            } else {
+                return -1;
+            }
+        } else {
+            if (numB < 0) {
+                return 1;
+            } else {
+                return numA > numB ? -1 : 1;
+            }
         }
-        if (numA > 0 && numB < 0) {
-            return 1;
-        }
-        return numA > numB ? -1 : 1;
     }
 }

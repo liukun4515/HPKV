@@ -1,5 +1,6 @@
 package cn.wangxinshuo.hpkv.FileIO;
 
+import cn.wangxinshuo.hpkv.util.disk.ReadDisk;
 import cn.wangxinshuo.hpkv.util.disk.WriteDisk;
 import org.junit.Test;
 
@@ -29,6 +30,25 @@ public class Test01 {
             }
             System.out.println("store:" + TimeUnit.NANOSECONDS.toMillis(
                     System.nanoTime() - start) + " ms");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void test02() {
+        byte[] data = {1, 2, 3, 4, 5, 6, 7, 8};
+        try {
+            RandomAccessFile file =
+                    new RandomAccessFile(
+                            new File("./data/test.txt"), "rwd");
+            WriteDisk.write(file, 0, data);
+            WriteDisk.write(file, data.length, data);
+            byte[] result = ReadDisk.read(file, 0, 16);
+            for (byte a :
+                    result) {
+                System.out.println(a);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -12,8 +12,12 @@ public class DatabaseResources {
 
     public static RandomAccessFile getDatabaseFile(String path) throws IOException {
         if (databaseFile == null) {
-            databaseFile = new RandomAccessFile(new File(path + "/data.db"), "rwd");
+            databaseFile = new RandomAccessFile(new File(path + "/value.db"), "rwd");
         }
         return databaseFile;
+    }
+
+    public static void close() throws IOException {
+        databaseFile.close();
     }
 }

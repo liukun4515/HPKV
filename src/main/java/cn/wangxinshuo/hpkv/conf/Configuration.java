@@ -12,16 +12,9 @@ import java.io.IOException;
  */
 public class Configuration {
     private static JSONParser json = new JSONParser();
-    public static int MaxLogNumber = getMaxLogNumber();
     public static int KeySize = getKeySize();
     public static int ValueSize = getValueSize();
-    public static int InsertBufferSize = getInsertBufferSize();
     public static int PointerSize = getPointerSize();
-    public static int MaxLevel = getMaxLevel();
-
-    private static int getMaxLogNumber() {
-        return getConfiguration("MaxLogNumber");
-    }
 
     private static int getKeySize() {
         return getConfiguration("KeySize");
@@ -31,16 +24,8 @@ public class Configuration {
         return getConfiguration("ValueSize");
     }
 
-    private static int getInsertBufferSize() {
-        return getConfiguration("InsertBufferSize");
-    }
-
     private static int getPointerSize() {
         return getConfiguration("PointerSize");
-    }
-
-    private static int getMaxLevel() {
-        return getConfiguration("MaxLevel");
     }
 
     private static int getConfiguration(String key) {
