@@ -1,0 +1,609 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AnalysisUIOptions\">\r\n    <option name=\"GROUP_BY_SEVERITY\" value=\"true\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"5a83aecd-3add-470d-9b9b-09402338ece2\" name=\"Default Changelist\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/cache/KeyCache.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/All/Test01.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/DB/DatabaseResources.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/DB/DatabaseResources.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/DB/IndexResources.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/DB/IndexResources.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Select.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Store.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/conf/Configuration.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/conf/Configuration.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/Key.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/Key.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/KeyCompare.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/KeyCompare.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/log/Log.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/skiplist/SkipList.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/InsertWrite.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/ReadDisk.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/ReadDisk.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/WriteDisk.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/WriteDisk.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/EngineRace.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/EngineRace.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/configuration.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/configuration.json\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/Configuration/Test01.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/Configuration/Test01.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/FileIO/Test01.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/FileIO/Test01.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/skiplist/Test01.java\" beforeDir=\"false\" />\r\n    </list>\r\n    <ignored path=\"$PROJECT_DIR$/out/\" />\r\n    <ignored path=\"$PROJECT_DIR$/target/\" />\r\n    <option name=\"EXCLUDED_CONVERTED_TO_IGNORED\" value=\"true\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"DatabaseView\">\r\n    <option name=\"SHOW_INTERMEDIATE\" value=\"true\" />\r\n    <option name=\"GROUP_DATA_SOURCES\" value=\"true\" />\r\n    <option name=\"GROUP_SCHEMA\" value=\"true\" />\r\n    <option name=\"GROUP_CONTENTS\" value=\"false\" />\r\n    <option name=\"SORT_POSITIONED\" value=\"false\" />\r\n    <option name=\"SHOW_EMPTY_GROUPS\" value=\"false\" />\r\n    <option name=\"AUTO_SCROLL_FROM_SOURCE\" value=\"false\" />\r\n    <option name=\"HIDDEN_KINDS\">\r\n      <set />\r\n    </option>\r\n    <expand />\r\n    <select />\r\n  </component>\r\n  <component name=\"FUSProjectUsageTrigger\">\r\n    <session id=\"-2004513787\">\r\n      <usages-collector id=\"statistics.lifecycle.project\">\r\n        <counts>\r\n          <entry key=\"project.closed\" value=\"10\" />\r\n          <entry key=\"project.open.time.12\" value=\"2\" />\r\n          <entry key=\"project.open.time.13\" value=\"5\" />\r\n          <entry key=\"project.open.time.14\" value=\"1\" />\r\n          <entry key=\"project.open.time.15\" value=\"1\" />\r\n          <entry key=\"project.open.time.24\" value=\"1\" />\r\n          <entry key=\"project.open.time.25\" value=\"1\" />\r\n          <entry key=\"project.open.time.9\" value=\"1\" />\r\n          <entry key=\"project.opened\" value=\"12\" />\r\n        </counts>\r\n      </usages-collector>\r\n      <usages-collector id=\"statistics.file.extensions.open\">\r\n        <counts>\r\n          <entry key=\"LICENSE\" value=\"1\" />\r\n          <entry key=\"a\" value=\"3\" />\r\n          <entry key=\"java\" value=\"78\" />\r\n          <entry key=\"json\" value=\"5\" />\r\n          <entry key=\"md\" value=\"2\" />\r\n          <entry key=\"xml\" value=\"7\" />\r\n        </counts>\r\n      </usages-collector>\r\n      <usages-collector id=\"statistics.file.types.open\">\r\n        <counts>\r\n          <entry key=\"JAVA\" value=\"78\" />\r\n          <entry key=\"JSON\" value=\"5\" />\r\n          <entry key=\"Markdown\" value=\"2\" />\r\n          <entry key=\"PLAIN_TEXT\" value=\"4\" />\r\n          <entry key=\"XML\" value=\"7\" />\r\n        </counts>\r\n      </usages-collector>\r\n      <usages-collector id=\"statistics.file.extensions.edit\">\r\n        <counts>\r\n          <entry key=\"dummy\" value=\"17\" />\r\n          <entry key=\"java\" value=\"6976\" />\r\n          <entry key=\"json\" value=\"58\" />\r\n          <entry key=\"md\" value=\"3\" />\r\n          <entry key=\"txt\" value=\"58\" />\r\n          <entry key=\"xml\" value=\"203\" />\r\n        </counts>\r\n      </usages-collector>\r\n      <usages-collector id=\"statistics.file.types.edit\">\r\n        <counts>\r\n          <entry key=\"JAVA\" value=\"6976\" />\r\n          <entry key=\"JSON\" value=\"58\" />\r\n          <entry key=\"Markdown\" value=\"3\" />\r\n          <entry key=\"PLAIN_TEXT\" value=\"75\" />\r\n          <entry key=\"XML\" value=\"203\" />\r\n        </counts>\r\n      </usages-collector>\r\n    </session>\r\n    <session id=\"1680737414\">\r\n      <usages-collector id=\"statistics.lifecycle.project\">\r\n        <counts>\r\n          <entry key=\"project.closed\" value=\"14\" />\r\n          <entry key=\"project.open.time.2\" value=\"1\" />\r\n          <entry key=\"project.open.time.4\" value=\"8\" />\r\n          <entry key=\"project.open.time.5\" value=\"7\" />\r\n          <entry key=\"project.open.time.6\" value=\"1\" />\r\n          <entry key=\"project.opened\" value=\"17\" />\r\n        </counts>\r\n      </usages-collector>\r\n      <usages-collector id=\"statistics.file.extensions.open\">\r\n        <counts>\r\n          <entry key=\"bin\" value=\"4\" />\r\n          <entry key=\"class\" value=\"24\" />\r\n          <entry key=\"java\" value=\"529\" />\r\n          <entry key=\"map\" value=\"1\" />\r\n          <entry key=\"md\" value=\"1\" />\r\n          <entry key=\"xml\" value=\"6\" />\r\n        </counts>\r\n      </usages-collector>\r\n      <usages-collector id=\"statistics.file.types.open\">\r\n        <counts>\r\n          <entry key=\"CLASS\" value=\"24\" />\r\n          <entry key=\"JAVA\" value=\"529\" />\r\n          <entry key=\"Markdown\" value=\"1\" />\r\n          <entry key=\"PLAIN_TEXT\" value=\"5\" />\r\n          <entry key=\"XML\" value=\"6\" />\r\n        </counts>\r\n      </usages-collector>\r\n      <usages-collector id=\"statistics.file.extensions.edit\">\r\n        <counts>\r\n          <entry key=\"dummy\" value=\"88\" />\r\n          <entry key=\"java\" value=\"26444\" />\r\n          <entry key=\"txt\" value=\"283\" />\r\n          <entry key=\"xml\" value=\"38\" />\r\n        </counts>\r\n      </usages-collector>\r\n      <usages-collector id=\"statistics.file.types.edit\">\r\n        <counts>\r\n          <entry key=\"JAVA\" value=\"26444\" />\r\n          <entry key=\"PLAIN_TEXT\" value=\"371\" />\r\n          <entry key=\"XML\" value=\"38\" />\r\n        </counts>\r\n      </usages-collector>\r\n    </session>\r\n    <session id=\"-941999230\">\r\n      <usages-collector id=\"statistics.lifecycle.project\">\r\n        <counts>\r\n          <entry key=\"project.closed\" value=\"2\" />\r\n          <entry key=\"project.open.time.4\" value=\"1\" />\r\n          <entry key=\"project.open.time.6\" value=\"1\" />\r\n          <entry key=\"project.open.time.7\" value=\"1\" />\r\n          <entry key=\"project.open.time.8\" value=\"1\" />\r\n          <entry key=\"project.open.time.9\" value=\"1\" />\r\n          <entry key=\"project.opened\" value=\"5\" />\r\n        </counts>\r\n      </usages-collector>\r\n      <usages-collector id=\"statistics.file.extensions.open\">\r\n        <counts>\r\n          <entry key=\"class\" value=\"7\" />\r\n          <entry key=\"java\" value=\"104\" />\r\n          <entry key=\"json\" value=\"10\" />\r\n          <entry key=\"xml\" value=\"5\" />\r\n        </counts>\r\n      </usages-collector>\r\n      <usages-collector id=\"statistics.file.types.open\">\r\n        <counts>\r\n          <entry key=\"CLASS\" value=\"7\" />\r\n          <entry key=\"JAVA\" value=\"104\" />\r\n          <entry key=\"JSON\" value=\"10\" />\r\n          <entry key=\"XML\" value=\"5\" />\r\n        </counts>\r\n      </usages-collector>\r\n      <usages-collector id=\"statistics.file.extensions.edit\">\r\n        <counts>\r\n          <entry key=\"java\" value=\"6565\" />\r\n          <entry key=\"json\" value=\"93\" />\r\n          <entry key=\"txt\" value=\"68\" />\r\n          <entry key=\"xml\" value=\"49\" />\r\n        </counts>\r\n      </usages-collector>\r\n      <usages-collector id=\"statistics.file.types.edit\">\r\n        <counts>\r\n          <entry key=\"JAVA\" value=\"6565\" />\r\n          <entry key=\"JSON\" value=\"93\" />\r\n          <entry key=\"PLAIN_TEXT\" value=\"68\" />\r\n          <entry key=\"XML\" value=\"49\" />\r\n        </counts>\r\n      </usages-collector>\r\n    </session>\r\n    <session id=\"630395709\">\r\n      <usages-collector id=\"statistics.lifecycle.project\">\r\n        <counts>\r\n          <entry key=\"project.closed\" value=\"3\" />\r\n          <entry key=\"project.open.time.2\" value=\"1\" />\r\n          <entry key=\"project.open.time.4\" value=\"1\" />\r\n          <entry key=\"project.open.time.5\" value=\"1\" />\r\n          <entry key=\"project.open.time.6\" value=\"1\" />\r\n          <entry key=\"project.opened\" value=\"4\" />\r\n        </counts>\r\n      </usages-collector>\r\n      <usages-collector id=\"statistics.file.extensions.open\">\r\n        <counts>\r\n          <entry key=\"java\" value=\"37\" />\r\n          <entry key=\"json\" value=\"4\" />\r\n          <entry key=\"txt\" value=\"1\" />\r\n          <entry key=\"xml\" value=\"1\" />\r\n        </counts>\r\n      </usages-collector>\r\n      <usages-collector id=\"statistics.file.types.open\">\r\n        <counts>\r\n          <entry key=\"JAVA\" value=\"37\" />\r\n          <entry key=\"JSON\" value=\"4\" />\r\n          <entry key=\"PLAIN_TEXT\" value=\"1\" />\r\n          <entry key=\"XML\" value=\"1\" />\r\n        </counts>\r\n      </usages-collector>\r\n      <usages-collector id=\"statistics.file.extensions.edit\">\r\n        <counts>\r\n          <entry key=\"java\" value=\"2161\" />\r\n          <entry key=\"json\" value=\"3\" />\r\n          <entry key=\"txt\" value=\"16\" />\r\n        </counts>\r\n      </usages-collector>\r\n      <usages-collector id=\"statistics.file.types.edit\">\r\n        <counts>\r\n          <entry key=\"JAVA\" value=\"2161\" />\r\n          <entry key=\"JSON\" value=\"3\" />\r\n          <entry key=\"PLAIN_TEXT\" value=\"16\" />\r\n        </counts>\r\n      </usages-collector>\r\n    </session>\r\n  </component>\r\n  <component name=\"FileEditorManager\">\r\n    <leaf SIDE_TABS_SIZE_LIMIT_KEY=\"300\">\r\n      <file pinned=\"false\" current-in-tab=\"true\">\r\n        <entry file=\"file://$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/EngineRace.java\">\r\n          <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n            <state relative-caret-position=\"2340\">\r\n              <caret line=\"92\" column=\"13\" lean-forward=\"true\" selection-start-line=\"92\" selection-start-column=\"13\" selection-end-line=\"92\" selection-end-column=\"13\" />\r\n              <folding>\r\n                <element signature=\"imports\" expanded=\"true\" />\r\n              </folding>\r\n            </state>\r\n          </provider>\r\n        </entry>\r\n      </file>\r\n      <file pinned=\"false\" current-in-tab=\"false\">\r\n        <entry file=\"file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/All/Test01.java\">\r\n          <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n            <state relative-caret-position=\"54\">\r\n              <caret line=\"16\" column=\"19\" selection-start-line=\"16\" selection-start-column=\"16\" selection-end-line=\"16\" selection-end-column=\"22\" />\r\n              <folding>\r\n                <element signature=\"imports\" expanded=\"true\" />\r\n              </folding>\r\n            </state>\r\n          </provider>\r\n        </entry>\r\n      </file>\r\n      <file pinned=\"false\" current-in-tab=\"false\">\r\n        <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/cache/KeyCache.java\">\r\n          <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n            <state relative-caret-position=\"522\">\r\n              <caret line=\"26\" selection-start-line=\"26\" selection-end-line=\"26\" />\r\n              <folding>\r\n                <element signature=\"imports\" expanded=\"true\" />\r\n              </folding>\r\n            </state>\r\n          </provider>\r\n        </entry>\r\n      </file>\r\n    </leaf>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"FindInProjectRecents\">\r\n    <findStrings>\r\n      <find>seek</find>\r\n      <find>put</find>\r\n    </findStrings>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"PREVIOUS_COMMIT_AUTHORS\">\r\n      <list>\r\n        <option value=\"wangxinshuo &lt;18862616362@163.com&gt;\" />\r\n      </list>\r\n    </option>\r\n    <option name=\"PUSH_AUTO_UPDATE\" value=\"true\" />\r\n    <option name=\"ROOT_SYNC\" value=\"DONT_SYNC\" />\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"IdeDocumentHistory\">\r\n    <option name=\"CHANGED_PATHS\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/b/plus/tree/AVL.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/b/plus/tree/Node.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/b/plus/tree/AdelsonVelskyLandTree.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/tree/AdelsonVelskyLandTree.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/tree/BPlusTree.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/tree/InternalNode.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/tree/AbstractNode.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/tree/Node.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/tree/LeafAbstractNode.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/tree/InternalAbstractNode.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/tree/LeafNode.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/configuration.xml\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/configuration.json\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/Configuration.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/KeyValue.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/InternalNode.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/LeafNode.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/Node.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/long2byte/LongToByteArray.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/BPlusTree.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/tree/Test01.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/new/util/convert/byte2long/ByteArrayToLong.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/sl/util/convert/byte2long/ByteArrayToLong.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/key/KeyCompare.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/convert/long2byte/LongToByteArray.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/exception/HPKVException.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/convert/byte2long/ByteArrayToLong.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/key/TestKey.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/convert/LongToByteArray.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Store.java\" />\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/InsertWrite.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/DB/IndexRsources.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/DB/DatabseResources.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/skiplist/Test01.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/log/Log.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/skiplist/SkipList.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/resources/configuration.json\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/conf/Configuration.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/Key.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/KeyCompare.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/WriteDisk.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/cache/KeyCache.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/Configuration/Test01.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/FileIO/Test01.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/ReadDisk.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Select.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/DB/IndexResources.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/DB/DatabaseResources.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/All/Test01.java\" />\r\n        <option value=\"$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/EngineRace.java\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"JsBuildToolGruntFileManager\" detection-done=\"true\" sorting=\"DEFINITION_ORDER\" />\r\n  <component name=\"JsBuildToolPackageJson\" detection-done=\"true\" sorting=\"DEFINITION_ORDER\" />\r\n  <component name=\"JsGulpfileManager\">\r\n    <detection-done>true</detection-done>\r\n    <sorting>DEFINITION_ORDER</sorting>\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"importingSettings\">\r\n      <MavenImportingSettings>\r\n        <option name=\"importAutomatically\" value=\"true\" />\r\n      </MavenImportingSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectFrameBounds\" extendedState=\"6\">\r\n    <option name=\"y\" value=\"27\" />\r\n    <option name=\"width\" value=\"927\" />\r\n    <option name=\"height\" value=\"1053\" />\r\n  </component>\r\n  <component name=\"ProjectInspectionProfilesVisibleTreeState\">\r\n    <entry key=\"Project Default\">\r\n      <profile-state>\r\n        <expanded-state>\r\n          <State />\r\n          <State>\r\n            <id>Android</id>\r\n          </State>\r\n          <State>\r\n            <id>CorrectnessLintAndroid</id>\r\n          </State>\r\n          <State>\r\n            <id>Java</id>\r\n          </State>\r\n          <State>\r\n            <id>Java language level migration aidsJava</id>\r\n          </State>\r\n          <State>\r\n            <id>LintAndroid</id>\r\n          </State>\r\n          <State>\r\n            <id>PerformanceLintAndroid</id>\r\n          </State>\r\n        </expanded-state>\r\n      </profile-state>\r\n    </entry>\r\n  </component>\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectView\">\r\n    <navigator proportions=\"\" version=\"1\">\r\n      <foldersAlwaysOnTop value=\"true\" />\r\n    </navigator>\r\n    <panes>\r\n      <pane id=\"Scope\" />\r\n      <pane id=\"ProjectPane\">\r\n        <subPane>\r\n          <expand>\r\n            <path>\r\n              <item name=\"HPKV\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"HPKV\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"HPKV\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"HPKV\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"HPKV\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"HPKV\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"main\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"HPKV\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"HPKV\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"main\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"java\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"HPKV\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"HPKV\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"main\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"java\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"hpkv\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"HPKV\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"HPKV\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"main\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"java\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"hpkv\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"cache\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"HPKV\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"HPKV\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"main\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"java\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"hpkv\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"conf\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"HPKV\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"HPKV\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"main\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"java\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"hpkv\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"DB\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"HPKV\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"HPKV\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"main\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"java\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"hpkv\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"key\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"HPKV\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"HPKV\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"main\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"java\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"hpkv\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"util\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"HPKV\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"HPKV\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"main\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"java\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"hpkv\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"util\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"convert\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"HPKV\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"HPKV\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"main\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"java\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"hpkv\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"util\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"disk\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"HPKV\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"HPKV\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"main\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"java\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"common\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"HPKV\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"HPKV\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"main\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"resources\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"HPKV\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"HPKV\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"test\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"HPKV\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"HPKV\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"test\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"java\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"HPKV\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"HPKV\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"test\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"java\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"hpkv\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"HPKV\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"HPKV\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"test\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"java\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"hpkv\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"All\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"HPKV\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"HPKV\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"test\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"java\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"hpkv\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"Configuration\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"HPKV\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"HPKV\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"test\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"java\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"hpkv\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"FileIO\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n          </expand>\r\n          <select />\r\n        </subPane>\r\n      </pane>\r\n      <pane id=\"PackagesPane\" />\r\n    </panes>\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"Downloaded.Files.Path.Enabled\" value=\"false\" />\r\n    <property name=\"Repository.Attach.JavaDocs\" value=\"false\" />\r\n    <property name=\"Repository.Attach.Sources\" value=\"false\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"aspect.path.notification.shown\" value=\"true\" />\r\n    <property name=\"com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp\" value=\"1540623383310\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\r\n    <property name=\"project.structure.last.edited\" value=\"Libraries\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.27586207\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"settings.github\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"cn.wangxinshuo.hpkv.key\" />\r\n    </key>\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key\" />\r\n      <recent name=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/new/util\" />\r\n      <recent name=\"$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/new\" />\r\n      <recent name=\"$PROJECT_DIR$/src/main/java\" />\r\n      <recent name=\"C:\\Users\\王新硕\\Documents\\GitHub\\HPKV\\src\\main\\java\\cn\\wangxinshuo\\hpkv\\util\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\王新硕\\Documents\\GitHub\\HPKV\\src\\main\\resources\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunDashboard\">\r\n    <option name=\"ruleStates\">\r\n      <list>\r\n        <RuleState>\r\n          <option name=\"name\" value=\"ConfigurationTypeDashboardGroupingRule\" />\r\n        </RuleState>\r\n        <RuleState>\r\n          <option name=\"name\" value=\"StatusDashboardGroupingRule\" />\r\n        </RuleState>\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"JUnit.Test01.test01\">\r\n    <configuration name=\"Test01.test01\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"HPKV\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"cn.wangxinshuo.hpkv.All.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"cn.wangxinshuo.hpkv.All\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"cn.wangxinshuo.hpkv.All.Test01\" />\r\n      <option name=\"METHOD_NAME\" value=\"test01\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Test01.test02\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"HPKV\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"cn.wangxinshuo.hpkv.FileIO.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"cn.wangxinshuo.hpkv.FileIO\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"cn.wangxinshuo.hpkv.FileIO.Test01\" />\r\n      <option name=\"METHOD_NAME\" value=\"test02\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"JUnit.Test01.test02\" />\r\n      <item itemvalue=\"JUnit.Test01.test01\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"JUnit.Test01.test01\" />\r\n        <item itemvalue=\"JUnit.Test01.test02\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration />\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"5a83aecd-3add-470d-9b9b-09402338ece2\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1538303291469</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1538303291469</updated>\r\n      <workItem from=\"1538303297347\" duration=\"1426000\" />\r\n      <workItem from=\"1538306893641\" duration=\"525000\" />\r\n      <workItem from=\"1538964193123\" duration=\"6769000\" />\r\n      <workItem from=\"1538972834049\" duration=\"16029000\" />\r\n      <workItem from=\"1539050309639\" duration=\"176000\" />\r\n      <workItem from=\"1539050497753\" duration=\"15697000\" />\r\n      <workItem from=\"1539131276051\" duration=\"16881000\" />\r\n      <workItem from=\"1539171370702\" duration=\"3450000\" />\r\n      <workItem from=\"1539182798765\" duration=\"62040000\" />\r\n      <workItem from=\"1539402986751\" duration=\"1438000\" />\r\n      <workItem from=\"1539433386522\" duration=\"2651000\" />\r\n      <workItem from=\"1539440861743\" duration=\"3827000\" />\r\n      <workItem from=\"1539489739240\" duration=\"9833000\" />\r\n      <workItem from=\"1539523885372\" duration=\"6346000\" />\r\n      <workItem from=\"1539530282414\" duration=\"815000\" />\r\n      <workItem from=\"1539559958452\" duration=\"2364000\" />\r\n      <workItem from=\"1539591120991\" duration=\"878000\" />\r\n      <workItem from=\"1539597425062\" duration=\"9820000\" />\r\n      <workItem from=\"1539667339572\" duration=\"44664000\" />\r\n      <workItem from=\"1539827892217\" duration=\"1001000\" />\r\n      <workItem from=\"1539845785334\" duration=\"571000\" />\r\n      <workItem from=\"1539847181588\" duration=\"4846000\" />\r\n      <workItem from=\"1539868391340\" duration=\"594000\" />\r\n      <workItem from=\"1539914440922\" duration=\"483000\" />\r\n      <workItem from=\"1539920750369\" duration=\"1420000\" />\r\n      <workItem from=\"1540025735304\" duration=\"13371000\" />\r\n      <workItem from=\"1540126120738\" duration=\"5700000\" />\r\n      <workItem from=\"1540173447739\" duration=\"6210000\" />\r\n      <workItem from=\"1540179921242\" duration=\"2063000\" />\r\n      <workItem from=\"1540195891472\" duration=\"5718000\" />\r\n      <workItem from=\"1540204114835\" duration=\"7167000\" />\r\n      <workItem from=\"1540268369998\" duration=\"32498000\" />\r\n      <workItem from=\"1540380748360\" duration=\"5944000\" />\r\n      <workItem from=\"1540432360283\" duration=\"1556000\" />\r\n      <workItem from=\"1540445578984\" duration=\"1825000\" />\r\n      <workItem from=\"1540452742177\" duration=\"6906000\" />\r\n      <workItem from=\"1540537734132\" duration=\"4242000\" />\r\n      <workItem from=\"1540614336710\" duration=\"7202000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"完成写入部分\">\r\n      <created>1539068236120</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539068236120</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"完成查找部分，第一阶段以及完成，后面将进行优化。\">\r\n      <created>1539068976210</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539068976210</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"完成查找部分，第一阶段以及完成，后面将进行优化。\">\r\n      <created>1539069077199</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539069077199</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"完成查找部分，第一阶段以及完成，后面将进行优化。\">\r\n      <created>1539069088389</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539069088389</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"完成测试部分，此数据库引擎可以进行简单的存取操作。\">\r\n      <created>1539135370858</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539135370858</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"key重复时测试未通过\">\r\n      <created>1539155826910</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539155826910</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"key重复时测试未通过\">\r\n      <created>1539171400703</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539171400703</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"完成阶段一的全部工作，转入阶段二的设计与实现\">\r\n      <created>1539254370574</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539254370574</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"第二阶段的原理验证\">\r\n      <created>1539259903305</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539259903305</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"第二阶段的原理验证\">\r\n      <created>1539309835404</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539309835404</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"store:552147 ms\">\r\n      <created>1539360835083</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539360835083</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"store:311492 ms\">\r\n      <created>1539361726322</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539361726322</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"store:246445 ms\">\r\n      <created>1539436537703</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539436537703</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"阶段二已经完成，转战阶段三\">\r\n      <created>1539501449319</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539501449319</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"添加新的接口，实现复赛的功能\">\r\n      <created>1539529647950</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539529647951</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"添加新的接口，实现复赛的功能(2)\">\r\n      <created>1539530180114</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539530180114</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"store:244475 ms\">\r\n      <created>1539562303939</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539562303939</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00018\" summary=\"添加查找缓存\">\r\n      <created>1539670691648</created>\r\n      <option name=\"number\" value=\"00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539670691648</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00019\" summary=\"10.17\">\r\n      <created>1539734427205</created>\r\n      <option name=\"number\" value=\"00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539734427205</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00020\" summary=\"完善相关类，对功能类进行完善\">\r\n      <created>1539745084295</created>\r\n      <option name=\"number\" value=\"00020\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539745084295</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00021\" summary=\"完成Key的封装：byte[]不能作为索引\">\r\n      <created>1539758682295</created>\r\n      <option name=\"number\" value=\"00021\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00021\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539758682295</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00022\" summary=\"完成插入与查找基本功能，下一步：B+树索引、内存优化\">\r\n      <created>1539761704906</created>\r\n      <option name=\"number\" value=\"00022\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539761704906</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00023\" summary=\"完成插入与查找基本功能，下一步：B+树索引、内存优化\">\r\n      <created>1539828891572</created>\r\n      <option name=\"number\" value=\"00023\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539828891572</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00024\" summary=\"准备用C++实现Tree的相关功能\">\r\n      <created>1539924334274</created>\r\n      <option name=\"number\" value=\"00024\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00024\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1539924334274</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00025\" summary=\"完善日志类功能，加快读写速度\">\r\n      <created>1540026927676</created>\r\n      <option name=\"number\" value=\"00025\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00025\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1540026927676</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00026\" summary=\"完善日志类功能，加快读写速度\">\r\n      <created>1540027089479</created>\r\n      <option name=\"number\" value=\"00026\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00026\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1540027089479</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00027\" summary=\"自研AVL树\">\r\n      <created>1540119231688</created>\r\n      <option name=\"number\" value=\"00027\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00027\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1540119231688</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00028\" summary=\"自研B+树\">\r\n      <created>1540176762951</created>\r\n      <option name=\"number\" value=\"00028\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00028\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1540176762951</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00029\" summary=\"自研skip list\">\r\n      <created>1540274200248</created>\r\n      <option name=\"number\" value=\"00029\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00029\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1540274200248</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00030\" summary=\"自研skip list\">\r\n      <created>1540274246553</created>\r\n      <option name=\"number\" value=\"00030\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00030\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1540274246553</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00031\" summary=\"自研skip list\">\r\n      <created>1540275970673</created>\r\n      <option name=\"number\" value=\"00031\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00031\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1540275970673</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00032\" summary=\"自研skip list\">\r\n      <created>1540276027313</created>\r\n      <option name=\"number\" value=\"00032\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00032\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1540276027313</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00033\" summary=\"自研skip list\">\r\n      <created>1540276094378</created>\r\n      <option name=\"number\" value=\"00033\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00033\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1540276094378</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00034\" summary=\"自研skip list\">\r\n      <created>1540276100439</created>\r\n      <option name=\"number\" value=\"00034\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00034\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1540276100439</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00035\" summary=\"自研skip list\">\r\n      <created>1540276108200</created>\r\n      <option name=\"number\" value=\"00035\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00035\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1540276108200</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00036\" summary=\"自研skip list\">\r\n      <created>1540276295485</created>\r\n      <option name=\"number\" value=\"00036\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00036\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1540276295485</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00037\" summary=\"Build insertWrite Class\">\r\n      <created>1540286528529</created>\r\n      <option name=\"number\" value=\"00037\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00037\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1540286528529</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00038\" summary=\"Build insertWrite Class\">\r\n      <created>1540286562635</created>\r\n      <option name=\"number\" value=\"00038\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00038\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1540286562635</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00039\" summary=\"Build selectSearch function\">\r\n      <created>1540365575619</created>\r\n      <option name=\"number\" value=\"00039\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00039\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1540365575619</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00040\" summary=\"test skip list\">\r\n      <created>1540516590400</created>\r\n      <option name=\"number\" value=\"00040\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00040\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1540516590400</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00041\" summary=\"test skip list\">\r\n      <created>1540615139279</created>\r\n      <option name=\"number\" value=\"00041\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00041\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1540615139280</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"42\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TestHistory\">\r\n    <history-entry file=\"Test01_test01_(2) - 2018.10.26 at 15h 51m 31s.xml\">\r\n      <configuration name=\"Test01.test01 (2)\" configurationId=\"JUnit\" />\r\n    </history-entry>\r\n    <history-entry file=\"Test01_test01_(2) - 2018.10.26 at 15h 51m 34s.xml\">\r\n      <configuration name=\"Test01.test01 (2)\" configurationId=\"JUnit\" />\r\n    </history-entry>\r\n    <history-entry file=\"Test01_test01_(2) - 2018.10.26 at 15h 51m 37s.xml\">\r\n      <configuration name=\"Test01.test01 (2)\" configurationId=\"JUnit\" />\r\n    </history-entry>\r\n    <history-entry file=\"Test01_test01_(2) - 2018.10.26 at 15h 51m 40s.xml\">\r\n      <configuration name=\"Test01.test01 (2)\" configurationId=\"JUnit\" />\r\n    </history-entry>\r\n    <history-entry file=\"Test01_test01_(2) - 2018.10.26 at 15h 51m 43s.xml\">\r\n      <configuration name=\"Test01.test01 (2)\" configurationId=\"JUnit\" />\r\n    </history-entry>\r\n    <history-entry file=\"Test01_test01_(2) - 2018.10.26 at 15h 51m 46s.xml\">\r\n      <configuration name=\"Test01.test01 (2)\" configurationId=\"JUnit\" />\r\n    </history-entry>\r\n    <history-entry file=\"Test01_test01_(2) - 2018.10.26 at 16h 17m 53s.xml\">\r\n      <configuration name=\"Test01.test01 (2)\" configurationId=\"JUnit\" />\r\n    </history-entry>\r\n    <history-entry file=\"Test01_test02 - 2018.10.27 at 14h 24m 46s.xml\">\r\n      <configuration name=\"Test01.test02\" configurationId=\"JUnit\" />\r\n    </history-entry>\r\n    <history-entry file=\"Test01_test01 - 2018.10.27 at 14h 55m 04s.xml\">\r\n      <configuration name=\"Test01.test01\" configurationId=\"JUnit\" />\r\n    </history-entry>\r\n    <history-entry file=\"Test01_test01 - 2018.10.27 at 14h 56m 28s.xml\">\r\n      <configuration name=\"Test01.test01\" configurationId=\"JUnit\" />\r\n    </history-entry>\r\n  </component>\r\n  <component name=\"TimeTrackingManager\">\r\n    <option name=\"totallyTimeSpent\" value=\"314946000\" />\r\n  </component>\r\n  <component name=\"TodoView\">\r\n    <todo-panel id=\"selected-file\">\r\n      <is-autoscroll-to-source value=\"true\" />\r\n    </todo-panel>\r\n    <todo-panel id=\"all\">\r\n      <are-packages-shown value=\"true\" />\r\n      <is-autoscroll-to-source value=\"true\" />\r\n    </todo-panel>\r\n  </component>\r\n  <component name=\"ToolWindowManager\">\r\n    <frame x=\"-8\" y=\"-8\" width=\"1936\" height=\"1056\" extended-state=\"6\" />\r\n    <layout>\r\n      <window_info content_ui=\"combo\" id=\"Project\" order=\"0\" visible=\"true\" weight=\"0.18550107\" />\r\n      <window_info id=\"Structure\" order=\"1\" side_tool=\"true\" weight=\"0.25\" />\r\n      <window_info id=\"Image Layers\" order=\"2\" />\r\n      <window_info id=\"Designer\" order=\"3\" />\r\n      <window_info id=\"UI Designer\" order=\"4\" />\r\n      <window_info id=\"Capture Tool\" order=\"5\" />\r\n      <window_info id=\"Favorites\" order=\"6\" side_tool=\"true\" />\r\n      <window_info anchor=\"bottom\" id=\"Messages\" order=\"0\" sideWeight=\"0.49946696\" weight=\"0.3253796\" />\r\n      <window_info anchor=\"bottom\" id=\"Message\" order=\"1\" />\r\n      <window_info anchor=\"bottom\" id=\"Find\" order=\"2\" weight=\"0.32864866\" />\r\n      <window_info anchor=\"bottom\" id=\"Run\" order=\"3\" sideWeight=\"0.4991699\" weight=\"0.36334056\" />\r\n      <window_info anchor=\"bottom\" id=\"Debug\" order=\"4\" weight=\"0.3991323\" />\r\n      <window_info anchor=\"bottom\" id=\"Cvs\" order=\"5\" weight=\"0.25\" />\r\n      <window_info anchor=\"bottom\" id=\"Inspection\" order=\"6\" weight=\"0.4\" />\r\n      <window_info anchor=\"bottom\" id=\"TODO\" order=\"7\" weight=\"0.32864866\" />\r\n      <window_info anchor=\"bottom\" id=\"Database Changes\" order=\"8\" show_stripe_button=\"false\" />\r\n      <window_info anchor=\"bottom\" id=\"Terminal\" order=\"9\" weight=\"0.329718\" />\r\n      <window_info anchor=\"bottom\" id=\"Event Log\" order=\"10\" sideWeight=\"0.5013835\" side_tool=\"true\" weight=\"0.3762162\" />\r\n      <window_info active=\"true\" anchor=\"bottom\" id=\"Version Control\" order=\"11\" sideWeight=\"0.4986165\" visible=\"true\" weight=\"0.37635574\" />\r\n      <window_info anchor=\"bottom\" id=\"Inspection Results\" order=\"12\" weight=\"0.329718\" />\r\n      <window_info anchor=\"right\" id=\"Commander\" internal_type=\"SLIDING\" order=\"0\" type=\"SLIDING\" weight=\"0.4\" />\r\n      <window_info anchor=\"right\" id=\"Ant Build\" order=\"1\" weight=\"0.25\" />\r\n      <window_info anchor=\"right\" content_ui=\"combo\" id=\"Hierarchy\" order=\"2\" weight=\"0.25\" />\r\n      <window_info anchor=\"right\" id=\"Palette\" order=\"3\" />\r\n      <window_info anchor=\"right\" id=\"Capture Analysis\" order=\"4\" />\r\n      <window_info anchor=\"right\" id=\"Theme Preview\" order=\"5\" />\r\n      <window_info anchor=\"right\" id=\"Palette&#9;\" order=\"6\" />\r\n      <window_info anchor=\"right\" id=\"Database\" order=\"7\" weight=\"0.32995737\" />\r\n      <window_info anchor=\"right\" id=\"Maven Projects\" order=\"8\" />\r\n    </layout>\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"1\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"RECENTLY_FILTERED_USER_GROUPS\">\r\n                <collection />\r\n              </option>\r\n              <option name=\"RECENTLY_FILTERED_BRANCH_GROUPS\">\r\n                <collection />\r\n              </option>\r\n              <option name=\"COLUMN_ORDER\">\r\n                <list>\r\n                  <option value=\"0\" />\r\n                  <option value=\"1\" />\r\n                  <option value=\"2\" />\r\n                  <option value=\"3\" />\r\n                </list>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsContentAnnotationSettings\">\r\n    <option name=\"myLimit\" value=\"2678400000\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"完成查找部分，第一阶段以及完成，后面将进行优化。\" />\r\n    <MESSAGE value=\"完成测试部分，此数据库引擎可以进行简单的存取操作。\" />\r\n    <MESSAGE value=\"key重复时测试未通过\" />\r\n    <MESSAGE value=\"完成阶段一的全部工作，转入阶段二的设计与实现\" />\r\n    <MESSAGE value=\"第二阶段的原理验证\" />\r\n    <MESSAGE value=\"store:552147 ms\" />\r\n    <MESSAGE value=\"store:311492 ms\" />\r\n    <MESSAGE value=\"store:246445 ms\" />\r\n    <MESSAGE value=\"阶段二已经完成，转战阶段三\" />\r\n    <MESSAGE value=\"添加新的接口，实现复赛的功能\" />\r\n    <MESSAGE value=\"添加新的接口，实现复赛的功能(2)\" />\r\n    <MESSAGE value=\"store:244475 ms\" />\r\n    <MESSAGE value=\"添加查找缓存\" />\r\n    <MESSAGE value=\"10.17\" />\r\n    <MESSAGE value=\"完善相关类，对功能类进行完善\" />\r\n    <MESSAGE value=\"完成Key的封装：byte[]不能作为索引\" />\r\n    <MESSAGE value=\"完成插入与查找基本功能，下一步：B+树索引、内存优化\" />\r\n    <MESSAGE value=\"准备用C++实现Tree的相关功能\" />\r\n    <MESSAGE value=\"完善日志类功能，加快读写速度\" />\r\n    <MESSAGE value=\"自研AVL树\" />\r\n    <MESSAGE value=\"自研B+树\" />\r\n    <MESSAGE value=\"自研skip list\" />\r\n    <MESSAGE value=\"Build insertWrite Class\" />\r\n    <MESSAGE value=\"Build selectSearch function\" />\r\n    <MESSAGE value=\"test skip list\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"test skip list\" />\r\n    <option name=\"OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT\" value=\"true\" />\r\n    <option name=\"REFORMAT_BEFORE_PROJECT_COMMIT\" value=\"true\" />\r\n  </component>\r\n  <component name=\"editorHistoryManager\">\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/old/resources/DatabaseResources.java\" />\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/KeyValue.java\" />\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/old/util/convert/byte2long/ByteArrayToLong.java\" />\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/old/util/convert/long2byte/LongToByteArray.java\" />\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/BPlusTree.java\" />\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/old/util/disk/ReadDisk.java\" />\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/Node.java\" />\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/InternalNode.java\" />\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/LeafNode.java\" />\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/btree4j/BIndexFile.java\" />\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/btree4j/BTree.java\" />\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/old/bplus/bptree/BPlusConfiguration.java\" />\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/old/bplus/util/TrialsClass.java\" />\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/old/bplus/fudger/Main.java\" />\r\n    <entry file=\"file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/tree/Test01.java\" />\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/old/Select.java\" />\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/old/Store.java\" />\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/sl/util/convert/byte2long/ByteArrayToLong.java\" />\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/key/KeyCompare.java\" />\r\n    <entry file=\"jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/nio/Buffer.class\" />\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/exceptions/EngineException.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"174\">\r\n          <caret line=\"6\" column=\"13\" selection-start-line=\"6\" selection-start-column=\"13\" selection-end-line=\"6\" selection-end-column=\"13\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/exception/HPKVException.java\" />\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/convert/ByteArrayToLong.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"203\">\r\n          <caret line=\"7\" column=\"13\" selection-start-line=\"7\" selection-start-column=\"13\" selection-end-line=\"7\" selection-end-column=\"13\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/nio/ByteBuffer.class\" />\r\n    <entry file=\"jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/io/FileInputStream.class\" />\r\n    <entry file=\"jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/io/InputStream.class\" />\r\n    <entry file=\"jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/io/IOException.class\" />\r\n    <entry file=\"jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/io/RandomAccessFile.class\" />\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/convert/LongToByteArray.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"348\">\r\n          <caret line=\"12\" column=\"5\" lean-forward=\"true\" selection-start-line=\"12\" selection-start-column=\"5\" selection-end-line=\"12\" selection-end-column=\"5\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/pom.xml\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"545\">\r\n          <caret line=\"43\" column=\"34\" lean-forward=\"true\" selection-start-line=\"43\" selection-start-column=\"34\" selection-end-line=\"43\" selection-end-column=\"34\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/skiplist/SkipList.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"489\">\r\n          <caret line=\"114\" column=\"71\" selection-start-line=\"114\" selection-start-column=\"71\" selection-end-line=\"114\" selection-end-column=\"71\" />\r\n          <folding>\r\n            <element signature=\"imports\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/skiplist/Test01.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"288\">\r\n          <caret line=\"13\" selection-start-line=\"13\" selection-end-line=\"17\" selection-end-column=\"5\" />\r\n          <folding>\r\n            <element signature=\"imports\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/key/TestKey.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"396\">\r\n          <caret line=\"12\" column=\"5\" lean-forward=\"true\" selection-start-line=\"12\" selection-start-column=\"5\" selection-end-line=\"12\" selection-end-column=\"5\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/conf/Configuration.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"413\">\r\n          <caret line=\"17\" lean-forward=\"true\" selection-start-line=\"17\" selection-end-line=\"17\" />\r\n          <folding>\r\n            <element signature=\"imports\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/resources/configuration.json\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"108\">\r\n          <caret line=\"3\" column=\"19\" selection-start-line=\"3\" selection-start-column=\"19\" selection-end-line=\"3\" selection-end-column=\"19\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/KeyCompare.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"828\">\r\n          <caret line=\"27\" column=\"25\" lean-forward=\"true\" selection-start-line=\"27\" selection-start-column=\"25\" selection-end-line=\"27\" selection-end-column=\"25\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/log/Log.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"648\">\r\n          <caret line=\"26\" lean-forward=\"true\" selection-start-line=\"26\" selection-end-line=\"26\" />\r\n          <folding>\r\n            <element signature=\"imports\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/InsertWrite.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"180\">\r\n          <caret line=\"9\" column=\"14\" lean-forward=\"true\" selection-start-line=\"9\" selection-start-column=\"14\" selection-end-line=\"9\" selection-end-column=\"14\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/WriteDisk.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"252\">\r\n          <caret line=\"11\" column=\"24\" selection-start-line=\"11\" selection-start-column=\"24\" selection-end-line=\"11\" selection-end-column=\"24\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Store.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"108\">\r\n          <caret line=\"3\" column=\"2\" lean-forward=\"true\" selection-start-line=\"3\" selection-start-column=\"2\" selection-end-line=\"3\" selection-end-column=\"2\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/Configuration/Test01.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"173\">\r\n          <caret line=\"6\" selection-start-line=\"6\" selection-start-column=\"2\" selection-end-line=\"9\" selection-end-column=\"7\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/data/test.txt\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\" />\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/ReadDisk.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"36\">\r\n          <caret line=\"1\" selection-start-line=\"1\" selection-end-line=\"1\" />\r\n          <folding>\r\n            <element signature=\"imports\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/Key.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"-138\">\r\n          <caret line=\"15\" lean-forward=\"true\" selection-start-line=\"15\" selection-end-line=\"15\" />\r\n          <folding>\r\n            <element signature=\"e#292#293#0\" expanded=\"true\" />\r\n            <element signature=\"e#342#343#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Select.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"216\">\r\n          <caret line=\"6\" column=\"4\" selection-start-line=\"6\" selection-start-column=\"4\" selection-end-line=\"6\" selection-end-column=\"4\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/DB/DatabaseResources.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"497\">\r\n          <caret line=\"20\" column=\"24\" selection-start-line=\"20\" selection-start-column=\"24\" selection-end-line=\"20\" selection-end-column=\"24\" />\r\n          <folding>\r\n            <element signature=\"imports\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/DB/IndexResources.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"522\">\r\n          <caret line=\"22\" column=\"21\" lean-forward=\"true\" selection-start-line=\"22\" selection-start-column=\"21\" selection-end-line=\"22\" selection-end-column=\"21\" />\r\n          <folding>\r\n            <element signature=\"imports\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/FileIO/Test01.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"329\">\r\n          <caret line=\"16\" selection-start-line=\"16\" selection-end-line=\"20\" selection-end-column=\"5\" />\r\n          <folding>\r\n            <element signature=\"imports\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/cache/KeyCache.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"522\">\r\n          <caret line=\"26\" selection-start-line=\"26\" selection-end-line=\"26\" />\r\n          <folding>\r\n            <element signature=\"imports\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/All/Test01.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"54\">\r\n          <caret line=\"16\" column=\"19\" selection-start-line=\"16\" selection-start-column=\"16\" selection-end-line=\"16\" selection-end-column=\"22\" />\r\n          <folding>\r\n            <element signature=\"imports\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/EngineRace.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"2340\">\r\n          <caret line=\"92\" column=\"13\" lean-forward=\"true\" selection-start-line=\"92\" selection-start-column=\"13\" selection-end-line=\"92\" selection-end-column=\"13\" />\r\n          <folding>\r\n            <element signature=\"imports\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n  </component>\r\n  <component name=\"masterDetails\">\r\n    <states>\r\n      <state key=\"ArtifactsStructureConfigurable.UI\">\r\n        <settings>\r\n          <artifact-editor />\r\n          <splitter-proportions>\r\n            <option name=\"proportions\">\r\n              <list>\r\n                <option value=\"0.27586207\" />\r\n              </list>\r\n            </option>\r\n          </splitter-proportions>\r\n        </settings>\r\n      </state>\r\n      <state key=\"FacetStructureConfigurable.UI\">\r\n        <settings>\r\n          <last-edited>No facets are configured</last-edited>\r\n          <splitter-proportions>\r\n            <option name=\"proportions\">\r\n              <list>\r\n                <option value=\"0.27586207\" />\r\n              </list>\r\n            </option>\r\n          </splitter-proportions>\r\n        </settings>\r\n      </state>\r\n      <state key=\"GlobalLibrariesConfigurable.UI\">\r\n        <settings>\r\n          <splitter-proportions>\r\n            <option name=\"proportions\">\r\n              <list>\r\n                <option value=\"0.27586207\" />\r\n              </list>\r\n            </option>\r\n          </splitter-proportions>\r\n        </settings>\r\n      </state>\r\n      <state key=\"JdkListConfigurable.UI\">\r\n        <settings>\r\n          <last-edited>1.8</last-edited>\r\n          <splitter-proportions>\r\n            <option name=\"proportions\">\r\n              <list>\r\n                <option value=\"0.27586207\" />\r\n              </list>\r\n            </option>\r\n          </splitter-proportions>\r\n        </settings>\r\n      </state>\r\n      <state key=\"ModuleStructureConfigurable.UI\">\r\n        <settings>\r\n          <last-edited>HPKV</last-edited>\r\n          <splitter-proportions>\r\n            <option name=\"proportions\">\r\n              <list>\r\n                <option value=\"0.2\" />\r\n                <option value=\"0.6\" />\r\n              </list>\r\n            </option>\r\n          </splitter-proportions>\r\n        </settings>\r\n      </state>\r\n      <state key=\"ProjectJDKs.UI\">\r\n        <settings>\r\n          <last-edited>1.8</last-edited>\r\n          <splitter-proportions>\r\n            <option name=\"proportions\">\r\n              <list>\r\n                <option value=\"0.2\" />\r\n              </list>\r\n            </option>\r\n          </splitter-proportions>\r\n        </settings>\r\n      </state>\r\n      <state key=\"ProjectLibrariesConfigurable.UI\">\r\n        <settings>\r\n          <last-edited>Maven: org.slf4j:slf4j-api:1.6.4</last-edited>\r\n          <splitter-proportions>\r\n            <option name=\"proportions\">\r\n              <list>\r\n                <option value=\"0.4218391\" />\r\n              </list>\r\n            </option>\r\n          </splitter-proportions>\r\n        </settings>\r\n      </state>\r\n      <state key=\"ScopeChooserConfigurable.UI\">\r\n        <settings>\r\n          <splitter-proportions>\r\n            <option name=\"proportions\">\r\n              <list>\r\n                <option value=\"0.2\" />\r\n              </list>\r\n            </option>\r\n          </splitter-proportions>\r\n        </settings>\r\n      </state>\r\n    </states>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision c7365761d476c0ae11b079cdf667980d35eca441)
++++ .idea/workspace.xml	(date 1540632026818)
+@@ -4,27 +4,8 @@
+     <option name="GROUP_BY_SEVERITY" value="true" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="5a83aecd-3add-470d-9b9b-09402338ece2" name="Default Changelist" comment="">
+-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/cache/KeyCache.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/All/Test01.java" afterDir="false" />
++    <list default="true" id="5a83aecd-3add-470d-9b9b-09402338ece2" name="Default Changelist" comment="complete!">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/DB/DatabaseResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/DB/DatabaseResources.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/DB/IndexResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/DB/IndexResources.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Select.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Store.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/conf/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/conf/Configuration.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/Key.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/KeyCompare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/KeyCompare.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/log/Log.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/skiplist/SkipList.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/InsertWrite.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/ReadDisk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/ReadDisk.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/WriteDisk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/WriteDisk.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/EngineRace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/EngineRace.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/configuration.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/configuration.json" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/Configuration/Test01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/Configuration/Test01.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/FileIO/Test01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/FileIO/Test01.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/skiplist/Test01.java" beforeDir="false" />
+     </list>
+     <ignored path="$PROJECT_DIR$/out/" />
+     <ignored path="$PROJECT_DIR$/target/" />
+@@ -196,42 +177,45 @@
+     <session id="630395709">
+       <usages-collector id="statistics.lifecycle.project">
+         <counts>
+-          <entry key="project.closed" value="3" />
++          <entry key="project.closed" value="4" />
+           <entry key="project.open.time.2" value="1" />
+-          <entry key="project.open.time.4" value="1" />
++          <entry key="project.open.time.4" value="2" />
+           <entry key="project.open.time.5" value="1" />
+           <entry key="project.open.time.6" value="1" />
+-          <entry key="project.opened" value="4" />
++          <entry key="project.opened" value="5" />
+         </counts>
+       </usages-collector>
+       <usages-collector id="statistics.file.extensions.open">
+         <counts>
+-          <entry key="java" value="37" />
+-          <entry key="json" value="4" />
++          <entry key="LICENSE" value="1" />
++          <entry key="gitattributes" value="1" />
++          <entry key="gitignore" value="1" />
++          <entry key="java" value="53" />
++          <entry key="json" value="5" />
+           <entry key="txt" value="1" />
+-          <entry key="xml" value="1" />
++          <entry key="xml" value="2" />
+         </counts>
+       </usages-collector>
+       <usages-collector id="statistics.file.types.open">
+         <counts>
+-          <entry key="JAVA" value="37" />
+-          <entry key="JSON" value="4" />
+-          <entry key="PLAIN_TEXT" value="1" />
+-          <entry key="XML" value="1" />
++          <entry key="JAVA" value="53" />
++          <entry key="JSON" value="5" />
++          <entry key="PLAIN_TEXT" value="4" />
++          <entry key="XML" value="2" />
+         </counts>
+       </usages-collector>
+       <usages-collector id="statistics.file.extensions.edit">
+         <counts>
+           <entry key="java" value="2161" />
+           <entry key="json" value="3" />
+-          <entry key="txt" value="16" />
++          <entry key="txt" value="32" />
+         </counts>
+       </usages-collector>
+       <usages-collector id="statistics.file.types.edit">
+         <counts>
+           <entry key="JAVA" value="2161" />
+           <entry key="JSON" value="3" />
+-          <entry key="PLAIN_TEXT" value="16" />
++          <entry key="PLAIN_TEXT" value="32" />
+         </counts>
+       </usages-collector>
+     </session>
+@@ -239,37 +223,10 @@
+   <component name="FileEditorManager">
+     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+       <file pinned="false" current-in-tab="true">
+-        <entry file="file://$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/EngineRace.java">
+-          <provider selected="true" editor-type-id="text-editor">
+-            <state relative-caret-position="2340">
+-              <caret line="92" column="13" lean-forward="true" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
+-              <folding>
+-                <element signature="imports" expanded="true" />
+-              </folding>
+-            </state>
+-          </provider>
+-        </entry>
+-      </file>
+-      <file pinned="false" current-in-tab="false">
+-        <entry file="file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/All/Test01.java">
+-          <provider selected="true" editor-type-id="text-editor">
+-            <state relative-caret-position="54">
+-              <caret line="16" column="19" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="22" />
+-              <folding>
+-                <element signature="imports" expanded="true" />
+-              </folding>
+-            </state>
+-          </provider>
+-        </entry>
+-      </file>
+-      <file pinned="false" current-in-tab="false">
+-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/cache/KeyCache.java">
++        <entry file="file://$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/AbstractEngine.java">
+           <provider selected="true" editor-type-id="text-editor">
+-            <state relative-caret-position="522">
+-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+-              <folding>
+-                <element signature="imports" expanded="true" />
+-              </folding>
++            <state relative-caret-position="225">
++              <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+             </state>
+           </provider>
+         </entry>
+@@ -522,20 +479,22 @@
+               <item name="HPKV" type="462c0819:PsiDirectoryNode" />
+               <item name="src" type="462c0819:PsiDirectoryNode" />
+               <item name="main" type="462c0819:PsiDirectoryNode" />
+-              <item name="resources" type="462c0819:PsiDirectoryNode" />
++              <item name="java" type="462c0819:PsiDirectoryNode" />
++              <item name="common" type="462c0819:PsiDirectoryNode" />
++              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
+             </path>
+             <path>
+               <item name="HPKV" type="b2602c69:ProjectViewProjectNode" />
+               <item name="HPKV" type="462c0819:PsiDirectoryNode" />
+               <item name="src" type="462c0819:PsiDirectoryNode" />
+-              <item name="test" type="462c0819:PsiDirectoryNode" />
++              <item name="main" type="462c0819:PsiDirectoryNode" />
++              <item name="resources" type="462c0819:PsiDirectoryNode" />
+             </path>
+             <path>
+               <item name="HPKV" type="b2602c69:ProjectViewProjectNode" />
+               <item name="HPKV" type="462c0819:PsiDirectoryNode" />
+               <item name="src" type="462c0819:PsiDirectoryNode" />
+               <item name="test" type="462c0819:PsiDirectoryNode" />
+-              <item name="java" type="462c0819:PsiDirectoryNode" />
+             </path>
+             <path>
+               <item name="HPKV" type="b2602c69:ProjectViewProjectNode" />
+@@ -543,7 +502,6 @@
+               <item name="src" type="462c0819:PsiDirectoryNode" />
+               <item name="test" type="462c0819:PsiDirectoryNode" />
+               <item name="java" type="462c0819:PsiDirectoryNode" />
+-              <item name="hpkv" type="462c0819:PsiDirectoryNode" />
+             </path>
+             <path>
+               <item name="HPKV" type="b2602c69:ProjectViewProjectNode" />
+@@ -552,7 +510,6 @@
+               <item name="test" type="462c0819:PsiDirectoryNode" />
+               <item name="java" type="462c0819:PsiDirectoryNode" />
+               <item name="hpkv" type="462c0819:PsiDirectoryNode" />
+-              <item name="All" type="462c0819:PsiDirectoryNode" />
+             </path>
+             <path>
+               <item name="HPKV" type="b2602c69:ProjectViewProjectNode" />
+@@ -561,16 +518,7 @@
+               <item name="test" type="462c0819:PsiDirectoryNode" />
+               <item name="java" type="462c0819:PsiDirectoryNode" />
+               <item name="hpkv" type="462c0819:PsiDirectoryNode" />
+-              <item name="Configuration" type="462c0819:PsiDirectoryNode" />
+-            </path>
+-            <path>
+-              <item name="HPKV" type="b2602c69:ProjectViewProjectNode" />
+-              <item name="HPKV" type="462c0819:PsiDirectoryNode" />
+-              <item name="src" type="462c0819:PsiDirectoryNode" />
+-              <item name="test" type="462c0819:PsiDirectoryNode" />
+-              <item name="java" type="462c0819:PsiDirectoryNode" />
+-              <item name="hpkv" type="462c0819:PsiDirectoryNode" />
+-              <item name="FileIO" type="462c0819:PsiDirectoryNode" />
++              <item name="All" type="462c0819:PsiDirectoryNode" />
+             </path>
+           </expand>
+           <select />
+@@ -585,7 +533,7 @@
+     <property name="Repository.Attach.Sources" value="false" />
+     <property name="WebServerToolWindowFactoryState" value="false" />
+     <property name="aspect.path.notification.shown" value="true" />
+-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540623383310" />
++    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540631580042" />
+     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+     <property name="project.structure.last.edited" value="Libraries" />
+     <property name="project.structure.proportion" value="0.15" />
+@@ -593,6 +541,9 @@
+     <property name="settings.editor.selected.configurable" value="settings.github" />
+   </component>
+   <component name="RecentsManager">
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="C:\Users\王新硕\Documents\GitHub\HPKV\src\main\resources" />
++    </key>
+     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+       <recent name="cn.wangxinshuo.hpkv.key" />
+     </key>
+@@ -603,9 +554,6 @@
+       <recent name="$PROJECT_DIR$/src/main/java" />
+       <recent name="C:\Users\王新硕\Documents\GitHub\HPKV\src\main\java\cn\wangxinshuo\hpkv\util" />
+     </key>
+-    <key name="MoveFile.RECENT_KEYS">
+-      <recent name="C:\Users\王新硕\Documents\GitHub\HPKV\src\main\resources" />
+-    </key>
+   </component>
+   <component name="RunDashboard">
+     <option name="ruleStates">
+@@ -710,7 +658,8 @@
+       <workItem from="1540445578984" duration="1825000" />
+       <workItem from="1540452742177" duration="6906000" />
+       <workItem from="1540537734132" duration="4242000" />
+-      <workItem from="1540614336710" duration="7202000" />
++      <workItem from="1540614336710" duration="7313000" />
++      <workItem from="1540627729177" duration="2105000" />
+     </task>
+     <task id="LOCAL-00001" summary="完成写入部分">
+       <created>1539068236120</created>
+@@ -999,13 +948,17 @@
+       <option name="project" value="LOCAL" />
+       <updated>1540615139280</updated>
+     </task>
+-    <option name="localTasksCounter" value="42" />
++    <task id="LOCAL-00042" summary="complete!">
++      <created>1540624172100</created>
++      <option name="number" value="00042" />
++      <option name="presentableId" value="LOCAL-00042" />
++      <option name="project" value="LOCAL" />
++      <updated>1540624172100</updated>
++    </task>
++    <option name="localTasksCounter" value="43" />
+     <servers />
+   </component>
+   <component name="TestHistory">
+-    <history-entry file="Test01_test01_(2) - 2018.10.26 at 15h 51m 31s.xml">
+-      <configuration name="Test01.test01 (2)" configurationId="JUnit" />
+-    </history-entry>
+     <history-entry file="Test01_test01_(2) - 2018.10.26 at 15h 51m 34s.xml">
+       <configuration name="Test01.test01 (2)" configurationId="JUnit" />
+     </history-entry>
+@@ -1031,11 +984,14 @@
+       <configuration name="Test01.test01" configurationId="JUnit" />
+     </history-entry>
+     <history-entry file="Test01_test01 - 2018.10.27 at 14h 56m 28s.xml">
++      <configuration name="Test01.test01" configurationId="JUnit" />
++    </history-entry>
++    <history-entry file="Test01_test01 - 2018.10.27 at 16h 12m 34s.xml">
+       <configuration name="Test01.test01" configurationId="JUnit" />
+     </history-entry>
+   </component>
+   <component name="TimeTrackingManager">
+-    <option name="totallyTimeSpent" value="314946000" />
++    <option name="totallyTimeSpent" value="317162000" />
+   </component>
+   <component name="TodoView">
+     <todo-panel id="selected-file">
+@@ -1048,8 +1004,9 @@
+   </component>
+   <component name="ToolWindowManager">
+     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
++    <editor active="true" />
+     <layout>
+-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18550107" />
++      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18763326" />
+       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+       <window_info id="Image Layers" order="2" />
+       <window_info id="Designer" order="3" />
+@@ -1067,7 +1024,7 @@
+       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+       <window_info anchor="bottom" id="Terminal" order="9" weight="0.329718" />
+       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013835" side_tool="true" weight="0.3762162" />
+-      <window_info active="true" anchor="bottom" id="Version Control" order="11" sideWeight="0.4986165" visible="true" weight="0.37635574" />
++      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.4986165" weight="0.37635574" />
+       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.329718" />
+       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+@@ -1113,7 +1070,6 @@
+     <option name="myLimit" value="2678400000" />
+   </component>
+   <component name="VcsManagerConfiguration">
+-    <MESSAGE value="完成查找部分，第一阶段以及完成，后面将进行优化。" />
+     <MESSAGE value="完成测试部分，此数据库引擎可以进行简单的存取操作。" />
+     <MESSAGE value="key重复时测试未通过" />
+     <MESSAGE value="完成阶段一的全部工作，转入阶段二的设计与实现" />
+@@ -1138,18 +1094,12 @@
+     <MESSAGE value="Build insertWrite Class" />
+     <MESSAGE value="Build selectSearch function" />
+     <MESSAGE value="test skip list" />
+-    <option name="LAST_COMMIT_MESSAGE" value="test skip list" />
++    <MESSAGE value="complete!" />
++    <option name="LAST_COMMIT_MESSAGE" value="complete!" />
+     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+   </component>
+   <component name="editorHistoryManager">
+-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/old/resources/DatabaseResources.java" />
+-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/KeyValue.java" />
+-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/old/util/convert/byte2long/ByteArrayToLong.java" />
+-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/old/util/convert/long2byte/LongToByteArray.java" />
+-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/BPlusTree.java" />
+-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/old/util/disk/ReadDisk.java" />
+-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/Node.java" />
+     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/InternalNode.java" />
+     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/tree/LeafNode.java" />
+     <entry file="file://$PROJECT_DIR$/src/main/java/btree4j/BIndexFile.java" />
+@@ -1190,109 +1140,103 @@
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/pom.xml">
++    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/skiplist/SkipList.java" />
++    <entry file="file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/skiplist/Test01.java" />
++    <entry file="file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/key/TestKey.java">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="545">
+-          <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
++        <state relative-caret-position="396">
++          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/skiplist/SkipList.java">
++    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/InsertWrite.java" />
++    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/WriteDisk.java">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="489">
+-          <caret line="114" column="71" selection-start-line="114" selection-start-column="71" selection-end-line="114" selection-end-column="71" />
+-          <folding>
+-            <element signature="imports" expanded="true" />
+-          </folding>
++        <state relative-caret-position="252">
++          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/skiplist/Test01.java">
++    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Store.java">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="288">
+-          <caret line="13" selection-start-line="13" selection-end-line="17" selection-end-column="5" />
+-          <folding>
+-            <element signature="imports" expanded="true" />
+-          </folding>
++        <state relative-caret-position="108">
++          <caret line="3" column="2" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/key/TestKey.java">
++    <entry file="file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/Configuration/Test01.java">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="396">
+-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
++        <state relative-caret-position="173">
++          <caret line="6" selection-start-line="6" selection-start-column="2" selection-end-line="9" selection-end-column="7" />
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/conf/Configuration.java">
++    <entry file="file://$PROJECT_DIR$/data/test.txt" />
++    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Select.java">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="413">
+-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+-          <folding>
+-            <element signature="imports" expanded="true" />
+-          </folding>
++        <state relative-caret-position="216">
++          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/main/resources/configuration.json">
++    <entry file="file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/FileIO/Test01.java">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="108">
+-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/KeyCompare.java">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="828">
+-          <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
++        <state relative-caret-position="329">
++          <caret line="16" selection-start-line="16" selection-end-line="20" selection-end-column="5" />
+         </state>
+       </provider>
+     </entry>
+     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/log/Log.java">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="648">
+-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
++        <state relative-caret-position="-1188">
++          <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+           <folding>
+             <element signature="imports" expanded="true" />
+           </folding>
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/InsertWrite.java">
++    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/cache/FileCache.java">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="180">
+-          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
++        <state relative-caret-position="252">
++          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/WriteDisk.java">
++    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/cache/KeyCache.java">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="252">
+-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
++        <state relative-caret-position="-463">
++          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
++          <folding>
++            <element signature="imports" expanded="true" />
++          </folding>
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Store.java">
++    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/conf/Configuration.java">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="108">
+-          <caret line="3" column="2" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
++        <state relative-caret-position="-31">
++          <caret line="17" selection-start-line="17" selection-end-line="17" />
++          <folding>
++            <element signature="imports" expanded="true" />
++          </folding>
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/Configuration/Test01.java">
++    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/DB/IndexResources.java">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="173">
+-          <caret line="6" selection-start-line="6" selection-start-column="2" selection-end-line="9" selection-end-column="7" />
++        <state relative-caret-position="641">
++          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
++          <folding>
++            <element signature="imports" expanded="true" />
++          </folding>
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/data/test.txt">
+-      <provider selected="true" editor-type-id="text-editor" />
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/ReadDisk.java">
++    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/DB/DatabaseResources.java">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="36">
+-          <caret line="1" selection-start-line="1" selection-end-line="1" />
++        <state relative-caret-position="569">
++          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+           <folding>
+             <element signature="imports" expanded="true" />
+           </folding>
+@@ -1301,8 +1245,8 @@
+     </entry>
+     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/Key.java">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="-138">
+-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
++        <state relative-caret-position="396">
++          <caret line="15" selection-start-line="15" selection-end-line="15" />
+           <folding>
+             <element signature="e#292#293#0" expanded="true" />
+             <element signature="e#342#343#0" expanded="true" />
+@@ -1310,70 +1254,86 @@
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/Select.java">
++    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/range/key/SortedList.java">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="216">
+-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
++        <state relative-caret-position="288">
++          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/DB/DatabaseResources.java">
++    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/key/KeyCompare.java">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="497">
+-          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+-          <folding>
+-            <element signature="imports" expanded="true" />
+-          </folding>
++        <state relative-caret-position="821">
++          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/DB/IndexResources.java">
++    <entry file="file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/All/Test01.java">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="522">
+-          <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
++        <state relative-caret-position="581">
++          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+           <folding>
+             <element signature="imports" expanded="true" />
+           </folding>
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/FileIO/Test01.java">
++    <entry file="file://$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/AbstractVisitor.java">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="72">
++          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/src/main/resources/configuration.json">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="329">
+-          <caret line="16" selection-start-line="16" selection-end-line="20" selection-end-column="5" />
++        <state relative-caret-position="108">
++          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/EngineRace.java">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="174">
++          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+           <folding>
+             <element signature="imports" expanded="true" />
+           </folding>
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/cache/KeyCache.java">
++    <entry file="file://$PROJECT_DIR$/.gitignore">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="-108" />
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/.gitattributes">
++      <provider selected="true" editor-type-id="text-editor" />
++    </entry>
++    <entry file="file://$PROJECT_DIR$/LICENSE">
++      <provider selected="true" editor-type-id="text-editor" />
++    </entry>
++    <entry file="file://$PROJECT_DIR$/pom.xml">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="522">
+-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+-          <folding>
+-            <element signature="imports" expanded="true" />
+-          </folding>
++        <state relative-caret-position="1008">
++          <caret line="28" column="35" lean-forward="true" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/All/Test01.java">
++    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/ReadDisk.java">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="54">
+-          <caret line="16" column="19" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="22" />
++        <state relative-caret-position="576">
++          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+           <folding>
+             <element signature="imports" expanded="true" />
+           </folding>
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/EngineRace.java">
++    <entry file="file://$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/AbstractEngine.java">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="2340">
+-          <caret line="92" column="13" lean-forward="true" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
+-          <folding>
+-            <element signature="imports" expanded="true" />
+-          </folding>
++        <state relative-caret-position="225">
++          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+         </state>
+       </provider>
+     </entry>
