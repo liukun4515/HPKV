@@ -2,7 +2,6 @@ package cn.wangxinshuo.hpkv.log;
 
 import cn.wangxinshuo.hpkv.conf.Configuration;
 import cn.wangxinshuo.hpkv.key.Key;
-import cn.wangxinshuo.hpkv.util.disk.ReadDisk;
 import cn.wangxinshuo.hpkv.util.disk.WriteDisk;
 
 import java.io.File;
@@ -17,7 +16,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class Log {
     private final int KV_NUMBER = Configuration.MaxLogNumber;
-    private volatile RandomAccessFile randomAccessFile;
+    private RandomAccessFile randomAccessFile;
     private String path;
 
     public Log(String path) throws IOException {
@@ -63,29 +62,15 @@ public class Log {
 
     public void delete() throws IOException {
         close();
-        File file = new File(path + "/log.bin");
+        File file = new File(path + "/data.log");
         final boolean delete = file.delete();
         final boolean newFile = file.createNewFile();
         this.randomAccessFile = new RandomAccessFile(file, "rwd");
         randomAccessFile.setLength(0);
     }
 
-    public int getLogFileLength() throws IOException {
-        return (int) randomAccessFile.length();
-    }
-
-    private void write(long offset, byte[] data) throws IOException {
-        WriteDisk.write(randomAccessFile, offset, data);
-    }
-
     public void write(byte[] data) throws IOException {
         WriteDisk.write(randomAccessFile, randomAccessFile.length(), data);
-    }
-
-    public void read(long offset, byte[] data) throws IOException {
-        System.arraycopy(ReadDisk.read(
-                randomAccessFile, offset, data.length),
-                0, data, 0, data.length);
     }
 
     public void close() throws IOException {

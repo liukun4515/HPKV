@@ -104,7 +104,7 @@ public class SkipList {
     public void insert(byte[] key, byte[] value) throws IOException {
         LinkedList<Long> list = new LinkedList<>();
         insertSearch(key, list);
-        for (int i = getRandomLevel(); i < list.size(); i++) {
+        for (int i = Configuration.MaxLevel - getRandomLevel(); i < list.size(); i++) {
             long position = list.get(i);
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
             stream.write(key);
@@ -115,8 +115,10 @@ public class SkipList {
                 stream.write(LongToByteArray.convert(list.get(i + 1)));
             }
             InsertWrite.insertWrite(indexFiles[i], position, stream.toByteArray());
+            System.out.println("在" + position + "写入第" + i + "个Key成功！");
         }
         InsertWrite.insertWrite(databaseFile, list.getLast(), value);
+        System.out.println("在" + list.getLast() + "写入Value成功！");
         list.clear();
     }
 

@@ -9,6 +9,7 @@ import cn.wangxinshuo.hpkv.skiplist.SkipList;
 import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
 import com.alibabacloud.polar_race.engine.common.exceptions.RetCodeEnum;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -23,6 +24,13 @@ public class EngineRace extends AbstractEngine {
     @Override
     public void open(String path) throws EngineException {
         try {
+            if (path.endsWith("/")) {
+                path = path.substring(0, path.length() - 1);
+            }
+            File pathFile = new File(path);
+            if (!pathFile.exists()) {
+                boolean mkdir = pathFile.mkdir();
+            }
             log = new Log(path);
             skipList = new SkipList(IndexResources.getIndexFiles(path),
                     DatabaseResources.getDatabaseFile(path));

@@ -22,7 +22,7 @@ public class Test01 {
         try {
             EngineRace race = new EngineRace();
             race.open("./data");
-            for (int i = 0; i < 100000; i++) {
+            for (int i = 0; i < 200; i++) {
                 race.write(get(Configuration.KeySize), get(Configuration.ValueSize));
             }
         } catch (EngineException e) {
