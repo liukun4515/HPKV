@@ -8,7 +8,7 @@ import java.io.RandomAccessFile;
  * @author wangxinshuo
  */
 public class IndexResources {
-    private static RandomAccessFile indexFiles = null;
+    private static volatile RandomAccessFile indexFiles = null;
 
     public static RandomAccessFile getIndexFiles(String path) throws IOException {
         if (indexFiles == null) {

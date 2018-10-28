@@ -15,14 +15,21 @@ public class ReadDisk {
     }
 
     public static byte[] read(RandomAccessFile file, long start, int length) throws IOException {
-        MappedByteBuffer buffer = getBuffer(file, start, length);
-        byte[] result;
-        if (length > buffer.remaining()) {
-            result = new byte[buffer.remaining()];
-        } else {
-            result = new byte[length];
+//        MappedByteBuffer buffer = getBuffer(file, start, length);
+////        byte[] result;
+////        if (length > buffer.remaining()) {
+////            result = new byte[buffer.remaining()];
+////        } else {
+////            result = new byte[length];
+////        }
+////        buffer.get(result);
+////        return result;
+        file.seek(start);
+        if (start + length <= file.length()) {
+            byte[] result = new byte[length];
+            file.read(result);
+            return result;
         }
-        buffer.get(result);
-        return result;
+        return null;
     }
 }

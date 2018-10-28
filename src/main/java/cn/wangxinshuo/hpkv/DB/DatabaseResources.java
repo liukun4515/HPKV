@@ -8,7 +8,7 @@ import java.io.RandomAccessFile;
  * @author wangxinshuo
  */
 public class DatabaseResources {
-    private static RandomAccessFile databaseFile = null;
+    private static volatile RandomAccessFile databaseFile = null;
 
     public static RandomAccessFile getDatabaseFile(String path) throws IOException {
         if (databaseFile == null) {

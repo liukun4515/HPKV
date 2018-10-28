@@ -27,8 +27,11 @@ public class EngineRace extends AbstractEngine {
 
     @Override
     public void open(String path) throws EngineException {
-        if (path.endsWith("/")) {
-            this.path = path.substring(0, path.length() - 1);
+        if (path == null) {
+            throw new EngineException(RetCodeEnum.INVALID_ARGUMENT, "INVALID_ARGUMENT");
+        } else {
+            this.path = path;
+            System.out.println(":::::::::::::::::::::" + path + "::::::::::::::::::::::");
         }
         File pathFile = new File(this.path);
         if (!pathFile.exists()) {
@@ -44,33 +47,37 @@ public class EngineRace extends AbstractEngine {
     }
 
     @Override
-    public synchronized void write(byte[] key, byte[] value) throws EngineException {
+    public void write(byte[] key, byte[] value) throws EngineException {
         try {
             RandomAccessFile databaseFile = DatabaseResources.getDatabaseFile(this.path);
             RandomAccessFile indexFiles = IndexResources.getIndexFiles(this.path);
             // work
-            long valuePosition = databaseFile.length();
-            // write value
-            WriteDisk.write(databaseFile, valuePosition, value);
-            // write key into file
-            byte[] byteValuePosition = LongToByteArray.convert(valuePosition);
-            WriteDisk.write(indexFiles, indexFiles.length(), key);
-            WriteDisk.write(indexFiles, indexFiles.length(), byteValuePosition);
-            // write key cache
-            keyTreeMap.put(new Key(key), byteValuePosition);
+            synchronized (this) {
+                long valuePosition = databaseFile.length();
+                // write value
+                WriteDisk.write(databaseFile, valuePosition, value);
+                // write key into file
+                byte[] byteValuePosition = LongToByteArray.convert(valuePosition);
+                WriteDisk.write(indexFiles, indexFiles.length(), key);
+                WriteDisk.write(indexFiles, indexFiles.length(), byteValuePosition);
+                // write key cache
+                keyTreeMap.put(new Key(key), byteValuePosition);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     @Override
-    public synchronized byte[] read(byte[] key) throws EngineException {
+    public byte[] read(byte[] key) throws EngineException {
         byte[] valuePosition = this.keyTreeMap.get(new Key(key));
         long position = ByteArrayToLong.convert(valuePosition);
         try {
-            return ReadDisk.read(
-                    DatabaseResources.getDatabaseFile(this.path),
-                    position, Configuration.ValueSize);
+            synchronized (this) {
+                return ReadDisk.read(
+                        DatabaseResources.getDatabaseFile(this.path),
+                        position, Configuration.ValueSize);
+            }
         } catch (IOException e) {
             e.printStackTrace();
             throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
@@ -78,13 +85,22 @@ public class EngineRace extends AbstractEngine {
     }
 
     @Override
-    public synchronized void range(byte[] lower, byte[] upper,
-                                   AbstractVisitor visitor) throws EngineException {
+    public void range(byte[] lower, byte[] upper,
+                      AbstractVisitor visitor) throws EngineException {
         final SortedMap<Key, byte[]> keySortedMap =
                 keyTreeMap.subMap(new Key(lower), new Key(upper));
         for (Key key :
                 keySortedMap.keySet()) {
-            visitor.visit(key.getData(), keySortedMap.get(key));
+            try {
+                byte[] value = ReadDisk.read(
+                        IndexResources.getIndexFiles(this.path),
+                        ByteArrayToLong.convert(keySortedMap.get(key)),
+                        Configuration.ValueSize);
+                visitor.visit(key.getData(), value);
+            } catch (IOException e) {
+                e.printStackTrace();
+                throw new EngineException(RetCodeEnum.IO_ERROR, "IO_ERROR");
+            }
         }
     }
 
@@ -93,6 +109,7 @@ public class EngineRace extends AbstractEngine {
         try {
             DatabaseResources.close();
             IndexResources.close();
+            keyTreeMap.clear();
         } catch (IOException e) {
             e.printStackTrace();
         }
