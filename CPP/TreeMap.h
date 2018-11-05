@@ -11,13 +11,15 @@
 
 class TreeMap {
 public:
-    void add(polar_race::PolarString*, long long);
-    long long get(polar_race::PolarString*);
+    void add(polar_race::PolarString *, long long);
+
+    long long get(polar_race::PolarString *);
+
     void close();
 
 private:
-    std::map <polar_race::PolarString,long long> data;
-    std::map <polar_race::PolarString,long long>::iterator iter;
+    std::map<polar_race::PolarString, long long> data;
+    std::map<polar_race::PolarString, long long>::iterator iter;
 };
 
 

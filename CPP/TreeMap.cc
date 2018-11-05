@@ -5,8 +5,14 @@
 
 #include "TreeMap.h"
 
-void TreeMap::add(polar_race::PolarString *key,long long value) {
-    this->data.insert(std::pair<polar_race::PolarString, long long>(*key, value));
+void TreeMap::add(polar_race::PolarString *key, long long value) {
+    this->iter = data.find(*key);
+    if (iter == data.end()) {
+        this->data.insert(std::pair<polar_race::PolarString,
+                long long>(*key, value));
+    } else {
+        iter->second = value;
+    }
 }
 
 long long TreeMap::get(polar_race::PolarString *key) {
@@ -18,6 +24,7 @@ long long TreeMap::get(polar_race::PolarString *key) {
 }
 
 
-void TreeMap::close(){
+void TreeMap::close() {
+    std::cout<<"Close"<<std::endl;
     data.clear();
 }

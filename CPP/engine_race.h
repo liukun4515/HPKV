@@ -14,10 +14,6 @@ namespace polar_race {
     public:
         static RetCode Open(const std::string &name, Engine **eptr);
 
-        static TreeMap *treeMap;
-
-        static std::string file_name;
-
         explicit EngineRace(const std::string &dir) {
         }
 
@@ -38,7 +34,9 @@ namespace polar_race {
                       Visitor &visitor) override;
 
     private:
+        static TreeMap *treeMap;
 
+        static Resources *resources;
     };
 
 }  // namespace polar_race
