@@ -1,6 +1,5 @@
 package cn.wangxinshuo.hpkv.All;
 
-import cn.wangxinshuo.hpkv.conf.Configuration;
 import com.alibabacloud.polar_race.engine.common.EngineRace;
 import com.alibabacloud.polar_race.engine.common.exceptions.EngineException;
 import org.junit.Test;
@@ -17,19 +16,30 @@ public class Test01 {
     @Test
     public void test01() {
         EngineRace engineRace = new EngineRace();
+        long start = System.nanoTime();
         try {
-            long start = System.nanoTime();
-            //engineRace.open("D:\\data");
-            engineRace.open("./data/");
-            for (int i = 0; i < 1000000; i++) {
-                byte[] key = get(Configuration.KeySize);
-                engineRace.write(key, get(Configuration.ValueSize));
-                engineRace.read(key);
+            engineRace.open("D:\\data");
+            //engineRace.open("./data");
+            ConcurrentWrite[] writes = new ConcurrentWrite[64];
+            for (int i = 0; i < 64; i++) {
+                writes[i] = new ConcurrentWrite();
+                writes[i].setEngineRace(engineRace);
+                writes[i].run();
             }
             engineRace.close();
-            System.out.println(TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - start));
         } catch (EngineException e) {
             e.printStackTrace();
         }
+        System.out.println(TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - start));
+    }
+
+    @Test
+    public void test02() {
+        System.out.println(new Random().nextDouble());
+    }
+
+    @Test
+    public void test03() {
+
     }
 }
