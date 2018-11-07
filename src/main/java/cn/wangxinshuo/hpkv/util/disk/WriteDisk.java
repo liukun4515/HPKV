@@ -9,22 +9,11 @@ import java.nio.channels.FileChannel;
  * @author 王新硕
  */
 public class WriteDisk {
-    //    public static void write(
-//            RandomAccessFile file, long start, byte[] data) throws IOException {
-//        FileChannel channel = file.getChannel();
-//        MappedByteBuffer buffer = channel.map(
-//                FileChannel.MapMode.READ_WRITE,start,data.length);
-//        buffer.put(data);
-//        if(new Random().nextDouble() < 0.05){
-//            buffer.force();
-//        }
-//    }
     public static void write(RandomAccessFile file, long start, byte[] data) throws IOException {
         FileChannel channel = file.getChannel();
         channel = channel.position(start);
         ByteBuffer buffer = ByteBuffer.wrap(data);
         channel.write(buffer);
-
         //channel.force(false);
     }
 }

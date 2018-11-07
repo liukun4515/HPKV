@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a83aecd-3add-470d-9b9b-09402338ece2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/All/ConcurrentWrite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/ReadDisk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/ReadDisk.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/WriteDisk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/WriteDisk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/EngineRace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/EngineRace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/All/Test01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/All/Test01.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -183,19 +179,19 @@
     <session id="630395709">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
-          <entry key="project.open.time.0" value="8" />
+          <entry key="project.closed" value="18" />
+          <entry key="project.open.time.0" value="9" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="5" />
-          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="75" />
+          <entry key="java" value="76" />
           <entry key="json" value="5" />
           <entry key="txt" value="1" />
           <entry key="xml" value="6" />
@@ -203,7 +199,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="75" />
+          <entry key="JAVA" value="76" />
           <entry key="JSON" value="5" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="XML" value="6" />
@@ -213,7 +209,7 @@
         <counts>
           <entry key="java" value="3856" />
           <entry key="json" value="3" />
-          <entry key="txt" value="27" />
+          <entry key="txt" value="28" />
           <entry key="xml" value="12" />
         </counts>
       </usages-collector>
@@ -221,7 +217,7 @@
         <counts>
           <entry key="JAVA" value="3856" />
           <entry key="JSON" value="3" />
-          <entry key="PLAIN_TEXT" value="27" />
+          <entry key="PLAIN_TEXT" value="28" />
           <entry key="XML" value="12" />
         </counts>
       </usages-collector>
@@ -232,8 +228,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/All/Test01.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+            <state relative-caret-position="540">
+              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/WriteDisk.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81">
+              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -242,13 +250,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/WriteDisk.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/ReadDisk.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="393">
+              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -395,7 +400,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -544,6 +548,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -552,7 +557,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541494754742" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541496890762" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
@@ -730,7 +735,9 @@
       <workItem from="1540880259135" duration="1640000" />
       <workItem from="1540959703344" duration="565000" />
       <workItem from="1540980902265" duration="4726000" />
-      <workItem from="1541489978562" duration="2617000" />
+      <workItem from="1541489978562" duration="2647000" />
+      <workItem from="1541561384399" duration="69000" />
+      <workItem from="1541564971645" duration="727000" />
     </task>
     <task id="LOCAL-00001" summary="完成写入部分">
       <created>1539068236120</created>
@@ -1040,7 +1047,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540700991808</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="complete">
+      <created>1541496901955</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1541496901955</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1076,7 +1090,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="341929000" />
+    <option name="totallyTimeSpent" value="342755000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1089,8 +1103,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18070363" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18443497" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -1108,7 +1123,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013835" side_tool="true" weight="0.3762162" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="11" sideWeight="0.4986165" visible="true" weight="0.26898047" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.4986165" visible="true" weight="0.26898047" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1376,13 +1391,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/ReadDisk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/alibabacloud/polar_race/engine/common/EngineRace.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="41">
@@ -1395,8 +1403,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cn/wangxinshuo/hpkv/All/Test01.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+        <state relative-caret-position="540">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1405,11 +1413,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/WriteDisk.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="81">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangxinshuo/hpkv/util/disk/ReadDisk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
         </state>
       </provider>
     </entry>
