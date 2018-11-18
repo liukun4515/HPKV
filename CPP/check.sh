@@ -1,4 +1,3 @@
 make
-cp test/test.cc ./
-g++ -o run test.cc -L./lib -lengine
+g++ -o run main.cc -L./lib -lengine -lpthread -lrt
 rm -f *.o

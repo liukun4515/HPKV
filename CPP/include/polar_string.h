@@ -83,13 +83,6 @@ namespace polar_race {
         return r;
     }
 
-    inline bool operator>(const PolarString &x, const PolarString &y){
-        return x.compare(y) > 0;
-    }
-
-    inline bool operator<(const PolarString &x, const PolarString &y){
-        return x.compare(y) < 0;
-    }
 
 }  // namespace polar_race
 

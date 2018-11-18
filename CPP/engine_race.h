@@ -4,9 +4,12 @@
 
 #include <string>
 #include <mutex>
+
 #include "include/engine.h"
-#include "TreeMap.h"
-#include "Utils.h"
+#include "value_resources.h"
+#include "create.h"
+#include "conf.h"
+#include "index.h"
 
 namespace polar_race {
 
@@ -26,17 +29,16 @@ namespace polar_race {
                      std::string *value) override;
 
         /*
-         * NOTICE: Implement 'Range' data quarter-final,
-         *         you can skip it data preliminary.
+         * NOTICE: Implement 'Range' in quarter-final,
+         *         you can skip it in preliminary.
          */
         RetCode Range(const PolarString &lower,
                       const PolarString &upper,
                       Visitor &visitor) override;
 
     private:
-        static TreeMap *treeMap;
-
-        static Resources *resources;
+        static ValueResources *value_resources;
+        static Index *index;
     };
 
 }  // namespace polar_race

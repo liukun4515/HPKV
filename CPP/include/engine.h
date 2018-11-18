@@ -49,14 +49,14 @@ namespace polar_race {
 
 
         /*
-         * NOTICE: Implement 'Range' data quarter-final,
-         *         you can skip it data preliminary.
+         * NOTICE: Implement 'Range' in quarter-final,
+         *         you can skip it in preliminary.
          */
         // Applies the given Vistor::Visit function to the result
-        // of every key-value pair data the key range [first, last),
-        // data order
-        // lower=="" is treated as a key before all keys data the database.
-        // upper=="" is treated as a key after all keys data the database.
+        // of every key-value pair in the key range [first, last),
+        // in order
+        // lower=="" is treated as a key before all keys in the database.
+        // upper=="" is treated as a key after all keys in the database.
         // Therefore the following call will traverse the entire database:
         //   Range("", "", visitor)
         virtual RetCode Range(const PolarString &lower,
